@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="design_doc_mode" content="canvas">
+<title>Martínez-Segura — Publicaciones para redes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.js"></script>
+<style>
+  * { box-sizing:border-box; }
+  html,body { margin:0; padding:0; }
+  body { font-family:'Hanken Grotesk',system-ui,sans-serif; background:#20130C; -webkit-font-smoothing:antialiased; }
+  .post { position:relative; overflow:hidden; flex:none; }
+  .grid-ovl { position:absolute; inset:0; pointer-events:none; background-image:linear-gradient(rgba(242,233,212,0.055) 1px,transparent 1px),linear-gradient(90deg,rgba(242,233,212,0.055) 1px,transparent 1px); background-size:66px 66px; }
+</style>
+</helmet>
+<div style="padding:56px clamp(20px,4vw,64px);display:flex;flex-direction:column;gap:64px;align-items:center;">
+
+  <!-- ===================== FB COVER · PORTADA 1640×624 ===================== -->
+  <figure style="margin:0;display:flex;flex-direction:column;gap:16px;align-items:center;">
+    <figcaption style="color:#E9CBB4;font-weight:700;font-size:15px;letter-spacing:0.14em;text-transform:uppercase;">Facebook · Portada · 1640×624</figcaption>
+    <div id="fb-cover" class="post" style="width:1640px;height:624px;background:#122A33;display:flex;">
+      <div style="position:absolute;inset:0;left:44%;background-image:url('assets/portfolio/03-estacion-total-leica-hero.jpeg');background-size:cover;background-position:center 30%;"></div>
+      <div style="position:absolute;inset:0;background:linear-gradient(90deg,#102229 0%,#102229 40%,rgba(16,34,41,0.86) 52%,rgba(16,34,41,0.35) 66%,rgba(16,34,41,0.55) 100%);"></div>
+      <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(242,233,212,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(242,233,212,0.05) 1px,transparent 1px);background-size:52px 52px;"></div>
+      <span aria-hidden="true" style="position:absolute;top:34px;left:34px;width:40px;height:40px;border-top:4px solid #F2A81E;border-left:4px solid #F2A81E;"></span>
+      <div style="position:relative;z-index:2;padding:56px 64px;display:flex;flex-direction:column;height:100%;max-width:1020px;">
+        <div style="display:flex;align-items:center;gap:16px;">
+          <svg width="54" height="54" viewBox="0 0 100 100" fill="none" stroke="#F2A81E" stroke-width="7" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M50 16 L88 78 Q92 86 82 86 L18 86 Q8 86 12 78 Z"></path><line x1="50" y1="40" x2="50" y2="64"></line><circle cx="50" cy="70" r="5" fill="#F2A81E" stroke="none"></circle></svg>
+          <div style="line-height:1;"><div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:27px;color:#F7EFDC;letter-spacing:0.02em;">MARTÍNEZ-SEGURA</div><div style="font-weight:700;font-size:13px;letter-spacing:0.4em;color:#F2C79A;margin-top:6px;">MULTISERVICIOS</div></div>
+        </div>
+        <div style="margin-top:auto;margin-bottom:6px;padding-left:264px;">
+          <h1 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:74px;line-height:0.96;color:#FBF2E0;margin:0;letter-spacing:-0.01em;">Del terreno al plano,<br><span style="color:#E0743E;">con precisión.</span></h1>
+          <p style="font-size:24px;color:#CBD8DB;margin:18px 0 0;line-height:1.4;max-width:720px;">Levantamientos topográficos y catastrales, diseño y control de obra en todo Nicaragua.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:20px;">
+            <span style="background:rgba(242,168,30,0.16);border:1px solid rgba(242,168,30,0.5);color:#F2A81E;border-radius:999px;padding:8px 18px;font-weight:700;font-size:17px;">Topografía</span>
+            <span style="background:rgba(242,168,30,0.16);border:1px solid rgba(242,168,30,0.5);color:#F2A81E;border-radius:999px;padding:8px 18px;font-weight:700;font-size:17px;">Catastro</span>
+            <span style="background:rgba(242,168,30,0.16);border:1px solid rgba(242,168,30,0.5);color:#F2A81E;border-radius:999px;padding:8px 18px;font-weight:700;font-size:17px;">Arquitectura</span>
+            <span style="background:rgba(242,168,30,0.16);border:1px solid rgba(242,168,30,0.5);color:#F2A81E;border-radius:999px;padding:8px 18px;font-weight:700;font-size:17px;">Control de obra</span>
+          </div>
+        </div>
+      </div>
+      <div style="position:absolute;z-index:2;right:48px;bottom:44px;display:inline-flex;align-items:center;gap:12px;background:rgba(18,42,51,0.72);border:1px solid rgba(242,233,212,0.22);border-radius:999px;padding:12px 24px;">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F2A81E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20"></path><path d="M12 2a15 15 0 010 20 15 15 0 010-20z"></path></svg>
+        <span style="color:#F7EFDC;font-weight:700;font-size:21px;">martinezseguramultiserviciosni.com</span>
+      </div>
+    </div>
+  </figure>
+
+  <!-- ===================== STORY FB · SÍGUENOS EN FACEBOOK ===================== -->
+  <figure style="margin:0;display:flex;flex-direction:column;gap:16px;align-items:center;">
+    <figcaption style="color:#E9CBB4;font-weight:700;font-size:15px;letter-spacing:0.14em;text-transform:uppercase;">IG / FB Story · 1080×1920 · Síguenos en Facebook</figcaption>
+    <div id="story-fb" class="post" style="width:1080px;height:1920px;background:linear-gradient(200deg,#1B62E0 0%,#164FC0 46%,#0F3388 100%);padding:74px 78px 60px;display:flex;flex-direction:column;">
+      <div style="position:absolute;top:-140px;right:-160px;width:520px;height:520px;border-radius:50%;background:rgba(255,255,255,0.06);"></div>
+      <div style="position:absolute;bottom:120px;left:-180px;width:420px;height:420px;border-radius:50%;background:rgba(9,28,74,0.35);"></div>
+
+      <div style="position:relative;display:flex;align-items:center;gap:14px;">
+        <svg width="46" height="46" viewBox="0 0 100 100" fill="none" stroke="#EAF1FF" stroke-width="7" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M50 16 L88 78 Q92 86 82 86 L18 86 Q8 86 12 78 Z"></path><line x1="50" y1="40" x2="50" y2="64"></line><circle cx="50" cy="70" r="5" fill="#EAF1FF" stroke="none"></circle></svg>
+        <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:23px;color:#EAF1FF;">MARTÍNEZ-SEGURA</div>
+      </div>
+
+      <div style="position:relative;margin-top:40px;">
+        <p style="margin:0;font-weight:800;font-size:23px;letter-spacing:0.16em;text-transform:uppercase;color:#F2A81E;">Ya estamos en Facebook</p>
+        <h1 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:80px;line-height:0.94;color:#F7FAFF;margin:16px 0 0;letter-spacing:-0.01em;">Seguinos y<br>mirá nuestro<br>trabajo.</h1>
+      </div>
+
+      <!-- Tarjeta real estilo página de Facebook -->
+      <div style="position:relative;margin-top:36px;background:#fff;border-radius:26px;overflow:hidden;box-shadow:0 30px 60px rgba(6,20,55,0.45);transform:rotate(-1.4deg);">
+        <div style="position:relative;height:196px;">
+          <div style="position:absolute;inset:0;background-image:url('assets/portfolio/03-estacion-total-leica-hero.jpeg');background-size:cover;background-position:center 32%;"></div>
+        </div>
+        <div style="padding:0 40px 28px;">
+          <div style="display:flex;align-items:flex-end;gap:22px;margin-top:-64px;">
+            <div style="flex:none;width:132px;height:132px;border-radius:50%;border:6px solid #fff;overflow:hidden;background:#B0512B;box-shadow:0 8px 20px rgba(0,0,0,0.2);"><img src="assets/brand/logo-badge.png" alt="Martínez-Segura" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+            <div style="padding-bottom:10px;"><div style="display:flex;align-items:center;gap:9px;"><span style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:31px;color:#0B1B33;">Martínez-Segura</span><svg width="26" height="26" viewBox="0 0 24 24" fill="#1877F2" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M9.5 12.4l1.8 1.8 3.6-4" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><div style="font-size:19px;color:#5A6B85;margin-top:3px;font-weight:600;">Multiservicios · Topografía e ingeniería</div></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:14px;margin-top:26px;">
+            <span style="flex:1;display:inline-flex;align-items:center;justify-content:center;gap:10px;background:#1877F2;color:#fff;border-radius:12px;padding:16px;font-weight:800;font-size:23px;"><svg width="22" height="22" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke="#fff" stroke-width="2.6" stroke-linecap="round"></path></svg>Seguir</span>
+            <span style="flex:1;display:inline-flex;align-items:center;justify-content:center;gap:10px;background:#EAF0FB;color:#1877F2;border-radius:12px;padding:16px;font-weight:800;font-size:23px;"><svg width="22" height="22" viewBox="0 0 24 24" fill="#1877F2" aria-hidden="true"><path d="M2 10.5h4v10H2zM7 20.5h9.6a2 2 0 001.96-1.6l1.4-7A1.6 1.6 0 0018.4 9H13l.9-4.2A1.7 1.7 0 0012.2 3L7 9.6z"></path></svg>Me gusta</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sticker QR -->
+      <div style="position:relative;margin-top:30px;display:flex;align-items:center;gap:26px;">
+        <div style="flex:none;background:#fff;border-radius:18px;padding:14px;box-shadow:0 16px 34px rgba(6,20,55,0.4);transform:rotate(2deg);"><div data-qr data-url="https://www.facebook.com/people/Mart%C3%ADnez-Segura-Multiservicios/61592004267682/" data-ecc="M" style="width:132px;height:132px;"></div></div>
+        <div><p style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:38px;color:#F7FAFF;line-height:1.05;">Escaneá y<br>seguinos</p><p style="margin:12px 0 0;font-size:22px;color:#BFD2F5;font-weight:600;">O buscanos como<br><strong style="color:#F2A81E;">Martínez-Segura Multiservicios</strong></p></div>
+      </div>
+
+      <div style="position:relative;margin-top:34px;">
+        <p style="margin:0 0 16px;font-weight:800;font-size:19px;letter-spacing:0.14em;text-transform:uppercase;color:#BFD2F5;">Esto encontrarás en nuestra página</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;">
+          <div style="aspect-ratio:1/1;border-radius:16px;overflow:hidden;border:3px solid rgba(255,255,255,0.14);"><img src="assets/portfolio/06-replanteo-fundaciones-o.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+          <div style="aspect-ratio:1/1;border-radius:16px;overflow:hidden;border:3px solid rgba(255,255,255,0.14);"><img src="assets/portfolio/01-levantamiento-cerro-o.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+          <div style="aspect-ratio:1/1;border-radius:16px;overflow:hidden;border:3px solid rgba(255,255,255,0.14);"><img src="assets/portfolio/11-obra-01-o.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+        </div>
+      </div>
+
+      <div style="position:relative;margin-top:auto;padding-top:28px;display:flex;align-items:center;gap:12px;">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8FB2F0" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20"></path><path d="M12 2a15 15 0 010 20 15 15 0 010-20z"></path></svg>
+        <span style="color:#DCE7FB;font-weight:600;font-size:23px;">martinezseguramultiserviciosni.com</span>
+      </div>
+    </div>
+  </figure>
+
+  <!-- ===================== PHOTO INTL · FB SQUARE · GUATEMALA + MÉXICO ===================== -->
+  <figure style="margin:0;display:flex;flex-direction:column;gap:16px;align-items:center;">
+    <figcaption style="color:#E9CBB4;font-weight:700;font-size:15px;letter-spacing:0.14em;text-transform:uppercase;">Facebook / IG Post · 1080×1080 · Foto · Internacional</figcaption>
+    <div id="photo-intl" class="post" style="width:1080px;height:1080px;background:linear-gradient(160deg,#A64A26,#5F2811);display:flex;flex-direction:column;padding:70px 70px 60px;">
+      <div class="grid-ovl"></div>
+      <div style="position:relative;">
+        <p style="margin:0;display:inline-flex;align-items:center;gap:12px;font-weight:800;font-size:19px;letter-spacing:0.2em;text-transform:uppercase;color:#F2A81E;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F2A81E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20"></path><path d="M12 2a15 15 0 010 20 15 15 0 010-20z"></path></svg>Experiencia internacional</p>
+        <h2 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:60px;line-height:0.98;color:#FBF2E0;margin:14px 0 0;">Supervisión de obra<br>fuera de Nicaragua</h2>
+      </div>
+      <div style="position:relative;margin-top:34px;display:grid;grid-template-columns:1fr 1fr;gap:22px;">
+        <div style="border-radius:18px;overflow:hidden;position:relative;aspect-ratio:1/1;box-shadow:0 16px 34px rgba(0,0,0,0.32);">
+          <div style="position:absolute;inset:0;background-image:url('assets/portfolio/18-obra-08-o.jpg');background-size:cover;background-position:center;"></div>
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 55%,rgba(30,12,5,0.82) 100%);"></div>
+          <span style="position:absolute;left:20px;bottom:18px;color:#FBF2E0;"><span style="display:block;font-weight:800;font-size:15px;letter-spacing:0.16em;text-transform:uppercase;color:#F2A81E;">Guatemala</span><span style="display:block;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:23px;">Ciudad de Guatemala</span></span>
+        </div>
+        <div style="border-radius:18px;overflow:hidden;position:relative;aspect-ratio:1/1;box-shadow:0 16px 34px rgba(0,0,0,0.32);">
+          <div style="position:absolute;inset:0;background-image:url('assets/portfolio/19-obra-09-o.jpg');background-size:cover;background-position:center;"></div>
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 55%,rgba(30,12,5,0.82) 100%);"></div>
+          <span style="position:absolute;left:20px;bottom:18px;color:#FBF2E0;"><span style="display:block;font-weight:800;font-size:15px;letter-spacing:0.16em;text-transform:uppercase;color:#F2A81E;">México</span><span style="display:block;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:23px;">Aeropuerto AIFA</span></span>
+        </div>
+      </div>
+      <p style="position:relative;font-size:23px;color:#F3DBC7;margin:26px 0 0;line-height:1.42;max-width:900px;">Supervisión y administración de obra en Ciudad de Guatemala y en el Aeropuerto Internacional Felipe Ángeles (AIFA), México.</p>
+      <div style="position:relative;margin-top:auto;padding-top:28px;display:flex;align-items:center;justify-content:space-between;gap:24px;">
+        <div><p style="margin:0;font-weight:700;font-size:18px;letter-spacing:0.14em;text-transform:uppercase;color:#F2C79A;">Conoce más · +1 760 883 0683</p><p style="margin:8px 0 0;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:29px;color:#FBF2E0;">martinezseguramultiserviciosni.com</p></div>
+        <div style="flex:none;background:#FBF2E0;border-radius:16px;padding:14px;"><div data-qr style="width:124px;height:124px;"></div></div>
+      </div>
+    </div>
+  </figure>
+
+  <!-- ===================== PHOTO P1 · FB SQUARE · HERO FOTO ===================== -->
+  <figure style="margin:0;display:flex;flex-direction:column;gap:16px;align-items:center;">
+    <figcaption style="color:#E9CBB4;font-weight:700;font-size:15px;letter-spacing:0.14em;text-transform:uppercase;">Facebook / IG Post · 1080×1080 · Foto · Marca</figcaption>
+    <div id="photo-p1" class="post" style="width:1080px;height:1080px;background:#122A33;padding:0;display:flex;">
+      <div style="position:absolute;inset:0;background-image:url('assets/portfolio/03-estacion-total-leica-hero.jpeg');background-size:cover;background-position:center;"></div>
+      <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,42,51,0.55) 0%,rgba(122,52,23,0.15) 38%,rgba(110,47,22,0.82) 78%,rgba(94,40,17,0.96) 100%);"></div>
+      <div style="position:relative;z-index:2;padding:76px;display:flex;flex-direction:column;width:100%;">
+        <div style="display:flex;align-items:center;gap:18px;">
+          <svg width="60" height="60" viewBox="0 0 100 100" fill="none" stroke="#F7EFDC" stroke-width="7" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M50 16 L88 78 Q92 86 82 86 L18 86 Q8 86 12 78 Z"></path><line x1="50" y1="40" x2="50" y2="64"></line><circle cx="50" cy="70" r="5" fill="#F7EFDC" stroke="none"></circle></svg>
+          <div style="line-height:1;"><div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:26px;color:#F7EFDC;">MARTÍNEZ-SEGURA</div><div style="font-weight:700;font-size:13px;letter-spacing:0.4em;color:#F2C79A;margin-top:6px;">MULTISERVICIOS</div></div>
+        </div>
+        <div style="margin-top:auto;">
+          <p style="margin:0;font-weight:800;font-size:19px;letter-spacing:0.2em;text-transform:uppercase;color:#F2A81E;">Topografía de precisión</p>
+          <h2 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:82px;line-height:0.98;color:#FBF2E0;margin:18px 0 0;">Medimos tu<br>terreno con<br>exactitud.</h2>
+        </div>
+        <div style="margin-top:44px;display:flex;align-items:flex-end;justify-content:space-between;gap:28px;">
+          <div>
+            <p style="margin:0;font-weight:700;font-size:18px;letter-spacing:0.14em;text-transform:uppercase;color:#F2C79A;">Visita nuestro sitio web</p>
+            <p style="margin:8px 0 0;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:29px;color:#FBF2E0;">martinezseguramultiserviciosni.com</p>
+            <div style="display:inline-flex;align-items:center;gap:12px;margin-top:18px;background:#122A33;border-radius:999px;padding:13px 24px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="#7FD3A6" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.1-1.3A10 10 0 1012 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5-4.5-.1-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.1.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.5.1.3.7 1.1 1.4 1.8 1 .8 1.7 1.1 2 1.2.2.1.4.1.5-.1l.6-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.2.5.3.1.2.1.6-.1 1.2z"></path></svg><span style="color:#F7EFDC;font-weight:700;font-size:22px;">+1 760 883 0683</span></div>
+          </div>
+          <div style="flex:none;background:#FBF2E0;border-radius:18px;padding:16px;box-shadow:0 18px 40px rgba(0,0,0,0.4);"><div data-qr style="width:150px;height:150px;"></div></div>
+        </div>
+      </div>
+    </div>
+  </figure>
+
+  <!-- ===================== PHOTO P2 · FB SQUARE · SERVICIO EN ACCIÓN ===================== -->
+  <figure style="margin:0;display:flex;flex-direction:column;gap:16px;align-items:center;">
+    <figcaption style="color:#E9CBB4;font-weight:700;font-size:15px;letter-spacing:0.14em;text-transform:uppercase;">Facebook / IG Post · 1080×1080 · Foto · Control de obras</figcaption>
+    <div id="photo-p2" class="post" style="width:1080px;height:1080px;background:#122A33;display:flex;flex-direction:column;">
+      <div style="position:relative;height:620px;flex:none;overflow:hidden;">
+        <div style="position:absolute;inset:0;background-image:url('assets/portfolio/06-replanteo-fundaciones-o.jpg');background-size:cover;background-position:center;"></div>
+        <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,42,51,0.05) 55%,rgba(94,40,17,0.9) 100%);"></div>
+        <span style="position:absolute;top:44px;left:44px;display:inline-flex;align-items:center;gap:10px;background:#B0512B;color:#FBF2E0;border-radius:999px;padding:12px 24px;font-weight:800;font-size:20px;letter-spacing:0.04em;">Control de obras</span>
+      </div>
+      <div style="flex:1;background:linear-gradient(160deg,#A64A26,#6E2F16);padding:56px 76px;display:flex;flex-direction:column;">
+        <div class="grid-ovl"></div>
+        <h2 style="position:relative;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:52px;line-height:1.02;color:#FBF2E0;margin:0;">Replanteo y control<br>topográfico en tu obra</h2>
+        <p style="position:relative;font-size:25px;color:#F3DBC7;margin:16px 0 0;line-height:1.4;max-width:760px;">Ubicamos ejes, niveles y fundaciones con precisión para que construyas sin errores.</p>
+        <div style="position:relative;margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:24px;">
+          <div><p style="margin:0;font-weight:700;font-size:17px;letter-spacing:0.14em;text-transform:uppercase;color:#F2C79A;">Cotiza · +1 760 883 0683</p><p style="margin:7px 0 0;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:27px;color:#FBF2E0;">martinezseguramultiserviciosni.com</p></div>
+          <div style="flex:none;background:#FBF2E0;border-radius:15px;padding:13px;"><div data-qr style="width:112px;height:112px;"></div></div>
+        </div>
+      </div>
+    </div>
+  </figure>
+
+  <!-- ===================== PHOTO P3 · FB SQUARE · SPLIT CTA ===================== -->
+  <figure style="margin:0;display:flex;flex-direction:column;gap:16px;align-items:center;">
+    <figcaption style="color:#E9CBB4;font-weight:700;font-size:15px;letter-spacing:0.14em;text-transform:uppercase;">Facebook / IG Post · 1080×1080 · Foto · Cotiza</figcaption>
+    <div id="photo-p3" class="post" style="width:1080px;height:1080px;display:flex;">
+      <div style="width:44%;flex:none;background-image:url('assets/portfolio/01-levantamiento-cerro-o.jpg');background-size:cover;background-position:center;"></div>
+      <div style="flex:1;background:linear-gradient(158deg,#A64A26,#5F2811);padding:76px 64px;display:flex;flex-direction:column;position:relative;overflow:hidden;">
+        <div class="grid-ovl"></div>
+        <svg style="position:relative" width="58" height="58" viewBox="0 0 100 100" fill="none" stroke="#F7EFDC" stroke-width="7" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M50 16 L88 78 Q92 86 82 86 L18 86 Q8 86 12 78 Z"></path><line x1="50" y1="40" x2="50" y2="64"></line><circle cx="50" cy="70" r="5" fill="#F7EFDC" stroke="none"></circle></svg>
+        <div style="position:relative;margin-top:auto;">
+          <p style="margin:0;font-weight:800;font-size:18px;letter-spacing:0.2em;text-transform:uppercase;color:#F2A81E;">¿Listo para empezar?</p>
+          <h2 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:58px;line-height:1;color:#FBF2E0;margin:16px 0 0;">Cotiza tu proyecto hoy</h2>
+          <p style="font-size:24px;color:#F3DBC7;margin:16px 0 0;line-height:1.4;">Topografía, catastro, diseño y control de obra en un solo lugar.</p>
+        </div>
+        <div style="position:relative;margin-top:40px;display:flex;align-items:center;gap:22px;">
+          <div style="flex:none;background:#FBF2E0;border-radius:16px;padding:15px;"><div data-qr style="width:130px;height:130px;"></div></div>
+          <div><p style="margin:0;font-weight:700;font-size:16px;letter-spacing:0.12em;text-transform:uppercase;color:#F2C79A;">Escanea o escribe</p><p style="margin:6px 0 0;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:26px;color:#FBF2E0;">+1 760 883 0683</p><p style="margin:6px 0 0;font-size:19px;color:#F3DBC7;">martinezseguramultiserviciosni.com</p></div>
+        </div>
+      </div>
+    </div>
+  </figure>
+
+  <!-- ===================== PHOTO S1 · IG STORY · FOTO FULL-BLEED ===================== -->
+  <figure style="margin:0;display:flex;flex-direction:column;gap:16px;align-items:center;">
+    <figcaption style="color:#E9CBB4;font-weight:700;font-size:15px;letter-spacing:0.14em;text-transform:uppercase;">IG / FB Story · 1080×1920 · Foto</figcaption>
+    <div id="photo-s1" class="post" style="width:1080px;height:1920px;background:#122A33;display:flex;">
+      <div style="position:absolute;inset:0;background-image:url('assets/portfolio/11-obra-01-o.jpg');background-size:cover;background-position:center;"></div>
+      <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(94,40,17,0.85) 0%,rgba(122,52,23,0.25) 32%,rgba(94,40,17,0.5) 62%,rgba(74,31,13,0.97) 100%);"></div>
+      <div style="position:relative;z-index:2;padding:110px 88px;display:flex;flex-direction:column;width:100%;">
+        <div style="display:flex;align-items:center;gap:18px;">
+          <svg width="64" height="64" viewBox="0 0 100 100" fill="none" stroke="#F7EFDC" stroke-width="7" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M50 16 L88 78 Q92 86 82 86 L18 86 Q8 86 12 78 Z"></path><line x1="50" y1="40" x2="50" y2="64"></line><circle cx="50" cy="70" r="5" fill="#F7EFDC" stroke="none"></circle></svg>
+          <div style="line-height:1;"><div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:30px;color:#F7EFDC;">MARTÍNEZ-SEGURA</div><div style="font-weight:700;font-size:15px;letter-spacing:0.4em;color:#F2C79A;margin-top:8px;">MULTISERVICIOS</div></div>
+        </div>
+        <div style="margin-top:64px;">
+          <p style="margin:0;font-weight:800;font-size:24px;letter-spacing:0.2em;text-transform:uppercase;color:#F2A81E;">Del terreno a la obra</p>
+          <h1 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:88px;line-height:0.98;color:#FBF2E0;margin:22px 0 0;">Precisión en<br>cada proyecto</h1>
+          <p style="font-size:32px;color:#F3DBC7;margin:26px 0 0;line-height:1.45;max-width:820px;">Topografía, catastro y control de obra en todo Nicaragua.</p>
+        </div>
+        <div style="margin-top:auto;background:rgba(18,42,51,0.72);border:1px solid rgba(251,242,224,0.18);border-radius:28px;padding:44px;display:flex;align-items:center;gap:32px;">
+          <div style="flex:none;background:#FBF2E0;border-radius:20px;padding:20px;"><div data-qr style="width:200px;height:200px;"></div></div>
+          <div><p style="margin:0;font-weight:800;font-size:22px;letter-spacing:0.14em;text-transform:uppercase;color:#F2A81E;">Escanea y visítanos</p><p style="margin:14px 0 0;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:30px;color:#FBF2E0;line-height:1.12;">martinezsegura<br>multiserviciosni.com</p><p style="margin:14px 0 0;font-size:26px;color:#F3DBC7;font-weight:700;">+1 760 883 0683</p></div>
+        </div>
+      </div>
+    </div>
+  </figure>
+
+  <!-- ===================== PHOTO S2 · IG STORY · FOTO + CTA ===================== -->
+  <figure style="margin:0;display:flex;flex-direction:column;gap:16px;align-items:center;">
+    <figcaption style="color:#E9CBB4;font-weight:700;font-size:15px;letter-spacing:0.14em;text-transform:uppercase;">IG / FB Story · 1080×1920 · Foto · Cotiza</figcaption>
+    <div id="photo-s2" class="post" style="width:1080px;height:1920px;background:#F2E9D4;display:flex;flex-direction:column;">
+      <div style="position:relative;height:960px;flex:none;overflow:hidden;">
+        <div style="position:absolute;inset:0;background-image:url('assets/portfolio/05-nave-industrial-o.jpg');background-size:cover;background-position:center;"></div>
+        <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,42,51,0.35) 0%,rgba(242,233,212,0) 40%,rgba(242,233,212,0.98) 100%);"></div>
+        <div style="position:absolute;top:100px;left:88px;display:flex;align-items:center;gap:16px;">
+          <svg width="56" height="56" viewBox="0 0 100 100" fill="none" stroke="#FBF2E0" stroke-width="7" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M50 16 L88 78 Q92 86 82 86 L18 86 Q8 86 12 78 Z"></path><line x1="50" y1="40" x2="50" y2="64"></line><circle cx="50" cy="70" r="5" fill="#FBF2E0" stroke="none"></circle></svg>
+          <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:26px;color:#FBF2E0;">MARTÍNEZ-SEGURA</div>
+        </div>
+      </div>
+      <div style="flex:1;padding:20px 88px 104px;display:flex;flex-direction:column;">
+        <p style="margin:0;font-weight:800;font-size:23px;letter-spacing:0.2em;text-transform:uppercase;color:#B0512B;">Precisión que se construye</p>
+        <h2 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:70px;line-height:0.98;color:#2B1F15;margin:16px 0 0;">Solicita tu<br>levantamiento</h2>
+        <p style="font-size:30px;color:#5C4A38;margin:20px 0 0;line-height:1.4;">Planos con validez ante catastro, listos en pocos días.</p>
+        <div style="margin-top:auto;background:#122A33;border-radius:26px;padding:44px 48px;display:flex;align-items:center;justify-content:space-between;gap:28px;">
+          <div><p style="margin:0;font-weight:700;font-size:22px;letter-spacing:0.14em;text-transform:uppercase;color:#F2A81E;">Escanea y cotiza</p><p style="margin:12px 0 0;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:30px;color:#FBF2E0;line-height:1.14;">martinezsegura<br>multiserviciosni.com</p><p style="margin:12px 0 0;font-size:26px;color:#F3DBC7;font-weight:700;">+1 760 883 0683</p></div>
+          <div style="flex:none;background:#FBF2E0;border-radius:20px;padding:20px;"><div data-qr style="width:180px;height:180px;"></div></div>
+        </div>
+      </div>
+    </div>
+  </figure>
+
+  <!-- ===================== POST A · FB SQUARE · BRAND CTA ===================== -->
+  <figure style="margin:0;display:flex;flex-direction:column;gap:16px;align-items:center;">
+    <figcaption style="color:#E9CBB4;font-weight:700;font-size:15px;letter-spacing:0.14em;text-transform:uppercase;">Facebook / IG Post · 1080×1080 · Marca</figcaption>
+    <div id="post-a" class="post" style="width:1080px;height:1080px;background:radial-gradient(120% 120% at 78% 12%,#C05C31 0%,#A64A26 42%,#7A3417 100%);padding:82px;display:flex;flex-direction:column;">
+      <div class="grid-ovl"></div>
+      <span aria-hidden="true" style="position:absolute;top:52px;left:52px;width:40px;height:40px;border-top:4px solid #F2A81E;border-left:4px solid #F2A81E;"></span>
+      <span aria-hidden="true" style="position:absolute;top:52px;right:52px;width:40px;height:40px;border-top:4px solid #F2A81E;border-right:4px solid #F2A81E;"></span>
+      <span aria-hidden="true" style="position:absolute;bottom:52px;left:52px;width:40px;height:40px;border-bottom:4px solid #F2A81E;border-left:4px solid #F2A81E;"></span>
+      <span aria-hidden="true" style="position:absolute;bottom:52px;right:52px;width:40px;height:40px;border-bottom:4px solid #F2A81E;border-right:4px solid #F2A81E;"></span>
+      <div style="position:relative;display:flex;align-items:center;gap:20px;">
+        <svg width="72" height="72" viewBox="0 0 100 100" fill="none" stroke="#F7EFDC" stroke-width="7" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M50 16 L88 78 Q92 86 82 86 L18 86 Q8 86 12 78 Z"></path><line x1="50" y1="40" x2="50" y2="64"></line><circle cx="50" cy="70" r="5" fill="#F7EFDC" stroke="none"></circle></svg>
+        <div style="line-height:1;"><div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:30px;letter-spacing:0.02em;color:#F7EFDC;">MARTÍNEZ-SEGURA</div><div style="font-weight:700;font-size:15px;letter-spacing:0.42em;color:#F2C79A;margin-top:7px;">MULTISERVICIOS</div></div>
+      </div>
+      <div style="position:relative;margin-top:auto;">
+        <p style="margin:0;display:inline-block;font-weight:800;font-size:18px;letter-spacing:0.22em;text-transform:uppercase;color:#F2A81E;">Topografía de precisión · Nicaragua</p>
+        <h1 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:104px;line-height:0.98;color:#FBF2E0;margin:22px 0 0;letter-spacing:-0.01em;">Del terreno<br>al plano.</h1>
+        <p style="font-size:31px;line-height:1.5;color:#F3DBC7;max-width:640px;margin:26px 0 0;">Levantamiento topográfico y catastral, replanteo y control de obra con estación total y GPS.</p>
+      </div>
+      <div style="position:relative;margin-top:52px;display:flex;align-items:flex-end;justify-content:space-between;gap:32px;">
+        <div>
+          <p style="margin:0 0 12px;font-weight:700;font-size:20px;letter-spacing:0.16em;text-transform:uppercase;color:#F2C79A;">Visita nuestro sitio web</p>
+          <p style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:34px;color:#FBF2E0;">martinezseguramultiserviciosni.com</p>
+          <div style="display:inline-flex;align-items:center;gap:12px;margin-top:22px;background:#122A33;border-radius:999px;padding:14px 26px;">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="#7FD3A6" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.1-1.3A10 10 0 1012 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5-4.5-.1-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.1.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.5.1.3.7 1.1 1.4 1.8 1 .8 1.7 1.1 2 1.2.2.1.4.1.5-.1l.6-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.2.5.3.1.2.1.6-.1 1.2z"></path></svg>
+            <span style="color:#F7EFDC;font-weight:700;font-size:24px;">+505 8866 3659</span>
+          </div>
+        </div>
+        <div style="flex:none;background:#FBF2E0;border-radius:22px;padding:22px;text-align:center;box-shadow:0 22px 44px rgba(0,0,0,0.28);">
+          <div data-qr style="width:190px;height:190px;"></div>
+          <p style="margin:12px 0 0;font-weight:700;font-size:16px;letter-spacing:0.12em;text-transform:uppercase;color:#8E3F20;">Escanea aquí</p>
+        </div>
+      </div>
+    </div>
+  </figure>
+
+  <!-- ===================== POST B · FB SQUARE · SERVICIOS ===================== -->
+  <figure style="margin:0;display:flex;flex-direction:column;gap:16px;align-items:center;">
+    <figcaption style="color:#E9CBB4;font-weight:700;font-size:15px;letter-spacing:0.14em;text-transform:uppercase;">Facebook / IG Post · 1080×1080 · Servicios</figcaption>
+    <div id="post-b" class="post" style="width:1080px;height:1080px;background:#F2E9D4;padding:76px;display:flex;flex-direction:column;">
+      <div style="display:flex;align-items:center;justify-content:space-between;">
+        <div>
+          <p style="margin:0;font-weight:800;font-size:19px;letter-spacing:0.22em;text-transform:uppercase;color:#B0512B;">Nuestros servicios</p>
+          <h2 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:66px;line-height:1;color:#2B1F15;margin:14px 0 0;">Lo que hacemos</h2>
+        </div>
+        <svg width="76" height="76" viewBox="0 0 100 100" fill="none" stroke="#B0512B" stroke-width="7" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M50 16 L88 78 Q92 86 82 86 L18 86 Q8 86 12 78 Z"></path><line x1="50" y1="40" x2="50" y2="64"></line><circle cx="50" cy="70" r="5" fill="#B0512B" stroke="none"></circle></svg>
+      </div>
+      <div style="margin-top:48px;display:grid;grid-template-columns:1fr 1fr;gap:26px 30px;">
+        <div style="display:flex;gap:20px;align-items:flex-start;"><div style="flex:none;width:64px;height:64px;border-radius:15px;background:#B0512B;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FBF2E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"></path><path d="M5 21V7l8-4v18"></path><path d="M19 21V11l-6-4"></path></svg></div><div><h3 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:29px;color:#2B1F15;margin:0;">Levantamiento topográfico</h3><p style="font-size:19px;color:#5C4A38;margin:6px 0 0;line-height:1.4;">Medición precisa de terrenos con estación total y GPS.</p></div></div>
+        <div style="display:flex;gap:20px;align-items:flex-start;"><div style="flex:none;width:64px;height:64px;border-radius:15px;background:#B0512B;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FBF2E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"></path><path d="M14 2v6h6"></path><path d="M9 15l2 2 4-4"></path></svg></div><div><h3 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:29px;color:#2B1F15;margin:0;">Levantamiento catastral</h3><p style="font-size:19px;color:#5C4A38;margin:6px 0 0;line-height:1.4;">Planos con validez ante catastro para tus trámites.</p></div></div>
+        <div style="display:flex;gap:20px;align-items:flex-start;"><div style="flex:none;width:64px;height:64px;border-radius:15px;background:#122A33;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FBF2E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19h16"></path><path d="M4 15l4-6 4 3 4-7 4 5"></path></svg></div><div><h3 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:29px;color:#2B1F15;margin:0;">Diseño de vialidad</h3><p style="font-size:19px;color:#5C4A38;margin:6px 0 0;line-height:1.4;">Trazado y perfiles de calles, caminos y accesos.</p></div></div>
+        <div style="display:flex;gap:20px;align-items:flex-start;"><div style="flex:none;width:64px;height:64px;border-radius:15px;background:#122A33;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FBF2E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"></path><path d="M5 21V8l7-5 7 5v13"></path><path d="M9 21v-6h6v6"></path></svg></div><div><h3 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:29px;color:#2B1F15;margin:0;">Diseño arquitectónico</h3><p style="font-size:19px;color:#5C4A38;margin:6px 0 0;line-height:1.4;">Planos de tu vivienda o proyecto, listos para construir.</p></div></div>
+        <div style="display:flex;gap:20px;align-items:flex-start;"><div style="flex:none;width:64px;height:64px;border-radius:15px;background:#B0512B;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FBF2E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20"></path><path d="M5 20V9l4-2v13"></path><path d="M13 20V5l6 3v12"></path></svg></div><div><h3 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:29px;color:#2B1F15;margin:0;">Control de obras</h3><p style="font-size:19px;color:#5C4A38;margin:6px 0 0;line-height:1.4;">Replanteo y control topográfico durante la construcción.</p></div></div>
+        <div style="display:flex;gap:20px;align-items:flex-start;"><div style="flex:none;width:64px;height:64px;border-radius:15px;background:#122A33;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FBF2E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 7h6"></path><path d="M9 11h6"></path><path d="M6 3h12a1 1 0 011 1v17l-4-2-3 2-3-2-4 2V4a1 1 0 011-1z"></path></svg></div><div><h3 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:29px;color:#2B1F15;margin:0;">Costos y presupuestos</h3><p style="font-size:19px;color:#5C4A38;margin:6px 0 0;line-height:1.4;">Estimación clara de materiales y costos de obra.</p></div></div>
+      </div>
+      <div style="margin-top:auto;padding-top:40px;border-top:2px solid rgba(43,31,21,0.14);display:flex;align-items:center;justify-content:space-between;gap:24px;">
+        <div><p style="margin:0;font-weight:700;font-size:18px;letter-spacing:0.14em;text-transform:uppercase;color:#B0512B;">Conócelos en detalle</p><p style="margin:6px 0 0;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:30px;color:#2B1F15;">martinezseguramultiserviciosni.com</p></div>
+        <div style="flex:none;background:#fff;border:2px solid #E4D6BC;border-radius:16px;padding:14px;"><div data-qr style="width:120px;height:120px;"></div></div>
+      </div>
+    </div>
+  </figure>
+
+  <!-- ===================== POST C · FB SQUARE · COBERTURA ===================== -->
+  <figure style="margin:0;display:flex;flex-direction:column;gap:16px;align-items:center;">
+    <figcaption style="color:#E9CBB4;font-weight:700;font-size:15px;letter-spacing:0.14em;text-transform:uppercase;">Facebook / IG Post · 1080×1080 · Cobertura</figcaption>
+    <div id="post-c" class="post" style="width:1080px;height:1080px;background:linear-gradient(158deg,#A64A26 0%,#7A3417 72%,#5F2811 100%);padding:82px;display:flex;flex-direction:column;">
+      <div class="grid-ovl"></div>
+      <div style="position:relative;">
+        <p style="margin:0;display:inline-flex;align-items:center;gap:12px;font-weight:800;font-size:19px;letter-spacing:0.2em;text-transform:uppercase;color:#F2A81E;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F2A81E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6 7-11a7 7 0 10-14 0c0 5 7 11 7 11z"></path><circle cx="12" cy="10" r="2.6"></circle></svg>Cobertura</p>
+        <h2 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:74px;line-height:0.98;color:#FBF2E0;margin:20px 0 0;">Trabajamos en<br>todo Nicaragua</h2>
+        <p style="font-size:28px;color:#F3DBC7;margin:22px 0 0;max-width:780px;line-height:1.45;">Llevamos nuestro equipo a tu terreno u obra, en los principales departamentos del país.</p>
+      </div>
+      <div style="position:relative;margin-top:44px;display:flex;flex-wrap:wrap;gap:16px;max-width:900px;">
+        <span style="background:rgba(251,242,224,0.12);border:1.5px solid rgba(251,242,224,0.35);color:#FBF2E0;border-radius:999px;padding:14px 28px;font-weight:700;font-size:26px;">Managua</span>
+        <span style="background:rgba(251,242,224,0.12);border:1.5px solid rgba(251,242,224,0.35);color:#FBF2E0;border-radius:999px;padding:14px 28px;font-weight:700;font-size:26px;">Masaya</span>
+        <span style="background:rgba(251,242,224,0.12);border:1.5px solid rgba(251,242,224,0.35);color:#FBF2E0;border-radius:999px;padding:14px 28px;font-weight:700;font-size:26px;">Granada</span>
+        <span style="background:rgba(251,242,224,0.12);border:1.5px solid rgba(251,242,224,0.35);color:#FBF2E0;border-radius:999px;padding:14px 28px;font-weight:700;font-size:26px;">León</span>
+        <span style="background:rgba(251,242,224,0.12);border:1.5px solid rgba(251,242,224,0.35);color:#FBF2E0;border-radius:999px;padding:14px 28px;font-weight:700;font-size:26px;">Chinandega</span>
+        <span style="background:rgba(251,242,224,0.12);border:1.5px solid rgba(251,242,224,0.35);color:#FBF2E0;border-radius:999px;padding:14px 28px;font-weight:700;font-size:26px;">Rivas</span>
+        <span style="background:rgba(251,242,224,0.12);border:1.5px solid rgba(251,242,224,0.35);color:#FBF2E0;border-radius:999px;padding:14px 28px;font-weight:700;font-size:26px;">Matagalpa</span>
+        <span style="background:rgba(251,242,224,0.12);border:1.5px solid rgba(251,242,224,0.35);color:#FBF2E0;border-radius:999px;padding:14px 28px;font-weight:700;font-size:26px;">Estelí</span>
+        <span style="background:rgba(251,242,224,0.12);border:1.5px solid rgba(251,242,224,0.35);color:#FBF2E0;border-radius:999px;padding:14px 28px;font-weight:700;font-size:26px;">Chontales</span>
+      </div>
+      <div style="position:relative;margin-top:32px;display:inline-flex;align-items:center;gap:14px;background:#122A33;border-radius:16px;padding:18px 26px;align-self:flex-start;">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#F2A81E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20"></path><path d="M12 2a15 15 0 010 20 15 15 0 010-20z"></path></svg>
+        <span style="color:#F7EFDC;font-weight:600;font-size:23px;">Consultoría también en <strong style="color:#F2A81E;">El Salvador</strong> y <strong style="color:#F2A81E;">Guatemala</strong></span>
+      </div>
+      <div style="position:relative;margin-top:auto;padding-top:36px;display:flex;align-items:center;justify-content:space-between;gap:24px;">
+        <div><p style="margin:0;font-weight:700;font-size:19px;letter-spacing:0.14em;text-transform:uppercase;color:#F2C79A;">¿Tu zona en la lista? Escríbenos</p><p style="margin:8px 0 0;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:31px;color:#FBF2E0;">martinezseguramultiserviciosni.com</p></div>
+        <div style="flex:none;background:#FBF2E0;border-radius:16px;padding:16px;"><div data-qr style="width:130px;height:130px;"></div></div>
+      </div>
+    </div>
+  </figure>
+
+  <!-- ===================== POST D · FB SQUARE · EDUCATIVO ===================== -->
+  <figure style="margin:0;display:flex;flex-direction:column;gap:16px;align-items:center;">
+    <figcaption style="color:#E9CBB4;font-weight:700;font-size:15px;letter-spacing:0.14em;text-transform:uppercase;">Facebook / IG Post · 1080×1080 · Educativo</figcaption>
+    <div id="post-d" class="post" style="width:1080px;height:1080px;background:#F2E9D4;padding:80px;display:flex;flex-direction:column;">
+      <span aria-hidden="true" style="position:absolute;top:0;left:0;width:100%;height:16px;background:#B0512B;"></span>
+      <p style="margin:0;font-weight:800;font-size:20px;letter-spacing:0.2em;text-transform:uppercase;color:#B0512B;">¿Sabías que?</p>
+      <h2 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:62px;line-height:1.02;color:#2B1F15;margin:16px 0 0;">¿Vas a comprar o<br>construir? Primero,<br>mídelo bien.</h2>
+      <p style="font-size:26px;color:#5C4A38;margin:22px 0 0;max-width:820px;line-height:1.45;">Un buen levantamiento topográfico te ahorra tiempo, dinero y conflictos. Esto es lo que ganas:</p>
+      <div style="margin-top:40px;display:flex;flex-direction:column;gap:26px;">
+        <div style="display:flex;gap:26px;align-items:center;"><span style="flex:none;width:74px;height:74px;border-radius:50%;background:#B0512B;color:#FBF2E0;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:36px;display:flex;align-items:center;justify-content:center;">1</span><div><h3 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:32px;color:#2B1F15;margin:0;">Linderos claros</h3><p style="font-size:22px;color:#5C4A38;margin:5px 0 0;line-height:1.4;">Sabes exactamente dónde empieza y termina tu propiedad.</p></div></div>
+        <div style="display:flex;gap:26px;align-items:center;"><span style="flex:none;width:74px;height:74px;border-radius:50%;background:#B0512B;color:#FBF2E0;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:36px;display:flex;align-items:center;justify-content:center;">2</span><div><h3 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:32px;color:#2B1F15;margin:0;">Planos con validez ante catastro</h3><p style="font-size:22px;color:#5C4A38;margin:5px 0 0;line-height:1.4;">Documentos listos para tus trámites legales y de banco.</p></div></div>
+        <div style="display:flex;gap:26px;align-items:center;"><span style="flex:none;width:74px;height:74px;border-radius:50%;background:#B0512B;color:#FBF2E0;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:36px;display:flex;align-items:center;justify-content:center;">3</span><div><h3 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:32px;color:#2B1F15;margin:0;">Evitas pérdidas y conflictos</h3><p style="font-size:22px;color:#5C4A38;margin:5px 0 0;line-height:1.4;">Menos sorpresas al construir o al comprar un terreno.</p></div></div>
+      </div>
+      <div style="margin-top:auto;padding-top:40px;border-top:2px solid rgba(43,31,21,0.14);display:flex;align-items:center;justify-content:space-between;gap:24px;">
+        <div><p style="margin:0;font-weight:700;font-size:19px;letter-spacing:0.14em;text-transform:uppercase;color:#B0512B;">Cotiza tu levantamiento</p><p style="margin:6px 0 0;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:30px;color:#2B1F15;">martinezseguramultiserviciosni.com</p></div>
+        <div style="flex:none;background:#fff;border:2px solid #E4D6BC;border-radius:16px;padding:14px;"><div data-qr style="width:120px;height:120px;"></div></div>
+      </div>
+    </div>
+  </figure>
+
+  <!-- ===================== STORY E · IG STORY · CTA ===================== -->
+  <figure style="margin:0;display:flex;flex-direction:column;gap:16px;align-items:center;">
+    <figcaption style="color:#E9CBB4;font-weight:700;font-size:15px;letter-spacing:0.14em;text-transform:uppercase;">IG / FB Story · 1080×1920 · Visita la web</figcaption>
+    <div id="story-e" class="post" style="width:1080px;height:1920px;background:radial-gradient(120% 80% at 50% 8%,#C05C31 0%,#A64A26 40%,#6E2F16 100%);padding:110px 96px;display:flex;flex-direction:column;align-items:center;text-align:center;">
+      <div class="grid-ovl"></div>
+      <div style="position:relative;display:flex;flex-direction:column;align-items:center;gap:24px;">
+        <svg width="120" height="120" viewBox="0 0 100 100" fill="none" stroke="#F7EFDC" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M50 16 L88 78 Q92 86 82 86 L18 86 Q8 86 12 78 Z"></path><line x1="50" y1="40" x2="50" y2="64"></line><circle cx="50" cy="70" r="5" fill="#F7EFDC" stroke="none"></circle></svg>
+        <div style="line-height:1;"><div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:40px;letter-spacing:0.02em;color:#F7EFDC;">MARTÍNEZ-SEGURA</div><div style="font-weight:700;font-size:19px;letter-spacing:0.42em;color:#F2C79A;margin-top:10px;">MULTISERVICIOS</div></div>
+      </div>
+      <div style="position:relative;margin-top:96px;">
+        <p style="margin:0;font-weight:800;font-size:24px;letter-spacing:0.22em;text-transform:uppercase;color:#F2A81E;">Ahora en línea</p>
+        <h1 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:96px;line-height:0.98;color:#FBF2E0;margin:24px 0 0;">Visita nuestro<br>sitio web</h1>
+        <p style="font-size:34px;color:#F3DBC7;margin:30px 0 0;line-height:1.45;">Conoce nuestros servicios, proyectos y cobertura en todo Nicaragua.</p>
+      </div>
+      <div style="position:relative;margin-top:80px;background:#FBF2E0;border-radius:34px;padding:52px;box-shadow:0 30px 60px rgba(0,0,0,0.32);">
+        <div data-qr style="width:440px;height:440px;"></div>
+      </div>
+      <p style="position:relative;margin:40px 0 0;font-weight:800;font-size:34px;letter-spacing:0.14em;text-transform:uppercase;color:#FBF2E0;">Escanea el código</p>
+      <p style="position:relative;margin:14px 0 0;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:40px;color:#F2A81E;">martinezseguramultiserviciosni.com</p>
+      <div style="position:relative;margin-top:auto;display:inline-flex;align-items:center;gap:16px;background:#122A33;border-radius:999px;padding:20px 38px;">
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="#7FD3A6" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.1-1.3A10 10 0 1012 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5-4.5-.1-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.1.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.5.1.3.7 1.1 1.4 1.8 1 .8 1.7 1.1 2 1.2.2.1.4.1.5-.1l.6-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.2.5.3.1.2.1.6-.1 1.2z"></path></svg>
+        <span style="color:#F7EFDC;font-weight:700;font-size:30px;">+505 8866 3659</span>
+      </div>
+    </div>
+  </figure>
+
+  <!-- ===================== STORY F · IG STORY · SERVICIOS ===================== -->
+  <figure style="margin:0;display:flex;flex-direction:column;gap:16px;align-items:center;">
+    <figcaption style="color:#E9CBB4;font-weight:700;font-size:15px;letter-spacing:0.14em;text-transform:uppercase;">IG / FB Story · 1080×1920 · Servicios</figcaption>
+    <div id="story-f" class="post" style="width:1080px;height:1920px;background:#F2E9D4;padding:104px 88px;display:flex;flex-direction:column;">
+      <span aria-hidden="true" style="position:absolute;top:0;left:0;width:100%;height:18px;background:#B0512B;"></span>
+      <div style="display:flex;align-items:center;gap:18px;">
+        <svg width="60" height="60" viewBox="0 0 100 100" fill="none" stroke="#B0512B" stroke-width="7" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M50 16 L88 78 Q92 86 82 86 L18 86 Q8 86 12 78 Z"></path><line x1="50" y1="40" x2="50" y2="64"></line><circle cx="50" cy="70" r="5" fill="#B0512B" stroke="none"></circle></svg>
+        <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:26px;color:#2B1F15;letter-spacing:0.01em;">MARTÍNEZ-SEGURA</div>
+      </div>
+      <p style="margin:56px 0 0;font-weight:800;font-size:23px;letter-spacing:0.2em;text-transform:uppercase;color:#B0512B;">Servicios de topografía e ingeniería</p>
+      <h2 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:76px;line-height:0.98;color:#2B1F15;margin:18px 0 0;">Todo para tu<br>terreno y obra</h2>
+      <div style="margin-top:56px;display:flex;flex-direction:column;gap:30px;">
+        <div style="display:flex;align-items:center;gap:26px;"><div style="flex:none;width:78px;height:78px;border-radius:18px;background:#B0512B;display:flex;align-items:center;justify-content:center;"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FBF2E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"></path><path d="M5 21V7l8-4v18"></path><path d="M19 21V11l-6-4"></path></svg></div><span style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:38px;color:#2B1F15;">Levantamiento topográfico</span></div>
+        <div style="display:flex;align-items:center;gap:26px;"><div style="flex:none;width:78px;height:78px;border-radius:18px;background:#122A33;display:flex;align-items:center;justify-content:center;"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FBF2E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"></path><path d="M14 2v6h6"></path><path d="M9 15l2 2 4-4"></path></svg></div><span style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:38px;color:#2B1F15;">Levantamiento catastral</span></div>
+        <div style="display:flex;align-items:center;gap:26px;"><div style="flex:none;width:78px;height:78px;border-radius:18px;background:#B0512B;display:flex;align-items:center;justify-content:center;"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FBF2E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19h16"></path><path d="M4 15l4-6 4 3 4-7 4 5"></path></svg></div><span style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:38px;color:#2B1F15;">Diseño de vialidad</span></div>
+        <div style="display:flex;align-items:center;gap:26px;"><div style="flex:none;width:78px;height:78px;border-radius:18px;background:#122A33;display:flex;align-items:center;justify-content:center;"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FBF2E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"></path><path d="M5 21V8l7-5 7 5v13"></path><path d="M9 21v-6h6v6"></path></svg></div><span style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:38px;color:#2B1F15;">Diseño arquitectónico</span></div>
+        <div style="display:flex;align-items:center;gap:26px;"><div style="flex:none;width:78px;height:78px;border-radius:18px;background:#B0512B;display:flex;align-items:center;justify-content:center;"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FBF2E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20"></path><path d="M5 20V9l4-2v13"></path><path d="M13 20V5l6 3v12"></path></svg></div><span style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:38px;color:#2B1F15;">Control de obras</span></div>
+        <div style="display:flex;align-items:center;gap:26px;"><div style="flex:none;width:78px;height:78px;border-radius:18px;background:#122A33;display:flex;align-items:center;justify-content:center;"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FBF2E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 7h6"></path><path d="M9 11h6"></path><path d="M6 3h12a1 1 0 011 1v17l-4-2-3 2-3-2-4 2V4a1 1 0 011-1z"></path></svg></div><span style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:38px;color:#2B1F15;">Costos y presupuestos</span></div>
+      </div>
+      <div style="margin-top:auto;background:#122A33;border-radius:26px;padding:44px 48px;display:flex;align-items:center;justify-content:space-between;gap:30px;">
+        <div><p style="margin:0;font-weight:700;font-size:22px;letter-spacing:0.14em;text-transform:uppercase;color:#F2A81E;">Escanea y cotiza hoy</p><p style="margin:12px 0 0;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:33px;color:#FBF2E0;line-height:1.15;">martinezsegura<br>multiserviciosni.com</p></div>
+        <div style="flex:none;background:#FBF2E0;border-radius:20px;padding:20px;"><div data-qr style="width:180px;height:180px;"></div></div>
+      </div>
+    </div>
+  </figure>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount(){ this.buildQR(); }
+  componentDidUpdate(){ this.buildQR(); }
+  buildQR(){
+    const url = 'https://martinezseguramultiserviciosni.com/';
+    const dark = '#17333D';
+    const run = () => {
+      if (!window.qrcode) { this._t = setTimeout(run, 80); return; }
+      document.querySelectorAll('[data-qr]').forEach(el => {
+        if (el.dataset.done) return;
+        const qr = window.qrcode(0, el.dataset.ecc || 'H');
+        qr.addData(el.dataset.url || url); qr.make();
+        el.innerHTML = qr.createSvgTag({ cellSize: 8, margin: 0, scalable: true });
+        const svg = el.querySelector('svg');
+        if (svg) {
+          svg.setAttribute('width', '100%');
+          svg.setAttribute('height', '100%');
+          svg.style.display = 'block';
+          svg.querySelectorAll('path,rect').forEach(n => {
+            const f = (n.getAttribute('fill') || '').toLowerCase();
+            if (f === '#000000' || f === 'black' || f === '#000') n.setAttribute('fill', dark);
+          });
+        }
+        el.dataset.done = '1';
+      });
+    };
+    run();
+  }
+}
+</script>
+</body>
+</html>
