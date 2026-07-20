@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portafolio de Proyectos de Topografía en Nicaragua | Martínez-Segura</title>
+<meta name="description" content="Portafolio de levantamientos topográficos, replanteo y control de obra realizados en Nicaragua: torres, naves industriales, fundaciones y tuberías pluviales.">
+<link rel="canonical" href="https://martinezseguramultiserviciosni.com/portafolio/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Portafolio de Proyectos de Topografía en Nicaragua">
+<meta property="og:description" content="Trabajo real en campo y obra: levantamientos, replanteo y control topográfico en Nicaragua.">
+<meta property="og:url" content="https://martinezseguramultiserviciosni.com/portafolio/">
+<meta property="og:image" content="https://martinezseguramultiserviciosni.com/assets/portfolio/01-levantamiento-cerro.jpeg">
+<meta name="robots" content="index,follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing:border-box; }
+  html,body { margin:0; padding:0; }
+  html { scroll-behavior:smooth; }
+  body { font-family:'Hanken Grotesk',system-ui,sans-serif; color:#34261A; background:#F2E9D4; -webkit-font-smoothing:antialiased; overflow-x:hidden; }
+  ::selection { background:#B0512B; color:#FBF2E0; }
+  a { color:#2F5D68; } a:hover { color:#8E3F20; }
+  :focus-visible { outline:3px solid rgba(47,93,104,0.6); outline-offset:2px; border-radius:3px; }
+  .skip { position:absolute;left:-999px;top:0;z-index:200;background:#B0512B;color:#FBF2E0;padding:12px 18px;border-radius:0 0 8px 0;font-weight:700;text-decoration:none; }
+  .skip:focus { left:0; }
+  @media (max-width:759px){ .ms-slide { aspect-ratio:4/5 !important; } .ms-caprow { flex-wrap:wrap; } .ms-caprow > div:first-child { flex-basis:100%; } }
+</style>
+</helmet>
+
+<a href="#contenido" class="skip">Saltar al contenido</a>
+<dc-import name="Header" active="portfolio" hint-size="100%,72px"></dc-import>
+
+<main id="contenido">
+  <nav aria-label="Ruta de navegación" style="max-width:1180px;margin:0 auto;padding:20px clamp(16px,5vw,32px) 0;font-size:13.5px;color:#6B5844;"><a href="index.dc.html" style="color:#6B5844;text-decoration:none;" style-hover="color:#B0512B;">Inicio</a> <span style="color:#B0A38C;">/</span> <span style="color:#B0512B;font-weight:600;">Portafolio</span></nav>
+
+  <section style="max-width:1180px;margin:0 auto;padding:clamp(30px,5vw,48px) clamp(16px,5vw,32px) 0;text-align:center;">
+    <p style="margin:0;font-weight:700;font-size:12px;letter-spacing:0.22em;text-transform:uppercase;color:#B0512B;">Proyectos</p>
+    <h1 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:clamp(30px,4vw,48px);color:#2B1F15;margin:12px auto 0;max-width:720px;line-height:1.06;">Nuestro trabajo en campo y obra</h1>
+    <div style="width:72px;height:4px;background:#B0512B;border-radius:2px;margin:18px auto 0;"></div>
+    <p style="font-size:17px;color:#4E3D2C;line-height:1.6;max-width:600px;margin:16px auto 0;">Una muestra de levantamientos topográficos, replanteos y control de obra realizados en Nicaragua.</p>
+  </section>
+
+  <section aria-label="Galería de proyectos" style="max-width:1180px;margin:0 auto;padding:clamp(28px,4vw,40px) clamp(16px,5vw,32px) 0;">
+    <figure style="margin:0;">
+      <div class="ms-slide" style="position:relative;border-radius:14px;overflow:hidden;border:1px solid rgba(43,31,21,0.16);box-shadow:0 18px 40px rgba(43,31,21,0.14);aspect-ratio:16/10;background:#E5D3AC;">
+        <img src="{{ curImg }}" alt="{{ curAlt }}" style="width:100%;height:100%;object-fit:cover;display:block;">
+        <span style="position:absolute;top:16px;right:16px;background:rgba(14,33,41,0.78);color:#F4EAD2;border-radius:999px;padding:7px 14px;font-weight:700;font-size:13px;">{{ counter }}</span>
+      </div>
+      <figcaption class="ms-caprow" style="display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:16px;">
+        <div style="min-width:0;flex:1;">
+          <sc-if value="{{ hasCaption }}" hint-placeholder-val="{{ true }}">
+            <span style="display:inline-block;font-weight:700;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#B0512B;">{{ curCat }}</span>
+            <span style="display:block;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:18px;color:#2B1F15;margin-top:4px;">{{ curTitle }}</span>
+            <span style="display:block;font-size:14.5px;color:#6B5844;line-height:1.5;margin-top:3px;">{{ curDesc }}</span>
+          </sc-if>
+          <sc-if value="{{ noCaption }}" hint-placeholder-val="{{ false }}">
+            <span style="display:inline-block;font-weight:700;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#2F5D68;">Obras</span>
+            <span style="display:block;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:18px;color:#2B1F15;margin-top:4px;">Ejecución y control de obra</span>
+          </sc-if>
+        </div>
+        <div style="display:flex;gap:10px;flex:none;">
+          <button sc-camel-on-click="{{ prev }}" aria-label="Proyecto anterior" style="width:46px;height:46px;border-radius:50%;background:#FFFDF6;border:1.5px solid rgba(43,31,21,0.25);color:#2B1F15;font-size:18px;font-weight:700;cursor:pointer;" style-hover="border-color:#B0512B;color:#B0512B;">←</button>
+          <button sc-camel-on-click="{{ next }}" aria-label="Proyecto siguiente" style="width:46px;height:46px;border-radius:50%;background:#B0512B;border:1.5px solid #B0512B;color:#FBF2E0;font-size:18px;font-weight:700;cursor:pointer;box-shadow:0 6px 14px rgba(176,81,43,0.3);" style-hover="background:#8E3F20;">→</button>
+        </div>
+      </figcaption>
+    </figure>
+
+    <div role="list" aria-label="Miniaturas" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:10px;margin-top:22px;">
+      <sc-for list="{{ items }}" as="it" hint-placeholder-count="8">
+        <button role="listitem" sc-camel-on-click="{{ it.select }}" aria-label="{{ it.label }}" style="padding:0;border-radius:9px;overflow:hidden;border:2px solid {{ it.border }};opacity:{{ it.opacity }};cursor:pointer;background:none;aspect-ratio:4/3;transition:opacity .12s ease,border-color .12s ease;" style-hover="opacity:1;">
+          <img src="{{ it.img }}" alt="" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
+        </button>
+      </sc-for>
+    </div>
+  </section>
+
+  <section aria-label="Contacto" style="margin-top:clamp(40px,6vw,64px);background:linear-gradient(135deg,#8E3F20 0%,#6E2F16 100%);color:#F4EAD2;position:relative;overflow:hidden;">
+    <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(244,234,210,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(244,234,210,0.05) 1px,transparent 1px);background-size:44px 44px;pointer-events:none;"></div>
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(40px,8vw,58px) clamp(16px,5vw,32px);text-align:center;position:relative;">
+      <h2 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:clamp(24px,3.2vw,36px);color:#FBF2E0;margin:0 auto;max-width:640px;line-height:1.12;">¿Tienes un proyecto similar?</h2>
+      <p style="font-size:16px;color:#F0D9C2;max-width:520px;margin:14px auto 0;line-height:1.6;">Cuéntanos qué necesitas y te enviamos una cotización a tu medida.</p>
+      <a href="https://wa.me/17608830683" target="_blank" rel="noopener" style="display:inline-block;margin-top:26px;background:#F2A81E;color:#3A1D0C;text-decoration:none;border-radius:8px;padding:15px 30px;font-weight:800;font-size:15px;box-shadow:0 10px 24px rgba(0,0,0,0.25);" style-hover="background:#FFB93D;">Escríbenos por WhatsApp</a>
+    </div>
+  </section>
+</main>
+
+<dc-import name="Footer" hint-size="100%,360px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { idx: 0 };
+  static ITEMS = [
+    { img:'assets/portfolio/01-levantamiento-cerro.jpeg', cat:'Topografía', title:'Control de verticalidad de torre', desc:'Control de verticalidad para torres de telecomunicaciones, El Naranjal, Matagalpa.' },
+    { img:'assets/portfolio/02-torre-camino.jpeg', cat:'Topografía', title:'Control de verticalidad de torre', desc:'Control de verticalidad para torres de telecomunicaciones, San Marcos, Matiguás.' },
+    { img:'assets/portfolio/03-estacion-total-leica.jpeg', cat:'Topografía', title:'Levantamiento de poligonal', desc:'Levantamiento de poligonal, Rotonda El Periodista, Managua.' },
+    { img:'assets/portfolio/05-nave-industrial.jpeg', cat:'Obras', title:'Control de niveles para losas', desc:'Control de niveles terminados para llena de losas en naves industriales, Ciudad Jardín, Managua.' },
+    { img:'assets/portfolio/06-replanteo-fundaciones.jpeg', cat:'Obras', title:'Replanteo de zapatas y ejes', desc:'Replanteo de zapatas y ejes para colocación de acero y formaletas en fundaciones de bodegas, Granada.' },
+    { img:'assets/portfolio/07-movimiento-tierra.jpeg', cat:'Obras', title:'Ubicación de ejes en fundaciones', desc:'Ubicación de ejes para colocación de acero en fundaciones, Carretera Norte, Managua.' },
+    { img:'assets/portfolio/10-tuberias-pluviales-chinandega.png', cat:'Obras', title:'Trazo y corte para tuberías pluviales', desc:'Trazo y corte para excavación y colocación de tuberías de aguas pluviales, Ingenio San Antonio, Chinandega.' },
+    { img:'assets/portfolio/11-obra-01.jpeg' }, { img:'assets/portfolio/12-obra-02.jpeg' }, { img:'assets/portfolio/13-obra-03.jpeg' },
+    { img:'assets/portfolio/14-obra-04.jpeg', cat:'Estudios de suelo', title:'Estudio de suelo', desc:'Estudio de suelo realizado en Cosmapa, Chinandega.' }, { img:'assets/portfolio/15-obra-05.jpeg' }, { img:'assets/portfolio/16-obra-06.jpeg' },
+    { img:'assets/portfolio/17-obra-07.jpeg' }, { img:'assets/portfolio/18-obra-08.jpeg', cat:'Supervisión de obra', title:'Supervisión y administración de obra', desc:'Supervisión y administración de obra en Ciudad de Guatemala, Guatemala.' }, { img:'assets/portfolio/19-obra-09.jpeg', cat:'Supervisión de obra', title:'Supervisión de obra — AIFA', desc:'Supervisión de obra en el Aeropuerto Internacional Felipe Ángeles (AIFA), Ciudad de México, México.' },
+    { img:'assets/portfolio/20-obra-10.jpeg' }, { img:'assets/portfolio/21-obra-11.jpeg' }, { img:'assets/portfolio/22-obra-12.jpeg' },
+    { img:'assets/portfolio/23-obra-13.jpeg' }, { img:'assets/portfolio/24-obra-14.jpeg' }, { img:'assets/portfolio/25-obra-15.jpeg' },
+    { img:'assets/portfolio/26-obra-16.jpeg' }, { img:'assets/portfolio/27-obra-17.jpeg' }
+  ];
+  renderVals(){
+    const L = Component.ITEMS, n = L.length;
+    const idx = Math.min(this.state.idx, n - 1);
+    const cur = L[idx];
+    return {
+      curImg: cur.img,
+      curAlt: cur.title ? (cur.title + ' — ' + cur.desc) : 'Proyecto de control y ejecución de obra en Nicaragua',
+      curCat: cur.cat || '', curTitle: cur.title || '', curDesc: cur.desc || '',
+      hasCaption: !!cur.title, noCaption: !cur.title,
+      counter: (idx + 1) + ' / ' + n,
+      prev: () => this.setState({ idx: (idx - 1 + n) % n }),
+      next: () => this.setState({ idx: (idx + 1) % n }),
+      items: L.map((it, i) => ({
+        img: it.img,
+        label: 'Ver proyecto ' + (i + 1),
+        select: () => this.setState({ idx: i }),
+        border: i === idx ? '#B0512B' : 'rgba(43,31,21,0.15)',
+        opacity: i === idx ? '1' : '0.55'
+      }))
+    };
+  }
+}
+</script>
+</body>
+</html>
