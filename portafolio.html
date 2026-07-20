@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="preload" as="image" href="assets/portfolio/01-levantamiento-cerro-o.jpg" fetchpriority="high">
 <script src="./support.js"></script>
 </head>
 <body>
@@ -17,7 +19,7 @@
 <meta property="og:title" content="Portafolio de Proyectos de Topografía en Nicaragua">
 <meta property="og:description" content="Trabajo real en campo y obra: levantamientos, replanteo y control topográfico en Nicaragua.">
 <meta property="og:url" content="https://martinezseguramultiserviciosni.com/portafolio/">
-<meta property="og:image" content="https://martinezseguramultiserviciosni.com/assets/portfolio/01-levantamiento-cerro.jpeg">
+<meta property="og:image" content="https://martinezseguramultiserviciosni.com/assets/portfolio/01-levantamiento-cerro-o.jpg">
 <meta name="robots" content="index,follow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
@@ -40,7 +42,7 @@
 <dc-import name="Header" active="portfolio" hint-size="100%,72px"></dc-import>
 
 <main id="contenido">
-  <nav aria-label="Ruta de navegación" style="max-width:1180px;margin:0 auto;padding:20px clamp(16px,5vw,32px) 0;font-size:13.5px;color:#6B5844;"><a href="index.dc.html" style="color:#6B5844;text-decoration:none;" style-hover="color:#B0512B;">Inicio</a> <span style="color:#B0A38C;">/</span> <span style="color:#B0512B;font-weight:600;">Portafolio</span></nav>
+  <nav aria-label="Ruta de navegación" style="max-width:1180px;margin:0 auto;padding:20px clamp(16px,5vw,32px) 0;font-size:13.5px;color:#6B5844;"><a href="index.html" style="color:#6B5844;text-decoration:none;" style-hover="color:#B0512B;">Inicio</a> <span style="color:#B0A38C;">/</span> <span style="color:#B0512B;font-weight:600;">Portafolio</span></nav>
 
   <section style="max-width:1180px;margin:0 auto;padding:clamp(30px,5vw,48px) clamp(16px,5vw,32px) 0;text-align:center;">
     <p style="margin:0;font-weight:700;font-size:12px;letter-spacing:0.22em;text-transform:uppercase;color:#B0512B;">Proyectos</p>
@@ -99,19 +101,19 @@
 class Component extends DCLogic {
   state = { idx: 0 };
   static ITEMS = [
-    { img:'assets/portfolio/01-levantamiento-cerro.jpeg', cat:'Topografía', title:'Control de verticalidad de torre', desc:'Control de verticalidad para torres de telecomunicaciones, El Naranjal, Matagalpa.' },
-    { img:'assets/portfolio/02-torre-camino.jpeg', cat:'Topografía', title:'Control de verticalidad de torre', desc:'Control de verticalidad para torres de telecomunicaciones, San Marcos, Matiguás.' },
+    { img:'assets/portfolio/01-levantamiento-cerro-o.jpg', cat:'Topografía', title:'Control de verticalidad de torre', desc:'Control de verticalidad para torres de telecomunicaciones, El Naranjal, Matagalpa.' },
+    { img:'assets/portfolio/02-torre-camino-o.jpg', cat:'Topografía', title:'Control de verticalidad de torre', desc:'Control de verticalidad para torres de telecomunicaciones, San Marcos, Matiguás.' },
     { img:'assets/portfolio/03-estacion-total-leica.jpeg', cat:'Topografía', title:'Levantamiento de poligonal', desc:'Levantamiento de poligonal, Rotonda El Periodista, Managua.' },
-    { img:'assets/portfolio/05-nave-industrial.jpeg', cat:'Obras', title:'Control de niveles para losas', desc:'Control de niveles terminados para llena de losas en naves industriales, Ciudad Jardín, Managua.' },
-    { img:'assets/portfolio/06-replanteo-fundaciones.jpeg', cat:'Obras', title:'Replanteo de zapatas y ejes', desc:'Replanteo de zapatas y ejes para colocación de acero y formaletas en fundaciones de bodegas, Granada.' },
-    { img:'assets/portfolio/07-movimiento-tierra.jpeg', cat:'Obras', title:'Ubicación de ejes en fundaciones', desc:'Ubicación de ejes para colocación de acero en fundaciones, Carretera Norte, Managua.' },
-    { img:'assets/portfolio/10-tuberias-pluviales-chinandega.png', cat:'Obras', title:'Trazo y corte para tuberías pluviales', desc:'Trazo y corte para excavación y colocación de tuberías de aguas pluviales, Ingenio San Antonio, Chinandega.' },
-    { img:'assets/portfolio/11-obra-01.jpeg' }, { img:'assets/portfolio/12-obra-02.jpeg' }, { img:'assets/portfolio/13-obra-03.jpeg' },
-    { img:'assets/portfolio/14-obra-04.jpeg', cat:'Estudios de suelo', title:'Estudio de suelo', desc:'Estudio de suelo realizado en Cosmapa, Chinandega.' }, { img:'assets/portfolio/15-obra-05.jpeg' }, { img:'assets/portfolio/16-obra-06.jpeg' },
-    { img:'assets/portfolio/17-obra-07.jpeg' }, { img:'assets/portfolio/18-obra-08.jpeg', cat:'Supervisión de obra', title:'Supervisión y administración de obra', desc:'Supervisión y administración de obra en Ciudad de Guatemala, Guatemala.' }, { img:'assets/portfolio/19-obra-09.jpeg', cat:'Supervisión de obra', title:'Supervisión de obra — AIFA', desc:'Supervisión de obra en el Aeropuerto Internacional Felipe Ángeles (AIFA), Ciudad de México, México.' },
-    { img:'assets/portfolio/20-obra-10.jpeg' }, { img:'assets/portfolio/21-obra-11.jpeg' }, { img:'assets/portfolio/22-obra-12.jpeg' },
-    { img:'assets/portfolio/23-obra-13.jpeg' }, { img:'assets/portfolio/24-obra-14.jpeg' }, { img:'assets/portfolio/25-obra-15.jpeg' },
-    { img:'assets/portfolio/26-obra-16.jpeg' }, { img:'assets/portfolio/27-obra-17.jpeg' }
+    { img:'assets/portfolio/05-nave-industrial-o.jpg', cat:'Obras', title:'Control de niveles para losas', desc:'Control de niveles terminados para llena de losas en naves industriales, Ciudad Jardín, Managua.' },
+    { img:'assets/portfolio/06-replanteo-fundaciones-o.jpg', cat:'Obras', title:'Replanteo de zapatas y ejes', desc:'Replanteo de zapatas y ejes para colocación de acero y formaletas en fundaciones de bodegas, Granada.' },
+    { img:'assets/portfolio/07-movimiento-tierra-o.jpg', cat:'Obras', title:'Ubicación de ejes en fundaciones', desc:'Ubicación de ejes para colocación de acero en fundaciones, Carretera Norte, Managua.' },
+    { img:'assets/portfolio/10-tuberias-pluviales-chinandega-o.jpg', cat:'Obras', title:'Trazo y corte para tuberías pluviales', desc:'Trazo y corte para excavación y colocación de tuberías de aguas pluviales, Ingenio San Antonio, Chinandega.' },
+    { img:'assets/portfolio/11-obra-01-o.jpg' }, { img:'assets/portfolio/12-obra-02-o.jpg' }, { img:'assets/portfolio/13-obra-03-o.jpg' },
+    { img:'assets/portfolio/14-obra-04-o.jpg', cat:'Estudios de suelo', title:'Estudio de suelo', desc:'Estudio de suelo realizado en Cosmapa, Chinandega.' }, { img:'assets/portfolio/15-obra-05-o.jpg' }, { img:'assets/portfolio/16-obra-06-o.jpg' },
+    { img:'assets/portfolio/17-obra-07-o.jpg' }, { img:'assets/portfolio/18-obra-08-o.jpg', cat:'Supervisión de obra', title:'Supervisión y administración de obra', desc:'Supervisión y administración de obra en Ciudad de Guatemala, Guatemala.' }, { img:'assets/portfolio/19-obra-09-o.jpg', cat:'Supervisión de obra', title:'Supervisión de obra — AIFA', desc:'Supervisión de obra en el Aeropuerto Internacional Felipe Ángeles (AIFA), Ciudad de México, México.' },
+    { img:'assets/portfolio/20-obra-10-o.jpg' }, { img:'assets/portfolio/21-obra-11-o.jpg' }, { img:'assets/portfolio/22-obra-12-o.jpg' },
+    { img:'assets/portfolio/23-obra-13-o.jpg' }, { img:'assets/portfolio/24-obra-14-o.jpg' }, { img:'assets/portfolio/25-obra-15-o.jpg' },
+    { img:'assets/portfolio/26-obra-16-o.jpg' }, { img:'assets/portfolio/27-obra-17-o.jpg' }
   ];
   renderVals(){
     const L = Component.ITEMS, n = L.length;
