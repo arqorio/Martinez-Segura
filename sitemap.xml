@@ -1,7 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://martinezseguramultiserviciosni.com/</loc>
-    <priority>1.0</priority>
-  </url>
+  <url><loc>https://martinezseguramultiserviciosni.com/</loc><lastmod>2026-07-17</lastmod><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://martinezseguramultiserviciosni.com/servicios/</loc><lastmod>2026-07-17</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://martinezseguramultiserviciosni.com/levantamiento-catastral/</loc><lastmod>2026-07-17</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://martinezseguramultiserviciosni.com/levantamiento-topografico/</loc><lastmod>2026-07-17</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://martinezseguramultiserviciosni.com/control-de-obras/</loc><lastmod>2026-07-17</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://martinezseguramultiserviciosni.com/diseno-vialidad/</loc><lastmod>2026-07-17</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://martinezseguramultiserviciosni.com/costos-presupuestos/</loc><lastmod>2026-07-17</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://martinezseguramultiserviciosni.com/diseno-arquitectonico/</loc><lastmod>2026-07-17</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://martinezseguramultiserviciosni.com/portafolio/</loc><lastmod>2026-07-17</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://martinezseguramultiserviciosni.com/cobertura/</loc><lastmod>2026-07-17</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://martinezseguramultiserviciosni.com/nosotros/</loc><lastmod>2026-07-17</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://martinezseguramultiserviciosni.com/contacto/</loc><lastmod>2026-07-17</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://martinezseguramultiserviciosni.com/topografo-managua/</loc><lastmod>2026-07-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://martinezseguramultiserviciosni.com/topografo-masaya/</loc><lastmod>2026-07-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://martinezseguramultiserviciosni.com/topografo-granada/</loc><lastmod>2026-07-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://martinezseguramultiserviciosni.com/topografo-leon/</loc><lastmod>2026-07-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://martinezseguramultiserviciosni.com/topografo-chinandega/</loc><lastmod>2026-07-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://martinezseguramultiserviciosni.com/topografo-rivas/</loc><lastmod>2026-07-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://martinezseguramultiserviciosni.com/topografo-matagalpa/</loc><lastmod>2026-07-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://martinezseguramultiserviciosni.com/topografo-esteli/</loc><lastmod>2026-07-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://martinezseguramultiserviciosni.com/topografo-chontales/</loc><lastmod>2026-07-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://martinezseguramultiserviciosni.com/topografo-el-salvador/</loc><lastmod>2026-07-19</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://martinezseguramultiserviciosni.com/topografo-guatemala/</loc><lastmod>2026-07-19</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
 </urlset>
