@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
 <meta charset="utf-8">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link rel="preload" as="image" href="assets/portfolio/28-cubierta-acero.png" fetchpriority="high">
+<link rel="preload" as="image" href="assets/portfolio/28-cubierta-acero.jpg" fetchpriority="high">
 <script src="./support.js"></script>
 </head>
 <body>
@@ -21,11 +21,13 @@
 <meta property="og:title" content="Portafolio de Proyectos de Topografía en Nicaragua">
 <meta property="og:description" content="Trabajo real en campo y obra: levantamientos, replanteo y control topográfico en Nicaragua.">
 <meta property="og:url" content="https://martinezseguramultiserviciosni.com/portafolio">
-<meta property="og:image" content="https://martinezseguramultiserviciosni.com/assets/portfolio/28-cubierta-acero.png">
+<meta property="og:image" content="https://martinezseguramultiserviciosni.com/assets/portfolio/28-cubierta-acero.jpg">
 <meta name="robots" content="index,follow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
 <style>
   * { box-sizing:border-box; }
   html,body { margin:0; padding:0; }
@@ -104,7 +106,7 @@
 class Component extends DCLogic {
   state = { idx: 0 };
   static ITEMS = [
-    { img:'assets/portfolio/28-cubierta-acero.png', cat:'Topografía', title:'Control topográfico de cubierta metálica', desc:'Replanteo, alineación y control de verticalidad para el montaje de la estructura de una cubierta metálica con estación total.' },
+    { img:'assets/portfolio/28-cubierta-acero.jpg', cat:'Topografía', title:'Control topográfico de cubierta metálica', desc:'Replanteo, alineación y control de verticalidad para el montaje de la estructura de una cubierta metálica con estación total.' },
     { img:'assets/portfolio/29-corte-estructura.jpg', cat:'Estructuras metálicas', title:'Fabricación de estructuras de acero', desc:'Corte, armado y soldadura de vigas de acero para estructura metálica en obra.' },
     { img:'assets/portfolio/30-nave-arco.jpg', cat:'Estructuras metálicas', title:'Montaje de nave de acero', desc:'Montaje de estructura metálica de gran claro para nave industrial, zona norte de Nicaragua.' },
     { img:'assets/portfolio/31-mojon-geodesico-chinandega.jpeg', cat:'Geodesia', title:'Instalación de mojón geodésico', desc:'Instalación y georreferenciación de mojón geodésico con receptor GNSS, Chinandega.' },
