@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="utf-8">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
+</helmet>
+<header style="position:sticky;top:0;z-index:50;background:rgba(16,33,41,0.97);backdrop-filter:blur(10px);border-bottom:1px solid rgba(244,234,210,0.14);">
+  <div style="max-width:1180px;margin:0 auto;padding:13px clamp(16px,5vw,32px);display:flex;align-items:center;justify-content:space-between;gap:16px;">
+    <a href="/en/" aria-label="Martínez-Segura Surveying — Home" style="display:flex;align-items:center;gap:11px;text-decoration:none;flex:none;">
+      <svg width="34" height="30" viewBox="0 0 38 34" fill="none" aria-hidden="true" style="flex:none;"><path d="M19 3 L34 28 C35 30 34 31 32 31 L6 31 C4 31 3 30 4 28 Z" stroke="#E0703F" stroke-width="2.4" stroke-linejoin="round"></path><circle cx="19" cy="22" r="2.4" fill="#E0703F"></circle></svg>
+      <span style="text-align:left;line-height:1;display:block;">
+        <span style="display:block;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:clamp(14px,4.2vw,19px);letter-spacing:0.01em;color:#F7EFDC;white-space:nowrap;">MARTÍNEZ-SEGURA</span>
+        <span style="display:block;font-family:'Hanken Grotesk',sans-serif;font-weight:600;font-size:clamp(9px,2.3vw,10px);letter-spacing:0.24em;color:#E8A33D;margin-top:4px;text-transform:uppercase;">Surveying · Engineering</span>
+      </span>
+    </a>
+
+    <nav aria-label="Primary" style="display:{{ navDisplay }};align-items:center;gap:clamp(12px,1.7vw,22px);">
+      <a href="/en/" style="position:relative;text-decoration:none;font-family:'Hanken Grotesk',sans-serif;font-weight:600;font-size:15px;color:{{ cHome }};padding:4px 0;">Home<span style="position:absolute;left:0;right:0;bottom:-5px;height:2px;border-radius:2px;background:{{ uHome }};"></span></a>
+      <a href="/en/services" style="position:relative;text-decoration:none;font-family:'Hanken Grotesk',sans-serif;font-weight:600;font-size:15px;color:{{ cServ }};padding:4px 0;">Services<span style="position:absolute;left:0;right:0;bottom:-5px;height:2px;border-radius:2px;background:{{ uServ }};"></span></a>
+      <a href="/en/contact" style="position:relative;text-decoration:none;font-family:'Hanken Grotesk',sans-serif;font-weight:600;font-size:15px;color:{{ cContact }};padding:4px 0;">Contact<span style="position:absolute;left:0;right:0;bottom:-5px;height:2px;border-radius:2px;background:{{ uContact }};"></span></a>
+      <a href="/" hreflang="es" style="display:inline-flex;align-items:center;gap:6px;text-decoration:none;font-family:'Hanken Grotesk',sans-serif;font-weight:700;font-size:13px;color:#C9D6DA;border:1px solid rgba(244,234,210,0.28);border-radius:999px;padding:6px 12px;" style-hover="color:#F2A81E;border-color:#F2A81E;">ES</a>
+      <a href="https://wa.me/17608830683" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;text-decoration:none;background:#B0512B;color:#FBF2E0;border-radius:7px;padding:10px 18px;font-family:'Hanken Grotesk',sans-serif;font-weight:700;font-size:14px;box-shadow:0 6px 16px rgba(176,81,43,0.3);" style-hover="background:#8E3F20;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#FBF2E0" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.1-1.3A10 10 0 1012 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5-4.5-.1-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.1.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.5.1.3.7 1.1 1.4 1.8 1 .8 1.7 1.1 2 1.2.2.1.4.1.5-.1l.6-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.2.5.3.1.2.1.6-.1 1.2z"></path></svg>Get a quote</a>
+    </nav>
+
+    <button sc-camel-on-click="{{ toggleMenu }}" aria-label="Open menu" style="display:{{ burgerDisplay }};flex-direction:column;justify-content:center;gap:5px;width:44px;height:44px;background:none;border:1.5px solid rgba(244,234,210,0.35);border-radius:9px;cursor:pointer;padding:0 12px;flex:none;">
+      <span style="display:block;height:2px;background:#EADFC8;border-radius:2px;"></span>
+      <span style="display:block;height:2px;background:#EADFC8;border-radius:2px;"></span>
+      <span style="display:block;height:2px;background:#EADFC8;border-radius:2px;"></span>
+    </button>
+  </div>
+
+  <sc-if value="{{ showMobileMenu }}" hint-placeholder-val="{{ false }}">
+  <nav aria-label="Mobile" style="border-top:1px solid rgba(244,234,210,0.14);padding:6px clamp(16px,5vw,32px) 14px;display:flex;flex-direction:column;">
+    <a href="/en/" style="text-decoration:none;border-bottom:1px solid rgba(244,234,210,0.1);font-family:'Hanken Grotesk',sans-serif;font-weight:600;font-size:18px;color:{{ cHome }};padding:16px 2px;">Home</a>
+    <a href="/en/services" style="text-decoration:none;border-bottom:1px solid rgba(244,234,210,0.1);font-family:'Hanken Grotesk',sans-serif;font-weight:600;font-size:18px;color:{{ cServ }};padding:16px 2px;">Services</a>
+    <a href="/en/contact" style="text-decoration:none;border-bottom:1px solid rgba(244,234,210,0.1);font-family:'Hanken Grotesk',sans-serif;font-weight:600;font-size:18px;color:{{ cContact }};padding:16px 2px;">Contact</a>
+    <a href="/" hreflang="es" style="text-decoration:none;border-bottom:1px solid rgba(244,234,210,0.1);font-family:'Hanken Grotesk',sans-serif;font-weight:600;font-size:18px;color:#C9D6DA;padding:16px 2px;">Español</a>
+    <a href="https://wa.me/17608830683" target="_blank" rel="noopener" style="text-align:center;margin-top:12px;text-decoration:none;background:#B0512B;color:#FBF2E0;border-radius:8px;padding:16px;font-family:'Hanken Grotesk',sans-serif;font-weight:700;font-size:16px;">Get a quote on WhatsApp</a>
+  </nav>
+  </sc-if>
+</header>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1180,&quot;height&quot;:72},&quot;active&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;home&quot;,&quot;services&quot;,&quot;contact&quot;],&quot;default&quot;:&quot;home&quot;,&quot;tsType&quot;:&quot;'home'|'services'|'contact'&quot;}}">
+class Component extends DCLogic {
+  constructor(props){ super(props); this.state = { menuOpen:false, isMobile: Component._mob() }; this._r = ()=> this.setState({ isMobile: Component._mob() }); }
+  static _mob(){ if (typeof window==='undefined') return false; return window.innerWidth < 1010; }
+  componentDidMount(){ if (typeof window!=='undefined') window.addEventListener('resize', this._r); }
+  componentWillUnmount(){ if (typeof window!=='undefined') window.removeEventListener('resize', this._r); }
+  renderVals(){
+    const active = (this.props && this.props.active) || 'home';
+    const on = '#F7EFDC', off = '#C9D6DA', gold = '#F2A81E', clear = 'transparent';
+    const mob = this.state.isMobile;
+    const col = (k)=> active===k ? on : off;
+    const un = (k)=> active===k ? gold : clear;
+    return {
+      toggleMenu: ()=> this.setState(s=>({ menuOpen: !s.menuOpen })),
+      showMobileMenu: mob && this.state.menuOpen,
+      navDisplay: mob ? 'none' : 'flex',
+      burgerDisplay: mob ? 'flex' : 'none',
+      cHome: col('home'), cServ: col('services'), cContact: col('contact'),
+      uHome: un('home'), uServ: un('services'), uContact: un('contact')
+    };
+  }
+}
+</script>
+</body>
+</html>
