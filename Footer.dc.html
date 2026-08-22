@@ -15,21 +15,21 @@
       <div style="max-width:340px;">
         <div style="display:flex;align-items:center;gap:12px;">
           <svg width="34" height="30" viewBox="0 0 38 34" fill="none" aria-hidden="true"><path d="M19 3 L34 28 C35 30 34 31 32 31 L6 31 C4 31 3 30 4 28 Z" stroke="#D9824E" stroke-width="2.4" stroke-linejoin="round"></path><circle cx="19" cy="22" r="2.4" fill="#D9824E"></circle></svg>
-          <span style="line-height:1;display:block;"><span style="display:block;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:17px;color:#F4EAD2;letter-spacing:0.01em;">MARTÍNEZ-SEGURA</span><span style="display:block;font-size:9px;letter-spacing:0.3em;color:#D9824E;font-weight:600;margin-top:4px;text-transform:uppercase;">Topografía · Nicaragua</span></span>
+          <span style="line-height:1;display:block;"><span style="display:block;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:17px;color:#F4EAD2;letter-spacing:0.01em;">MARTÍNEZ-SEGURA</span><span style="display:block;font-size:9px;letter-spacing:0.3em;color:#D9824E;font-weight:600;margin-top:4px;text-transform:uppercase;">{{ tagline }}</span></span>
         </div>
-        <p style="font-size:14px;line-height:1.6;color:#8CA3AB;margin:16px 0 0;">Topografía de precisión con validez catastral en Nicaragua. Levantamientos, replanteo y control de obra — del terreno al plano.</p>
+        <p style="font-size:14px;line-height:1.6;color:#8CA3AB;margin:16px 0 0;">{{ blurb }}</p>
         <div style="display:inline-flex;align-items:center;gap:8px;margin-top:16px;background:rgba(31,138,91,0.15);border:1px solid rgba(31,138,91,0.4);border-radius:999px;padding:7px 14px;font-size:12.5px;font-weight:600;color:#7FD3A6;">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7FD3A6" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-11"></path></svg>Lic. Catastral SSL101483
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7FD3A6" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-11"></path></svg>{{ credential }}
         </div>
       </div>
 
       <nav aria-label="Servicios" style="display:flex;flex-direction:column;gap:11px;">
         <span style="font-weight:700;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#7E97A0;margin-bottom:2px;">Servicios</span>
-        <a href="/levantamiento-catastral" style="color:#C2D2D6;text-decoration:none;font-size:15px;padding:5px 0;display:inline-block;" style-hover="color:#F4EAD2;">Levantamiento catastral</a>
-        <a href="/levantamiento-topografico" style="color:#C2D2D6;text-decoration:none;font-size:15px;padding:5px 0;display:inline-block;" style-hover="color:#F4EAD2;">Levantamiento topográfico</a>
-        <a href="/control-de-obras" style="color:#C2D2D6;text-decoration:none;font-size:15px;padding:5px 0;display:inline-block;" style-hover="color:#F4EAD2;">Control de obras</a>
-        <a href="/diseno-vialidad" style="color:#C2D2D6;text-decoration:none;font-size:15px;padding:5px 0;display:inline-block;" style-hover="color:#F4EAD2;">Vialidad y movimiento de tierra</a>
-        <a href="/servicios" style="color:#C2D2D6;text-decoration:none;font-size:15px;padding:5px 0;display:inline-block;" style-hover="color:#F4EAD2;">Ver todos los servicios →</a>
+        <a href="{{ svc1.href }}" style="color:#C2D2D6;text-decoration:none;font-size:15px;padding:5px 0;display:inline-block;" style-hover="color:#F4EAD2;">{{ svc1.label }}</a>
+        <a href="{{ svc2.href }}" style="color:#C2D2D6;text-decoration:none;font-size:15px;padding:5px 0;display:inline-block;" style-hover="color:#F4EAD2;">{{ svc2.label }}</a>
+        <a href="{{ svc3.href }}" style="color:#C2D2D6;text-decoration:none;font-size:15px;padding:5px 0;display:inline-block;" style-hover="color:#F4EAD2;">{{ svc3.label }}</a>
+        <a href="{{ svc4.href }}" style="color:#C2D2D6;text-decoration:none;font-size:15px;padding:5px 0;display:inline-block;" style-hover="color:#F4EAD2;">{{ svc4.label }}</a>
+        <a href="{{ svcAll.href }}" style="color:#C2D2D6;text-decoration:none;font-size:15px;padding:5px 0;display:inline-block;" style-hover="color:#F4EAD2;">{{ svcAll.label }}</a>
       </nav>
 
       <nav aria-label="Empresa" style="display:flex;flex-direction:column;gap:11px;">
@@ -52,14 +52,50 @@
 
     <div style="border-top:1px solid rgba(244,234,210,0.1);margin-top:36px;padding-top:20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:#7E97A0;">
       <span>© {{ year }} Martínez-Segura Multiservicios. Todos los derechos reservados.</span>
-      <span>Managua · Masaya · Granada · León · Chinandega · Rivas · Matagalpa · Estelí · Chontales · Jinotega · Nueva Segovia · Madriz</span>
+      <span>{{ regions }}</span>
     </div>
   </div>
 </footer>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1180,&quot;height&quot;:360}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1180,&quot;height&quot;:360},&quot;country&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;nicaragua&quot;,&quot;options&quot;:[&quot;nicaragua&quot;,&quot;costa-rica&quot;],&quot;tsType&quot;:&quot;string&quot;}}">
 class Component extends DCLogic {
-  renderVals(){ return { year: new Date().getFullYear() }; }
+  renderVals(){
+    const country = this.props.country || "nicaragua";
+    const data = {
+      nicaragua: {
+        tagline: "Topografía · Nicaragua",
+        blurb: "Topografía de precisión con validez catastral en Nicaragua. Levantamientos, replanteo y control de obra — del terreno al plano.",
+        credential: "Lic. Catastral SSL101483",
+        regions: "Managua · Masaya · Granada · León · Chinandega · Rivas · Matagalpa · Estelí · Chontales · Jinotega · Nueva Segovia · Madriz",
+        services: [
+          {label:"Levantamiento catastral", href:"/levantamiento-catastral"},
+          {label:"Levantamiento topográfico", href:"/levantamiento-topografico"},
+          {label:"Control de obras", href:"/control-de-obras"},
+          {label:"Vialidad y movimiento de tierra", href:"/diseno-vialidad"}
+        ],
+        svcAll: {label:"Ver todos los servicios →", href:"/servicios"}
+      },
+      "costa-rica": {
+        tagline: "Topografía · Costa Rica",
+        blurb: "Topografía, catastro y control de obra en Costa Rica. Equipo propio y respaldo colegiado ante el CFIA — del terreno al plano.",
+        credential: "Respaldo colegiado CFIA",
+        regions: "San José · Alajuela · Cartago · Heredia · Guanacaste · Puntarenas · Limón",
+        services: [
+          {label:"Levantamiento catastral", href:"/levantamiento-catastral-costa-rica"},
+          {label:"Levantamiento topográfico", href:"/levantamiento-topografico-costa-rica"},
+          {label:"Control de obras", href:"/control-de-obras-costa-rica"},
+          {label:"Vialidad y movimiento de tierra", href:"/diseno-vialidad-costa-rica"}
+        ],
+        svcAll: {label:"Ver todos los servicios en Costa Rica →", href:"/topografo-costa-rica"}
+      }
+    };
+    const d = data[country] || data.nicaragua;
+    return {
+      year: new Date().getFullYear(),
+      tagline: d.tagline, blurb: d.blurb, credential: d.credential, regions: d.regions,
+      svc1: d.services[0], svc2: d.services[1], svc3: d.services[2], svc4: d.services[3], svcAll: d.svcAll
+    };
+  }
 }
 </script>
 </body>

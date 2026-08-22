@@ -34,9 +34,9 @@ a{color:inherit;text-decoration:none;}
 /* header */
 header{position:sticky;top:0;z-index:50;background:rgba(16,44,52,.97);backdrop-filter:blur(6px);border-bottom:1px solid rgba(227,162,60,.18);}
 .nav{display:flex;align-items:center;justify-content:space-between;height:64px;}
-.brand{display:flex;align-items:center;gap:10px;color:var(--cream);}
-.brand .nm{font-weight:800;font-size:14px;line-height:1;}
-.brand .nm small{display:block;font-weight:600;font-size:7.5px;letter-spacing:.2em;color:var(--golds);margin-top:3px;}
+.brand{display:flex;align-items:center;gap:10px;color:var(--cream);flex:none;}
+.brand .nm{font-weight:800;font-size:14px;line-height:1;white-space:nowrap;}
+.brand .nm small{display:block;font-weight:600;font-size:7.5px;letter-spacing:.15em;color:var(--golds);margin-top:3px;white-space:nowrap;}
 .navlinks{display:flex;align-items:center;gap:26px;}
 .navlinks a{color:var(--cream);font-weight:600;font-size:14px;opacity:.9;}
 .navlinks a:hover{color:var(--golds);opacity:1;}
@@ -125,6 +125,9 @@ footer a:hover{color:var(--golds);}
 <link rel="canonical" href="https://martinezseguramultiserviciosni.com/topografo-mexico">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://martinezseguramultiserviciosni.com/topografo-mexico">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://martinezseguramultiserviciosni.com/"},{"@type":"ListItem","position":2,"name":"México","item":"https://martinezseguramultiserviciosni.com/topografo-mexico"}]}
+</script>
 </head>
 <body>
 
@@ -145,11 +148,12 @@ footer a:hover{color:var(--golds);}
 
 <div style="background:#163A44;border-bottom:1px solid rgba(227,162,60,.28);color:#F4EAD2;">
   <div class="wrap" style="display:flex;align-items:center;gap:13px;padding:11px 22px;">
-    <span style="flex:none;font-weight:800;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#0E262D;background:#E3A23C;border-radius:30px;padding:5px 12px;">En desarrollo</span>
+    <span style="flex:none;font-weight:800;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#0E262D;background:#E3A23C;border-radius:30px;padding:5px 12px;white-space:nowrap;">En desarrollo</span>
     <p style="margin:0;font-size:13px;line-height:1.45;color:#D8CCB0;"><b style="color:#F4EAD2;">Estamos habilitando atención completa en México.</b> Hoy trabajamos el diseño, BIM y la gestión de proyectos de forma remota, y sumamos socios colegiados locales para la ejecución de campo — muy pronto, servicio completo en el país.</p>
   </div>
 </div>
 
+<nav aria-label="Ruta de navegación" class="wrap" style="padding:14px 22px 0;font-size:13px;color:var(--mut);"><a href="/" style="color:var(--mut);text-decoration:none;">Inicio</a> <span style="color:var(--line);">/</span> <span style="color:var(--terra);font-weight:600;">México</span></nav>
 <a id="top"></a>
 <section class="hero">
   <div class="bg"></div>
@@ -251,12 +255,20 @@ footer a:hover{color:var(--golds);}
   </div>
 </section>
 
+<section class="sec" style="padding:44px 0;">
+  <div class="wrap">
+    <span class="kick">Presencia regional</span>
+    <h2 style="font-size:22px;margin-top:8px;">Estamos en toda la región</h2>
+    <p class="lead" style="margin-top:8px;">Estamos habilitando atención completa en toda la región — muy pronto, servicio activo también en Costa Rica, Guatemala, El Salvador y México.</p>
+    <div class="geobar"><a href="/topografo-costa-rica" class="geopill">Costa Rica <span>· Próximamente</span></a><a href="/topografo-guatemala" class="geopill">Guatemala <span>· Próximamente</span></a><a href="/topografo-el-salvador" class="geopill">El Salvador <span>· Próximamente</span></a><span class="geopill" style="opacity:.75;">México <span>· Próximamente</span></span></div>
+  </div>
+</section>
 <footer>
   <div class="wrap frow">
     <div>
       <div class="b">Martínez-Segura Multiservicios</div>
       Topografía · Ingeniería · Arquitectura<br>
-      Nicaragua · México · Guatemala · Costa Rica · El Salvador
+      México
     </div>
     <div>
       Licencia catastral <span class="r">SSL101483</span><br>
