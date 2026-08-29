@@ -57,7 +57,31 @@
 class Component extends DCLogic {
   constructor(props){ super(props); this.state = { menuOpen:false, isMobile: Component._mob() }; this._r = ()=> this.setState({ isMobile: Component._mob() }); }
   static _mob(){ if (typeof window==='undefined') return false; return window.innerWidth < 1010; }
-  componentDidMount(){ if (typeof window!=='undefined') window.addEventListener('resize', this._r); }
+  componentDidMount(){
+    if (typeof window!=='undefined') window.addEventListener('resize', this._r);
+    if (typeof window!=='undefined' && typeof document!=='undefined' && !window.__msNav){
+      window.__msNav = true;
+      var resolve = function(href){
+        if(!href || href.charAt(0)!=='/' || href.charAt(1)==='/') return null;
+        var hash=''; var hi=href.indexOf('#'); if(hi>-1){ hash=href.slice(hi); href=href.slice(0,hi); }
+        href = href.split('?')[0];
+        if(/^\/(assets|api)\//.test(href)) return null;
+        if(/\.[a-z0-9]+$/i.test(href)) return null;
+        var m = location.pathname.match(/^(.*sitio\/deploy-vercel\/)/);
+        if(!m) return null;
+        var clean = href.replace(/\/+$/,'');
+        var file = clean==='' ? 'index.html' : (clean==='/en' ? 'en/index.html' : clean.replace(/^\//,'')+'.html');
+        return location.origin + m[1] + file + hash;
+      };
+      window.msResolve = resolve;
+      document.addEventListener('click', function(e){
+        var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+        if(!a || a.target==='_blank') return;
+        var u = resolve(a.getAttribute('href'));
+        if(u){ e.preventDefault(); window.location.href = u; }
+      }, true);
+    }
+  }
   componentWillUnmount(){ if (typeof window!=='undefined') window.removeEventListener('resize', this._r); }
   renderVals(){
     const active = (this.props && this.props.active) || 'home';
