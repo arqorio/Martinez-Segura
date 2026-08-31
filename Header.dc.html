@@ -29,6 +29,7 @@
     <nav aria-label="Principal" style="display:{{ navDisplay }};align-items:center;gap:clamp(12px,1.7vw,22px);">
       <a href="/" style="position:relative;text-decoration:none;font-family:'Hanken Grotesk',sans-serif;font-weight:600;font-size:15px;color:{{ cHome }};padding:4px 0;">Inicio<span style="position:absolute;left:0;right:0;bottom:-5px;height:2px;border-radius:2px;background:{{ uHome }};"></span></a>
       <a href="/servicios" style="position:relative;text-decoration:none;font-family:'Hanken Grotesk',sans-serif;font-weight:600;font-size:15px;color:{{ cServ }};padding:4px 0;">Servicios<span style="position:absolute;left:0;right:0;bottom:-5px;height:2px;border-radius:2px;background:{{ uServ }};"></span></a>
+      <a href="/arquitectura" style="position:relative;text-decoration:none;font-family:'Hanken Grotesk',sans-serif;font-weight:600;font-size:15px;color:{{ cArch }};padding:4px 0;">Arquitectura<span style="position:absolute;left:0;right:0;bottom:-5px;height:2px;border-radius:2px;background:{{ uArch }};"></span></a>
       <a href="/portafolio" style="position:relative;text-decoration:none;font-family:'Hanken Grotesk',sans-serif;font-weight:600;font-size:15px;color:{{ cPort }};padding:4px 0;">Portafolio<span style="position:absolute;left:0;right:0;bottom:-5px;height:2px;border-radius:2px;background:{{ uPort }};"></span></a>
       <a href="/cobertura" style="position:relative;text-decoration:none;font-family:'Hanken Grotesk',sans-serif;font-weight:600;font-size:15px;color:{{ cCob }};padding:4px 0;">Cobertura<span style="position:absolute;left:0;right:0;bottom:-5px;height:2px;border-radius:2px;background:{{ uCob }};"></span></a>
       <a href="/nosotros" style="position:relative;text-decoration:none;font-family:'Hanken Grotesk',sans-serif;font-weight:600;font-size:15px;color:{{ cAbout }};padding:4px 0;">Nosotros<span style="position:absolute;left:0;right:0;bottom:-5px;height:2px;border-radius:2px;background:{{ uAbout }};"></span></a>
@@ -48,6 +49,7 @@
   <nav aria-label="Móvil" style="border-top:1px solid rgba(244,234,210,0.14);padding:6px clamp(16px,5vw,32px) 14px;display:flex;flex-direction:column;">
     <a href="/" style="text-decoration:none;border-bottom:1px solid rgba(244,234,210,0.1);font-family:'Hanken Grotesk',sans-serif;font-weight:600;font-size:18px;color:{{ cHome }};padding:16px 2px;">Inicio</a>
     <a href="/servicios" style="text-decoration:none;border-bottom:1px solid rgba(244,234,210,0.1);font-family:'Hanken Grotesk',sans-serif;font-weight:600;font-size:18px;color:{{ cServ }};padding:16px 2px;">Servicios</a>
+    <a href="/arquitectura" style="text-decoration:none;border-bottom:1px solid rgba(244,234,210,0.1);font-family:'Hanken Grotesk',sans-serif;font-weight:600;font-size:18px;color:{{ cArch }};padding:16px 2px;">Arquitectura</a>
     <a href="/portafolio" style="text-decoration:none;border-bottom:1px solid rgba(244,234,210,0.1);font-family:'Hanken Grotesk',sans-serif;font-weight:600;font-size:18px;color:{{ cPort }};padding:16px 2px;">Portafolio</a>
     <a href="/cobertura" style="text-decoration:none;border-bottom:1px solid rgba(244,234,210,0.1);font-family:'Hanken Grotesk',sans-serif;font-weight:600;font-size:18px;color:{{ cCob }};padding:16px 2px;">Cobertura</a>
     <a href="/nosotros" style="text-decoration:none;border-bottom:1px solid rgba(244,234,210,0.1);font-family:'Hanken Grotesk',sans-serif;font-weight:600;font-size:18px;color:{{ cAbout }};padding:16px 2px;">Nosotros</a>
@@ -58,7 +60,7 @@
   </sc-if>
 </header>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1180,&quot;height&quot;:72},&quot;active&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;home&quot;,&quot;services&quot;,&quot;portfolio&quot;,&quot;coverage&quot;,&quot;about&quot;,&quot;contact&quot;],&quot;default&quot;:&quot;home&quot;,&quot;tsType&quot;:&quot;'home'|'services'|'portfolio'|'coverage'|'about'|'contact'&quot;}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1180,&quot;height&quot;:72},&quot;active&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;home&quot;,&quot;services&quot;,&quot;architecture&quot;,&quot;portfolio&quot;,&quot;coverage&quot;,&quot;about&quot;,&quot;contact&quot;],&quot;default&quot;:&quot;home&quot;,&quot;tsType&quot;:&quot;'home'|'services'|'architecture'|'portfolio'|'coverage'|'about'|'contact'&quot;}}">
 class Component extends DCLogic {
   constructor(props){ super(props); this.state = { menuOpen:false, isMobile: Component._mob() }; this._r = ()=> this.setState({ isMobile: Component._mob() }); }
   static _mob(){ if (typeof window==='undefined') return false; return window.innerWidth < 1010; }
@@ -99,8 +101,8 @@ class Component extends DCLogic {
       showMobileMenu: mob && this.state.menuOpen,
       navDisplay: mob ? 'none' : 'flex',
       burgerDisplay: mob ? 'flex' : 'none',
-      cHome: col('home'), cServ: col('services'), cPort: col('portfolio'), cCob: col('coverage'), cAbout: col('about'), cContact: col('contact'),
-      uHome: un('home'), uServ: un('services'), uPort: un('portfolio'), uCob: un('coverage'), uAbout: un('about'), uContact: un('contact')
+      cHome: col('home'), cServ: col('services'), cArch: col('architecture'), cPort: col('portfolio'), cCob: col('coverage'), cAbout: col('about'), cContact: col('contact'),
+      uHome: un('home'), uServ: un('services'), uArch: un('architecture'), uPort: un('portfolio'), uCob: un('coverage'), uAbout: un('about'), uContact: un('contact')
     };
   }
 }
