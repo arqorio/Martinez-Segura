@@ -13,6 +13,9 @@ gtag('config', 'G-WJ06J12YSY');
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preload" as="script" href="/assets/vendor/react.production.min.js">
+<link rel="preload" as="script" href="/assets/vendor/react-dom.production.min.js">
+<script>window.__resources={"https://unpkg.com/react@18.3.1/umd/react.production.min.js":"/assets/vendor/react.production.min.js","https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js":"/assets/vendor/react-dom.production.min.js"};</script>
 <script src="./support.js"></script>
 </head>
 <body>
@@ -30,6 +33,7 @@ gtag('config', 'G-WJ06J12YSY');
 <meta property="og:title" content="Contacto — Martínez-Segura Multiservicios">
 <meta property="og:description" content="Cotiza tu levantamiento topográfico en Nicaragua por WhatsApp. Respuesta en menos de 2 horas.">
 <meta property="og:url" content="https://martinezseguramultiserviciosni.com/contacto">
+<meta property="og:image" content="https://martinezseguramultiserviciosni.com/assets/portfolio/03-estacion-total-leica.jpeg">
 <meta name="robots" content="index,follow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
@@ -43,18 +47,119 @@ gtag('config', 'G-WJ06J12YSY');
   body { font-family:'Hanken Grotesk',system-ui,sans-serif; color:#34261A; background:#F2E9D4; -webkit-font-smoothing:antialiased; overflow-x:hidden; }
   ::selection { background:#B0512B; color:#FBF2E0; }
   a { color:#2F5D68; } a:hover { color:#8E3F20; }
-  input, textarea, select { font-family:'Hanken Grotesk',sans-serif; }
+  input, textarea, select, button { font-family:'Hanken Grotesk',sans-serif; }
   :focus-visible { outline:3px solid rgba(47,93,104,0.6); outline-offset:2px; border-radius:3px; }
   .skip { position:absolute;left:-999px;top:0;z-index:200;background:#B0512B;color:#FBF2E0;padding:12px 18px;border-radius:0 0 8px 0;font-weight:700;text-decoration:none; }
   .skip:focus { left:0; }
-  .ms-field { display:block;width:100%;margin-top:7px;background:#F4EAD2;border:1px solid rgba(43,31,21,0.16);border-radius:9px;padding:13px 14px;font-size:15px;color:#2B1F15; }
-  .ms-field:focus { border-color:#B0512B; }
+
+  /* ---------- layout ---------- */
+  .wrap { max-width:1180px; margin:0 auto; padding-left:clamp(16px,5vw,32px); padding-right:clamp(16px,5vw,32px); }
+  .c-grid { display:grid; grid-template-columns:1fr; gap:clamp(18px,2.4vw,26px); align-items:start; }
+  @media (min-width:940px){
+    .c-grid { grid-template-columns:1.16fr 0.84fr; }
+    .c-form { grid-column:1; grid-row:1; }
+    .c-side { grid-column:2; grid-row:1; position:sticky; top:88px; }
+  }
+  /* On phones the fastest path comes first: tap a channel, then the form. */
+  @media (max-width:939px){ .c-side { order:-1; } }
+
+  .card { background:#FFFDF6; border:1px solid rgba(43,31,21,0.1); border-radius:16px; box-shadow:0 1px 3px rgba(43,31,21,0.06); }
+  .h-disp { font-family:'Bricolage Grotesque',sans-serif; font-weight:800; color:#2B1F15; line-height:1.1; margin:0; }
+
+  /* ---------- direct channels ---------- */
+  .chan { display:flex; align-items:center; gap:13px; padding:14px 16px; text-decoration:none; border-radius:12px;
+          border:1px solid rgba(43,31,21,0.1); background:#FFFDF6; transition:transform .14s ease, border-color .14s ease, box-shadow .14s ease; }
+  .chan + .chan { margin-top:9px; }
+  .chan:hover { transform:translateY(-2px); box-shadow:0 6px 16px rgba(43,31,21,0.09); }
+  .chan-wa:hover { border-color:#25D366; }
+  .chan-mail:hover, .chan-tel:hover { border-color:#B0512B; }
+  .chan-map:hover { border-color:#F2A81E; }
+  .chan-ico { width:42px; height:42px; border-radius:11px; display:flex; align-items:center; justify-content:center; flex:none; }
+  .chan-txt { display:block; min-width:0; flex:1; }
+  .chan-t { display:block; font-weight:700; font-size:15px; color:#2B1F15; line-height:1.25; }
+  .chan-s { display:block; font-size:13px; color:#7A6A52; margin-top:2px; line-height:1.3; }
+  .chan-v { display:block; font-weight:700; font-size:15px; color:#B0512B; margin-top:3px; letter-spacing:0.01em; }
+  .chan-go { margin-left:auto; color:#C2B49A; flex:none; }
+
+  /* ---------- trust chips ---------- */
+  .tchips { display:flex; flex-wrap:wrap; gap:8px; justify-content:center; margin-top:20px; }
+  .tchip { display:inline-flex; align-items:center; gap:7px; background:#FFFDF6; border:1px solid rgba(43,31,21,0.12);
+           border-radius:999px; padding:7px 14px; font-size:13.5px; font-weight:600; color:#4E3D2C; }
+
+  /* ---------- form ---------- */
+  .ms-field { display:block; width:100%; margin-top:7px; background:#F4EAD2; border:1px solid rgba(43,31,21,0.16);
+              border-radius:10px; padding:13px 14px; font-size:16px; color:#2B1F15; transition:border-color .14s ease, box-shadow .14s ease; }
+  .ms-field:focus { border-color:#B0512B; box-shadow:0 0 0 3px rgba(176,81,43,0.14); outline:none; }
+  .ms-field::placeholder { color:#A8967C; }
   select.ms-field { appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%238E3F20' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:40px;cursor:pointer; }
-  @media (prefers-reduced-motion: no-preference){ @supports (animation-timeline: view()){ [data-reveal]{ opacity:0; animation:msRevealUp linear both; animation-timeline:view(); animation-range:entry 5% cover 20%; } } }
+  .lbl { display:block; font-size:13px; font-weight:700; color:#4E3D2C; letter-spacing:0.01em; }
+  .lgd { font-size:13px; font-weight:700; color:#4E3D2C; padding:0; margin-bottom:10px; letter-spacing:0.01em; }
+  .req { color:#B0512B; }
+  .grid2 { display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:16px; }
+
+  /* segmented location control — pure CSS, survives re-render */
+  .seg { display:grid; grid-template-columns:1fr 1fr; gap:9px; }
+  .seg label { position:relative; display:flex; flex-direction:column; gap:2px; background:#F4EAD2; border:1.5px solid rgba(43,31,21,0.14);
+               border-radius:11px; padding:13px 14px 13px 42px; cursor:pointer; font-size:14.5px; font-weight:700; color:#2B1F15;
+               transition:border-color .14s ease, background .14s ease; min-height:44px; }
+  .seg label small { font-weight:500; font-size:12.5px; color:#7A6A52; }
+  .seg input { position:absolute; left:14px; top:50%; transform:translateY(-50%); accent-color:#B0512B; width:18px; height:18px; margin:0; }
+  .seg label:has(input:checked) { background:#FBEFDD; border-color:#B0512B; }
+  .seg label:has(input:checked) small { color:#8E3F20; }
+  @media (max-width:420px){ .seg { grid-template-columns:1fr; } }
+
+  /* service chips — radio group, no JS */
+  .chips { display:grid; grid-template-columns:repeat(auto-fit,minmax(148px,1fr)); gap:8px; }
+  .chips label { position:relative; display:flex; align-items:center; background:#F4EAD2; border:1.5px solid rgba(43,31,21,0.14);
+                 border-radius:11px; padding:11px 13px; font-size:13.5px; line-height:1.3; font-weight:600; color:#4E3D2C; cursor:pointer;
+                 transition:border-color .14s ease, background .14s ease, color .14s ease; min-height:46px; }
+  .chips input { position:absolute; opacity:0; pointer-events:none; }
+  .chips label:hover { border-color:#C99070; }
+  .chips label:has(input:checked) { background:#B0512B; border-color:#B0512B; color:#FBF2E0; }
+  .chips label:has(input:focus-visible) { outline:3px solid rgba(47,93,104,0.6); outline-offset:2px; }
+
+  .btn-wa { display:inline-flex; align-items:center; justify-content:center; gap:10px; background:#B0512B; color:#FBF2E0; border:none;
+            border-radius:10px; padding:16px 30px; font-weight:800; font-size:16px; cursor:pointer; min-height:52px;
+            box-shadow:0 6px 16px rgba(176,81,43,0.28); transition:background .14s ease, transform .14s ease; }
+  .btn-wa:hover { background:#8E3F20; transform:translateY(-1px); }
+  .btn-wa:active { transform:none; }
+  @media (max-width:560px){ .btn-wa { width:100%; } }
+
+  /* ---------- next steps ---------- */
+  .steps { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:16px; counter-reset:s; }
+  .step { position:relative; padding:22px 20px 20px; }
+  .step-n { width:34px; height:34px; border-radius:50%; background:#2F5D68; color:#F4EAD2; display:flex; align-items:center;
+            justify-content:center; font-weight:800; font-size:15px; font-family:'Bricolage Grotesque',sans-serif; }
+  .step h3 { font-family:'Bricolage Grotesque',sans-serif; font-weight:700; font-size:16.5px; color:#2B1F15; margin:13px 0 0; }
+  .step p { font-size:14.5px; color:#5C4A36; line-height:1.55; margin:6px 0 0; }
+
+  /* ---------- sticky mobile CTA ---------- */
+  .sticky-cta { position:fixed; left:0; right:0; bottom:0; z-index:90; display:none; gap:9px; padding:10px 12px calc(10px + env(safe-area-inset-bottom));
+                background:rgba(251,242,224,0.94); backdrop-filter:blur(10px); border-top:1px solid rgba(43,31,21,0.12);
+                box-shadow:0 -4px 18px rgba(43,31,21,0.1); }
+  .sticky-cta a { flex:1; display:inline-flex; align-items:center; justify-content:center; gap:8px; text-decoration:none;
+                  border-radius:10px; padding:13px 10px; font-weight:800; font-size:14.5px; min-height:48px; }
+  .sticky-wa { background:#25D366; color:#08301C; }
+  .sticky-tel { background:#FFFDF6; color:#8E3F20; border:1.5px solid rgba(176,81,43,0.35); }
+  @media (max-width:939px){ .sticky-cta { display:flex; } main { padding-bottom:78px; } }
+
+  @media (prefers-reduced-motion: no-preference){
+    @supports (animation-timeline: view()){ [data-reveal]{ opacity:0; animation:msRevealUp linear both; animation-timeline:view(); animation-range:entry 5% cover 20%; } }
+  }
   @keyframes msRevealUp { from { opacity:0; transform:translateY(22px); } to { opacity:1; transform:none; } }
+  @media (prefers-reduced-motion: reduce){ html { scroll-behavior:auto; } }
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://martinezseguramultiserviciosni.com/"},{"@type":"ListItem","position":2,"name":"Contacto","item":"https://martinezseguramultiserviciosni.com/contacto"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ContactPage","url":"https://martinezseguramultiserviciosni.com/contacto",
+ "mainEntity":{"@type":"ProfessionalService","name":"Martínez-Segura Multiservicios","@id":"https://martinezseguramultiserviciosni.com/#business",
+ "url":"https://martinezseguramultiserviciosni.com/","email":"oreliomartinez0@gmail.com","telephone":"+505 8866 3659",
+ "address":{"@type":"PostalAddress","addressCountry":"NI"},
+ "openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"07:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"08:00","closes":"13:00"}],
+ "contactPoint":[
+  {"@type":"ContactPoint","contactType":"customer service","telephone":"+505 8866 3659","areaServed":["NI","US","CR","MX","GT","SV"],"availableLanguage":["es","en"]}]}}
 </script>
 </helmet>
 
@@ -62,134 +167,251 @@ gtag('config', 'G-WJ06J12YSY');
 <dc-import name="Header" active="contact" hint-size="100%,72px"></dc-import>
 
 <main id="contenido">
-  <nav aria-label="Ruta de navegación" style="max-width:1180px;margin:0 auto;padding:22px clamp(16px,5vw,32px) 4px;display:flex;align-items:center;flex-wrap:wrap;gap:8px;font-size:13px;"><a href="/" style="display:inline-flex;align-items:center;gap:6px;color:#7A6A52;text-decoration:none;" style-hover="color:#B0512B;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"></path><path d="M5 10v10h5v-6h4v6h5V10"></path></svg>Inicio</a><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#C2B49A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;"><path d="M9 6l6 6-6 6"></path></svg><span aria-current="page" style="color:#8E3F20;font-weight:700;background:rgba(176,81,43,0.1);border:1px solid rgba(176,81,43,0.22);border-radius:999px;padding:3px 11px;">Contacto</span></nav>
+  <nav aria-label="Ruta de navegación" class="wrap" style="padding-top:22px;padding-bottom:4px;display:flex;align-items:center;flex-wrap:wrap;gap:8px;font-size:13px;"><a href="/" style="display:inline-flex;align-items:center;gap:6px;color:#7A6A52;text-decoration:none;" style-hover="color:#B0512B;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"></path><path d="M5 10v10h5v-6h4v6h5V10"></path></svg>Inicio</a><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#C2B49A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;"><path d="M9 6l6 6-6 6"></path></svg><span aria-current="page" style="color:#8E3F20;font-weight:700;background:rgba(176,81,43,0.1);border:1px solid rgba(176,81,43,0.22);border-radius:999px;padding:3px 11px;">Contacto</span></nav>
 
-  <section style="max-width:1180px;margin:0 auto;padding:clamp(28px,5vw,48px) clamp(16px,5vw,32px) 0;text-align:center;">
+  <!-- HERO -->
+  <section class="wrap" style="padding-top:clamp(26px,4.5vw,44px);text-align:center;">
     <p style="margin:0;font-weight:700;font-size:12px;letter-spacing:0.22em;text-transform:uppercase;color:#B0512B;">Contacto</p>
-    <h1 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:clamp(30px,4vw,48px);color:#2B1F15;margin:12px auto 0;max-width:640px;line-height:1.06;">Hablemos de tu proyecto</h1>
+    <h1 class="h-disp" style="font-size:clamp(31px,4.2vw,50px);margin:12px auto 0;max-width:660px;">Hablemos de tu proyecto</h1>
     <div style="width:64px;height:4px;background:#B0512B;border-radius:2px;margin:18px auto 0;"></div>
-    <p style="font-size:17px;color:#4E3D2C;line-height:1.6;max-width:560px;margin:16px auto 0;">Cuéntanos sobre tu terreno o proyecto y te enviamos una cotización. Respondemos en menos de 2 horas por WhatsApp.</p>
-  </section>
-
-  <!-- CONTACT METHODS -->
-  <section style="max-width:1180px;margin:0 auto;padding:clamp(26px,4vw,40px) clamp(16px,5vw,32px) 0;">
-    <div data-reveal style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;">
-      <a href="https://wa.me/50588663659" target="_blank" rel="noopener" style="text-decoration:none;background:#FFFDF6;border:1px solid rgba(43,31,21,0.1);border-radius:14px;padding:24px;box-shadow:0 1px 3px rgba(43,31,21,0.06);display:block;transition:transform .15s ease,border-color .15s ease;" style-hover="transform:translateY(-3px);border-color:#25D366;">
-        <span style="width:46px;height:46px;border-radius:12px;background:#25D366;display:flex;align-items:center;justify-content:center;"><svg width="24" height="24" viewBox="0 0 24 24" fill="#0B2C1B" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.1-1.3A10 10 0 1012 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5-4.5-.1-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.1.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.5.1.3.7 1.1 1.4 1.8 1 .8 1.7 1.1 2 1.2.2.1.4.1.5-.1l.6-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.2.5.3.1.2.1.6-.1 1.2z"></path></svg></span>
-        <h2 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:18px;color:#2B1F15;margin:15px 0 0;">WhatsApp Nicaragua</h2>
-        <p style="font-size:14.5px;color:#4E3D2C;margin:6px 0 0;">Steven · atención local</p>
-        <p style="font-weight:700;font-size:17px;color:#B0512B;margin:8px 0 0;">+505 8866 3659</p>
-      </a>
-      <a href="https://wa.me/17608830683" target="_blank" rel="noopener" style="text-decoration:none;background:#FFFDF6;border:1px solid rgba(43,31,21,0.1);border-radius:14px;padding:24px;box-shadow:0 1px 3px rgba(43,31,21,0.06);display:block;transition:transform .15s ease,border-color .15s ease;" style-hover="transform:translateY(-3px);border-color:#25D366;">
-        <span style="width:46px;height:46px;border-radius:12px;background:#25D366;display:flex;align-items:center;justify-content:center;"><svg width="24" height="24" viewBox="0 0 24 24" fill="#0B2C1B" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.1-1.3A10 10 0 1012 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5-4.5-.1-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.1.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.5.1.3.7 1.1 1.4 1.8 1 .8 1.7 1.1 2 1.2.2.1.4.1.5-.1l.6-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.2.5.3.1.2.1.6-.1 1.2z"></path></svg></span>
-        <h2 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:18px;color:#2B1F15;margin:15px 0 0;">WhatsApp Internacional</h2>
-        <p style="font-size:14.5px;color:#4E3D2C;margin:6px 0 0;">Orelio · desde el exterior</p>
-        <p style="font-weight:700;font-size:17px;color:#B0512B;margin:8px 0 0;">+1 760 883 0683</p>
-      </a>
-      <a href="mailto:oreliomartinez0@gmail.com" style="text-decoration:none;background:#FFFDF6;border:1px solid rgba(43,31,21,0.1);border-radius:14px;padding:24px;box-shadow:0 1px 3px rgba(43,31,21,0.06);display:block;transition:transform .15s ease,border-color .15s ease;" style-hover="transform:translateY(-3px);border-color:#B0512B;">
-        <span style="width:46px;height:46px;border-radius:12px;background:#2F5D68;display:flex;align-items:center;justify-content:center;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F4EAD2" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M4 7l8 6 8-6"></path></svg></span>
-        <h2 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:18px;color:#2B1F15;margin:15px 0 0;">Correo</h2>
-        <p style="font-size:14.5px;color:#4E3D2C;margin:6px 0 0;">Escríbenos con los detalles</p>
-        <p style="font-weight:700;font-size:14.5px;color:#B0512B;margin:8px 0 0;word-break:break-all;">oreliomartinez0@gmail.com</p>
-      </a>
-      <a href="https://g.page/r/CXns9yz7EHzxEAE" target="_blank" rel="noopener" style="text-decoration:none;background:#FFFDF6;border:1px solid rgba(43,31,21,0.1);border-radius:14px;padding:24px;box-shadow:0 1px 3px rgba(43,31,21,0.06);display:block;transition:transform .15s ease,border-color .15s ease;" style-hover="transform:translateY(-3px);border-color:#F2A81E;">
-        <span style="width:46px;height:46px;border-radius:12px;background:#F2A81E;display:flex;align-items:center;justify-content:center;"><svg width="24" height="24" viewBox="0 0 24 24" fill="#3A1D0C" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.5 1.6 6.7L12 17.3 5.8 20.6l1.6-6.7L2.2 8.9l6.9-.6z"></path></svg></span>
-        <h2 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:18px;color:#2B1F15;margin:15px 0 0;">Google Business</h2>
-        <p style="font-size:14.5px;color:#4E3D2C;margin:6px 0 0;">Ver perfil y reseñas</p>
-        <p style="font-weight:700;font-size:14.5px;color:#B0512B;margin:8px 0 0;">Ver en Google →</p>
-      </a>
+    <p style="font-size:17px;color:#4E3D2C;line-height:1.6;max-width:580px;margin:16px auto 0;">Cuéntanos sobre tu terreno o proyecto y te enviamos una cotización sin costo. Respondemos en menos de 2 horas por WhatsApp.</p>
+    <div class="tchips">
+      <span class="tchip"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2F5D68" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3.2 1.9"></path></svg>Respuesta &lt; 2 horas</span>
+      <span class="tchip"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#B0512B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7.5 3v5.2c0 4.4-3.1 8.2-7.5 9.3-4.4-1.1-7.5-4.9-7.5-9.3V6z"></path><path d="M9.2 12.1l2 2 3.6-3.9"></path></svg>Lic. catastral SSL101483</span>
+      <span class="tchip"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2F5D68" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M3.2 9h17.6M3.2 15h17.6M12 3a15 15 0 010 18 15 15 0 010-18z"></path></svg>Español e inglés</span>
+      <span class="tchip"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#B0512B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.4 7-11a7 7 0 10-14 0c0 5.6 7 11 7 11z"></path><circle cx="12" cy="10" r="2.6"></circle></svg>12 departamentos</span>
     </div>
   </section>
 
-  <!-- FORM -->
-  <section style="max-width:1180px;margin:0 auto;padding:clamp(22px,3vw,32px) clamp(16px,5vw,32px) clamp(40px,6vw,64px);">
-    <form id="ms-form" data-reveal style="background:#FFFDF6;border:1px solid rgba(43,31,21,0.1);border-radius:16px;padding:clamp(24px,3.4vw,40px);box-shadow:0 1px 3px rgba(43,31,21,0.06);">
-      <h2 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:clamp(21px,2.6vw,28px);color:#2B1F15;margin:0;">Cuéntanos qué necesitas</h2>
-      <p style="font-size:15px;color:#6B5844;margin:8px 0 0;line-height:1.5;">Elige el servicio y tu departamento. Te contactamos por WhatsApp según tu ubicación — Nicaragua o desde el exterior.</p>
+  <!-- FORM + DIRECT CHANNELS -->
+  <section class="wrap" style="padding-top:clamp(26px,4vw,40px);padding-bottom:clamp(14px,2vw,20px);">
+    <div class="c-grid">
 
-      <fieldset style="border:none;padding:0;margin:24px 0 0;min-width:0;">
-        <legend style="font-size:13px;font-weight:600;color:#4E3D2C;padding:0;margin-bottom:9px;">¿Dónde te encuentras?</legend>
-        <div style="display:flex;flex-wrap:wrap;gap:10px;">
-          <label style="flex:1 1 220px;display:flex;align-items:center;gap:10px;background:#F4EAD2;border:1px solid rgba(43,31,21,0.16);border-radius:9px;padding:13px 14px;cursor:pointer;font-size:14.5px;font-weight:600;color:#2B1F15;"><input type="radio" name="ubicacion" value="Nicaragua" checked style="accent-color:#B0512B;width:18px;height:18px;flex:none;">En Nicaragua <span style="font-weight:500;color:#7A664A;">· te atiende Steven</span></label>
-          <label style="flex:1 1 220px;display:flex;align-items:center;gap:10px;background:#F4EAD2;border:1px solid rgba(43,31,21,0.16);border-radius:9px;padding:13px 14px;cursor:pointer;font-size:14.5px;font-weight:600;color:#2B1F15;"><input type="radio" name="ubicacion" value="Exterior" style="accent-color:#B0512B;width:18px;height:18px;flex:none;">Fuera de Nicaragua <span style="font-weight:500;color:#7A664A;">· te atiende Orelio</span></label>
+      <!-- ── direct channels ─────────────────────────── -->
+      <aside class="c-side" aria-label="Canales directos">
+        <div class="card" style="padding:20px 18px;">
+          <h2 class="h-disp" style="font-size:17px;display:flex;align-items:center;gap:8px;">
+            <span style="width:8px;height:8px;border-radius:50%;background:#25D366;box-shadow:0 0 0 3px rgba(37,211,102,0.22);flex:none;"></span>
+            Escríbenos ahora
+          </h2>
+          <p style="font-size:13.5px;color:#7A6A52;margin:7px 0 15px;line-height:1.5;">La vía más rápida. Puedes mandarnos fotos o la ubicación del terreno.</p>
+
+          <a class="chan chan-wa" href="https://wa.me/50588663659" target="_blank" rel="noopener">
+            <span class="chan-ico" style="background:#25D366;"><svg width="22" height="22" viewBox="0 0 24 24" fill="#08301C" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.1-1.3A10 10 0 1012 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5-4.5-.1-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.1.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.5.1.3.7 1.1 1.4 1.8 1 .8 1.7 1.1 2 1.2.2.1.4.1.5-.1l.6-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.2.5.3.1.2.1.6-.1 1.2z"></path></svg></span>
+            <span class="chan-txt"><span class="chan-t">WhatsApp</span><span class="chan-s">Steven · respuesta en menos de 2 horas</span><span class="chan-v">+505 8866 3659</span></span>
+            <svg class="chan-go" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg>
+          </a>
+
+          <a class="chan chan-tel" href="tel:+50588663659">
+            <span class="chan-ico" style="background:#2F5D68;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#F4EAD2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .3 1.9.7 2.8a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.3-1.2a2 2 0 012.1-.5c.9.4 1.8.6 2.8.7a2 2 0 011.7 2z"></path></svg></span>
+            <span class="chan-txt"><span class="chan-t">Llamar directo</span><span class="chan-s">Lun–Vie 7:00–18:00 · Sáb 8:00–13:00</span><span class="chan-v">+505 8866 3659</span></span>
+            <svg class="chan-go" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg>
+          </a>
+
+          <a class="chan chan-mail" href="mailto:oreliomartinez0@gmail.com?subject=Cotizaci%C3%B3n%20%E2%80%94%20Mart%C3%ADnez-Segura">
+            <span class="chan-ico" style="background:#8E3F20;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#F4EAD2" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M4 7l8 6 8-6"></path></svg></span>
+            <span class="chan-txt"><span class="chan-t">Correo</span><span class="chan-s">Para planos, expedientes y adjuntos</span><span class="chan-v" style="font-size:13.5px;word-break:break-all;">oreliomartinez0@gmail.com</span></span>
+            <svg class="chan-go" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg>
+          </a>
+
+          <a class="chan chan-map" href="https://g.page/r/CXns9yz7EHzxEAE" target="_blank" rel="noopener">
+            <span class="chan-ico" style="background:#F2A81E;"><svg width="21" height="21" viewBox="0 0 24 24" fill="#3A1D0C" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.5 1.6 6.7L12 17.3 5.8 20.6l1.6-6.7L2.2 8.9l6.9-.6z"></path></svg></span>
+            <span class="chan-txt"><span class="chan-t">Google Business</span><span class="chan-s">Ver perfil, fotos y reseñas</span></span>
+            <svg class="chan-go" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg>
+          </a>
         </div>
-      </fieldset>
 
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-top:16px;">
-        <label style="display:block;font-size:13px;font-weight:600;color:#4E3D2C;">Servicio que necesitas
-          <select name="servicio" class="ms-field">
-            <option value="">Elige un servicio…</option>
-            <option>Levantamiento catastral</option>
-            <option>Levantamiento topográfico</option>
-            <option>Deslinde / linderos</option>
-            <option>Control de obra / replanteo</option>
-            <option>Diseño arquitectónico</option>
-            <option>Diseño estructural</option>
-            <option>Vialidad y movimiento de tierra</option>
-            <option>Mojones geodésicos</option>
-            <option>Costos y presupuestos</option>
-            <option>Modelado BIM</option>
-            <option>Soldadura y estructuras metálicas</option>
-            <option>Otro / consulta general</option>
-          </select>
-        </label>
-        <label style="display:block;font-size:13px;font-weight:600;color:#4E3D2C;">Departamento (ubicación del terreno)
-          <select name="departamento" class="ms-field">
-            <option value="">Elige tu departamento…</option>
-            <option>Managua</option>
-            <option>Masaya</option>
-            <option>Granada</option>
-            <option>León</option>
-            <option>Chinandega</option>
-            <option>Rivas</option>
-            <option>Matagalpa</option>
-            <option>Estelí</option>
-            <option>Chontales</option>
-            <option>Jinotega</option>
-            <option>Nueva Segovia</option>
-            <option>Madriz</option>
-            <option>Fuera de Nicaragua</option>
-          </select>
-        </label>
+        <div class="card" style="padding:18px;margin-top:14px;background:#EFE3C7;border-color:rgba(43,31,21,0.13);">
+          <h2 class="h-disp" style="font-size:15px;">Horario de atención</h2>
+          <dl style="margin:11px 0 0;font-size:14px;color:#4E3D2C;display:grid;grid-template-columns:auto 1fr;gap:6px 14px;">
+            <dt style="font-weight:600;">Lun – Vie</dt><dd style="margin:0;text-align:right;">7:00 – 18:00</dd>
+            <dt style="font-weight:600;">Sábado</dt><dd style="margin:0;text-align:right;">8:00 – 13:00</dd>
+            <dt style="font-weight:600;">Domingo</dt><dd style="margin:0;text-align:right;color:#7A6A52;">Solo WhatsApp</dd>
+          </dl>
+          <p style="font-size:12.5px;color:#7A6A52;margin:12px 0 0;line-height:1.5;border-top:1px solid rgba(43,31,21,0.12);padding-top:11px;">Hora de Nicaragua (GMT−6). Los mensajes fuera de horario se responden a primera hora del día siguiente.</p>
+        </div>
+      </aside>
+
+      <!-- ── quote form ──────────────────────────────── -->
+      <div class="c-form">
+        <form id="ms-form" novalidate class="card" style="padding:clamp(22px,3.2vw,38px);">
+          <h2 class="h-disp" style="font-size:clamp(21px,2.6vw,28px);">Pide tu cotización</h2>
+          <p style="font-size:15px;color:#6B5844;margin:8px 0 0;line-height:1.55;">Toma menos de un minuto. Al enviar se abre WhatsApp con tu mensaje ya redactado — sin costo ni compromiso.</p>
+
+          <fieldset style="border:none;padding:0;margin:24px 0 0;min-width:0;">
+            <legend class="lgd">1 · ¿Dónde te encuentras?</legend>
+            <div class="seg">
+              <label><input type="radio" name="ubicacion" value="Nicaragua" checked>En Nicaragua<small>Visita técnica en sitio</small></label>
+              <label><input type="radio" name="ubicacion" value="Exterior">Fuera de Nicaragua<small>Coordinamos a distancia</small></label>
+            </div>
+          </fieldset>
+
+          <fieldset style="border:none;padding:0;margin:22px 0 0;min-width:0;">
+            <legend class="lgd">2 · ¿Qué servicio necesitas? <span class="req">*</span></legend>
+            <div class="chips">
+              <label><input type="radio" name="servicio" value="Levantamiento catastral">Levantamiento catastral</label>
+              <label><input type="radio" name="servicio" value="Levantamiento topográfico">Levantamiento topográfico</label>
+              <label><input type="radio" name="servicio" value="Deslinde / linderos">Deslinde / linderos</label>
+              <label><input type="radio" name="servicio" value="Control de obra / replanteo">Control de obra / replanteo</label>
+              <label><input type="radio" name="servicio" value="Diseño arquitectónico">Diseño arquitectónico</label>
+              <label><input type="radio" name="servicio" value="Diseño estructural">Diseño estructural</label>
+              <label><input type="radio" name="servicio" value="Vialidad y movimiento de tierra">Vialidad y mov. de tierra</label>
+              <label><input type="radio" name="servicio" value="Mojones geodésicos">Mojones geodésicos</label>
+              <label><input type="radio" name="servicio" value="Costos y presupuestos">Costos y presupuestos</label>
+              <label><input type="radio" name="servicio" value="Modelado BIM">Modelado BIM</label>
+              <label><input type="radio" name="servicio" value="Soldadura y estructuras metálicas">Soldadura y estructuras</label>
+              <label><input type="radio" name="servicio" value="Otro / consulta general">Otro / consulta</label>
+            </div>
+            <p id="err-servicio" role="alert" style="display:none;font-size:13px;font-weight:600;color:#B0512B;margin:10px 0 0;">Elige el servicio que necesitas.</p>
+          </fieldset>
+
+          <fieldset style="border:none;padding:0;margin:22px 0 0;min-width:0;">
+            <legend class="lgd">3 · Tus datos</legend>
+            <div class="grid2">
+              <label class="lbl">Nombre <span class="req">*</span>
+                <input type="text" name="nombre" autocomplete="name" placeholder="¿Cómo te llamas?" class="ms-field" required>
+              </label>
+              <label class="lbl">Teléfono / WhatsApp <span class="req">*</span>
+                <input type="tel" name="telefono" inputmode="tel" autocomplete="tel" placeholder="Ej. +505 8888 8888" class="ms-field" required>
+              </label>
+            </div>
+            <p id="err-datos" role="alert" style="display:none;font-size:13px;font-weight:600;color:#B0512B;margin:10px 0 0;">Necesitamos tu nombre y un número de contacto.</p>
+
+            <div class="grid2" style="margin-top:16px;">
+              <label class="lbl">Departamento del terreno
+                <select name="departamento" class="ms-field">
+                  <option value="">Elige tu departamento…</option>
+                  <option>Managua</option><option>Masaya</option><option>Granada</option><option>León</option>
+                  <option>Chinandega</option><option>Rivas</option><option>Matagalpa</option><option>Estelí</option>
+                  <option>Chontales</option><option>Jinotega</option><option>Nueva Segovia</option><option>Madriz</option>
+                  <option>Otro departamento</option><option>Fuera de Nicaragua</option>
+                </select>
+              </label>
+              <label class="lbl">Correo <span style="font-weight:500;color:#8A745A;">(opcional)</span>
+                <input type="email" name="correo" inputmode="email" autocomplete="email" placeholder="tucorreo@ejemplo.com" class="ms-field">
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset style="border:none;padding:0;margin:22px 0 0;min-width:0;">
+            <legend class="lgd">4 · Cuéntanos del proyecto</legend>
+            <textarea name="proyecto" rows="4" placeholder="Tamaño y ubicación del terreno, tipo de proyecto, fechas estimadas…" class="ms-field" style="resize:vertical;margin-top:0;"></textarea>
+            <p style="font-size:13px;color:#7A6A52;margin:9px 0 0;line-height:1.5;">¿Tienes fotos, escrituras o planos? Adjúntalos directo en el chat de WhatsApp — nos ayuda a cotizar más rápido.</p>
+          </fieldset>
+
+          <div style="margin-top:26px;display:flex;flex-wrap:wrap;align-items:center;gap:14px;">
+            <button type="submit" class="btn-wa"><svg width="19" height="19" viewBox="0 0 24 24" fill="#FBF2E0" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.1-1.3A10 10 0 1012 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5-4.5-.1-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.1.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.5.1.3.7 1.1 1.4 1.8 1 .8 1.7 1.1 2 1.2.2.1.4.1.5-.1l.6-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.2.5.3.1.2.1.6-.1 1.2z"></path></svg>Enviar por WhatsApp</button>
+            <p style="font-size:13px;color:#8A745A;margin:0;line-height:1.5;flex:1 1 220px;min-width:0;">No guardamos tus datos en el sitio: el mensaje viaja directo a nuestro WhatsApp.</p>
+          </div>
+        </form>
       </div>
 
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-top:16px;">
-        <label style="display:block;font-size:13px;font-weight:600;color:#4E3D2C;">Nombre<input type="text" name="nombre" autocomplete="name" placeholder="¿Cómo te llamas?" class="ms-field"></label>
-        <label style="display:block;font-size:13px;font-weight:600;color:#4E3D2C;">Teléfono / WhatsApp<input type="tel" name="telefono" autocomplete="tel" placeholder="Ej. +505 8888 8888" class="ms-field"></label>
+    </div>
+  </section>
+
+  <!-- WHAT HAPPENS NEXT -->
+  <section class="wrap" style="padding-top:clamp(26px,4vw,40px);padding-bottom:clamp(40px,6vw,64px);">
+    <h2 class="h-disp" data-reveal style="font-size:clamp(20px,2.6vw,28px);text-align:center;margin-bottom:20px;">¿Qué pasa después de escribir?</h2>
+    <div class="steps" data-reveal>
+      <div class="card step">
+        <span class="step-n">1</span>
+        <h3>Respondemos en menos de 2 horas</h3>
+        <p>Revisamos tu mensaje y te hacemos las preguntas necesarias para entender el alcance del trabajo.</p>
       </div>
-
-      <label style="display:block;font-size:13px;font-weight:600;color:#4E3D2C;margin-top:16px;">Correo (opcional)<input type="email" name="correo" autocomplete="email" placeholder="tucorreo@ejemplo.com" class="ms-field"></label>
-
-      <label style="display:block;font-size:13px;font-weight:600;color:#4E3D2C;margin-top:16px;">Descripción del proyecto<textarea name="proyecto" rows="4" placeholder="Cuéntanos qué necesitas: tamaño y ubicación del terreno, tipo de proyecto, fechas..." class="ms-field" style="resize:vertical;"></textarea></label>
-
-      <button type="submit" style="margin-top:22px;display:inline-flex;align-items:center;gap:9px;background:#B0512B;color:#FBF2E0;border:none;border-radius:8px;padding:15px 28px;font-family:'Hanken Grotesk',sans-serif;font-weight:700;font-size:15px;cursor:pointer;" style-hover="background:#8E3F20;"><svg width="18" height="18" viewBox="0 0 24 24" fill="#FBF2E0" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.1-1.3A10 10 0 1012 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5-4.5-.1-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.1.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.5.1.3.7 1.1 1.4 1.8 1 .8 1.7 1.1 2 1.2.2.1.4.1.5-.1l.6-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.2.5.3.1.2.1.6-.1 1.2z"></path></svg>Enviar por WhatsApp</button>
-      <p style="font-size:13px;color:#8A745A;margin:14px 0 0;line-height:1.5;">Al enviar se abre WhatsApp con tu mensaje listo. Sin costo ni compromiso.</p>
-    </form>
-    <script>
-    (function(){
-      if(window.__msFormWired) return; window.__msFormWired=true;
-      function send(f){
-        var val=function(n){ return ((f[n]&&f[n].value)||'').trim(); };
-        var servicio=f.servicio.value, depto=f.departamento.value;
-        var ubic=(f.ubicacion&&f.ubicacion.value)||'';
-        var nombre=val('nombre'), tel=val('telefono'), correo=val('correo'), proyecto=val('proyecto');
-        var msg='Hola Martínez-Segura, quiero una cotización.';
-        if(ubic) msg+='\n\nUbicación: '+(ubic==='Exterior'?'Fuera de Nicaragua':'En Nicaragua');
-        if(servicio) msg+='\nServicio: '+servicio;
-        if(depto) msg+='\nDepartamento: '+depto;
-        if(nombre) msg+='\nNombre: '+nombre;
-        if(tel) msg+='\nTeléfono/WhatsApp: '+tel;
-        if(correo) msg+='\nCorreo: '+correo;
-        if(proyecto) msg+='\n\nProyecto: '+proyecto;
-        var exterior = (ubic==='Exterior') || depto==='Fuera de Nicaragua';
-        var num = exterior ? '17608830683' : '50588663659';
-        window.open('https://wa.me/'+num+'?text='+encodeURIComponent(msg),'_blank','noopener');
-      }
-      document.addEventListener('submit', function(e){ var f=e.target; if(f&&f.id==='ms-form'){ e.preventDefault(); send(f); } });
-    })();
-    </script>
+      <div class="card step">
+        <span class="step-n">2</span>
+        <h3>Cotización clara y sin costo</h3>
+        <p>Te enviamos precio, tiempo de entrega y qué incluye el juego de planos. Sin letra pequeña.</p>
+      </div>
+      <div class="card step">
+        <span class="step-n">3</span>
+        <h3>Coordinamos la visita de campo</h3>
+        <p>Agendamos el levantamiento en sitio y te entregamos el trabajo con validez ante catastro.</p>
+      </div>
+    </div>
   </section>
 </main>
+
+<!-- Sticky mobile action bar -->
+<div class="sticky-cta" role="group" aria-label="Contacto rápido">
+  <a class="sticky-wa" href="https://wa.me/50588663659" target="_blank" rel="noopener"><svg width="19" height="19" viewBox="0 0 24 24" fill="#08301C" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.1-1.3A10 10 0 1012 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5-4.5-.1-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.1.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.5.1.3.7 1.1 1.4 1.8 1 .8 1.7 1.1 2 1.2.2.1.4.1.5-.1l.6-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.2.5.3.1.2.1.6-.1 1.2z"></path></svg>WhatsApp</a>
+  <a class="sticky-tel" href="tel:+50588663659"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .3 1.9.7 2.8a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.3-1.2a2 2 0 012.1-.5c.9.4 1.8.6 2.8.7a2 2 0 011.7 2z"></path></svg>Llamar</a>
+</div>
+
+<script>
+(function(){
+  if (window.__msFormWired) return; window.__msFormWired = true;
+
+  function val(f, n){ var el = f.elements[n]; return el && el.value ? String(el.value).trim() : ''; }
+  function radio(f, n){ var el = f.elements[n]; if (!el) return ''; return el.value ? String(el.value) : ''; }
+
+  // The dc runtime drops the `checked` attribute when it renders the template, and it
+  // renders over the parse-time DOM, so keep re-applying the default for a few seconds
+  // rather than stopping at the first form we happen to find.
+  function applyDefault(){
+    var f = document.getElementById('ms-form');
+    if (!f || !f.elements['ubicacion']) return;
+    if (radio(f, 'ubicacion')) return;           // already set, or the user chose one
+    var first = f.querySelector('input[name="ubicacion"][value="Nicaragua"]');
+    if (first) first.checked = true;
+  }
+  var ticks = 0;
+  var defaultTimer = setInterval(function(){
+    applyDefault();
+    if (++ticks > 50) clearInterval(defaultTimer);   // ~3s, then stop
+  }, 60);
+  applyDefault();
+  function show(f, id, on){ var p = f.querySelector('#' + id); if (p) p.style.display = on ? 'block' : 'none'; }
+
+  function send(f){
+    var servicio = radio(f, 'servicio');
+    var ubic     = radio(f, 'ubicacion') || 'Nicaragua';
+    var depto    = val(f, 'departamento');
+    var nombre   = val(f, 'nombre');
+    var tel      = val(f, 'telefono');
+    var correo   = val(f, 'correo');
+    var proyecto = val(f, 'proyecto');
+
+    var bad = null;
+    show(f, 'err-servicio', !servicio);
+    show(f, 'err-datos', !(nombre && tel));
+    if (!servicio) bad = f.querySelector('input[name="servicio"]');
+    else if (!nombre) bad = f.elements['nombre'];
+    else if (!tel) bad = f.elements['telefono'];
+    if (bad) { try { bad.focus({ preventScroll:false }); } catch(e) { bad.focus(); } return; }
+
+    var msg = 'Hola Martínez-Segura, quiero una cotización.';
+    msg += '\n\nUbicación: ' + (ubic === 'Exterior' ? 'Fuera de Nicaragua' : 'En Nicaragua');
+    msg += '\nServicio: ' + servicio;
+    if (depto)    msg += '\nDepartamento: ' + depto;
+    msg += '\nNombre: ' + nombre;
+    msg += '\nTeléfono/WhatsApp: ' + tel;
+    if (correo)   msg += '\nCorreo: ' + correo;
+    if (proyecto) msg += '\n\nProyecto: ' + proyecto;
+
+    var num = '50588663659';
+    if (typeof gtag === 'function') {
+      try { gtag('event', 'generate_lead', { method: 'whatsapp_form', service: servicio, destination: num }); } catch(e){}
+    }
+    window.open('https://wa.me/' + num + '?text=' + encodeURIComponent(msg), '_blank', 'noopener');
+  }
+
+  document.addEventListener('submit', function(e){
+    var f = e.target;
+    if (f && f.id === 'ms-form') { e.preventDefault(); send(f); }
+  });
+
+  // Clear an error as soon as the user fixes it.
+  document.addEventListener('input', function(e){
+    var f = e.target && e.target.form;
+    if (!f || f.id !== 'ms-form') return;
+    if (e.target.name === 'servicio') show(f, 'err-servicio', false);
+    if (e.target.name === 'nombre' || e.target.name === 'telefono') {
+      if (val(f, 'nombre') && val(f, 'telefono')) show(f, 'err-datos', false);
+    }
+  }, true);
+})();
+</script>
 
 <dc-import name="Footer" hint-size="100%,360px"></dc-import>
 </x-dc>
