@@ -14,7 +14,10 @@ gtag('config', 'G-WJ06J12YSY');
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link rel="preload" as="image" href="assets/portfolio/28-cubierta-acero.jpg" fetchpriority="high">
+<link rel="preload" as="image" href="assets/portfolio/28-cubierta-acero.webp" fetchpriority="high">
+<link rel="preload" as="script" href="/assets/vendor/react.production.min.js">
+<link rel="preload" as="script" href="/assets/vendor/react-dom.production.min.js">
+<script>window.__resources={"https://unpkg.com/react@18.3.1/umd/react.production.min.js":"/assets/vendor/react.production.min.js","https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js":"/assets/vendor/react-dom.production.min.js"};</script>
 <script src="./support.js"></script>
 </head>
 <body>
@@ -108,7 +111,7 @@ gtag('config', 'G-WJ06J12YSY');
     <div style="max-width:1180px;margin:0 auto;padding:clamp(40px,8vw,58px) clamp(16px,5vw,32px);text-align:center;position:relative;">
       <h2 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:clamp(24px,3.2vw,36px);color:#FBF2E0;margin:0 auto;max-width:640px;line-height:1.12;">¿Tienes un proyecto similar?</h2>
       <p style="font-size:16px;color:#F0D9C2;max-width:520px;margin:14px auto 0;line-height:1.6;">Cuéntanos qué necesitas y te enviamos una cotización a tu medida.</p>
-      <a href="https://wa.me/17608830683" target="_blank" rel="noopener" style="display:inline-block;margin-top:26px;background:#F2A81E;color:#3A1D0C;text-decoration:none;border-radius:8px;padding:15px 30px;font-weight:800;font-size:15px;box-shadow:0 10px 24px rgba(0,0,0,0.25);" style-hover="background:#FFB93D;">Escríbenos por WhatsApp</a>
+      <a href="https://wa.me/50588663659" target="_blank" rel="noopener" style="display:inline-block;margin-top:26px;background:#F2A81E;color:#3A1D0C;text-decoration:none;border-radius:8px;padding:15px 30px;font-weight:800;font-size:15px;box-shadow:0 10px 24px rgba(0,0,0,0.25);" style-hover="background:#FFB93D;">Escríbenos por WhatsApp</a>
     </div>
   </section>
 </main>
@@ -119,43 +122,43 @@ gtag('config', 'G-WJ06J12YSY');
 class Component extends DCLogic {
   state = { idx: 0 };
   static ITEMS = [
-    { img:'assets/portfolio/28-cubierta-acero.jpg', cat:'Topografía', title:'Control topográfico de cubierta metálica', desc:'Replanteo, alineación y control de verticalidad para el montaje de la estructura de una cubierta metálica con estación total.' },
-    { img:'assets/portfolio/29-corte-estructura.jpg', cat:'Estructuras metálicas', title:'Fabricación de estructuras de acero', desc:'Corte, armado y soldadura de vigas de acero para estructura metálica en obra.' },
-    { img:'assets/portfolio/30-nave-arco.jpg', cat:'Estructuras metálicas', title:'Montaje de nave de acero', desc:'Montaje de estructura metálica de gran claro para nave industrial, zona norte de Nicaragua.' },
-    { img:'assets/portfolio/31-mojon-geodesico-chinandega.jpeg', cat:'Geodesia', title:'Instalación de mojón geodésico', desc:'Instalación y georreferenciación de mojón geodésico con receptor GNSS, Chinandega.' },
-    { img:'assets/portfolio/32-mojon-geodesico-el-rama-base.jpeg', cat:'Geodesia', title:'Estación base GNSS', desc:'Montaje de estación base GNSS para levantamiento y red de mojones geodésicos, El Rama.' },
-    { img:'assets/portfolio/33-mojon-geodesico-el-rama.jpeg', cat:'Geodesia', title:'Punto de control geodésico', desc:'Ocupación de punto de control con base GNSS para densificación de la red geodésica, El Rama.' },
-    { img:'assets/portfolio/34-mojon-geodesico-palma.jpeg', cat:'Geodesia', title:'Mojón geodésico en campo', desc:'Instalación de mojón geodésico con GNSS en plantación de palma, zona rural.' },
-    { img:'assets/portfolio/01-levantamiento-cerro-o.jpg', cat:'Topografía', title:'Control de verticalidad de torre', desc:'Control de verticalidad para torres de telecomunicaciones, El Naranjal, Matagalpa.' },
-    { img:'assets/portfolio/02-torre-camino-o.jpg', cat:'Topografía', title:'Control de verticalidad de torre', desc:'Control de verticalidad para torres de telecomunicaciones, San Marcos, Matiguás.' },
-    { img:'assets/portfolio/03-estacion-total-leica.jpeg', cat:'Topografía', title:'Levantamiento de poligonal', desc:'Levantamiento de poligonal, Rotonda El Periodista, Managua.' },
-    { img:'assets/portfolio/05-nave-industrial-o.jpg', cat:'Obras', title:'Control de niveles para losas', desc:'Control de niveles terminados para llena de losas en naves industriales, Ciudad Jardín, Managua.' },
-    { img:'assets/portfolio/06-replanteo-fundaciones-o.jpg', cat:'Obras', title:'Replanteo de zapatas y ejes', desc:'Replanteo de zapatas y ejes para colocación de acero y formaletas en fundaciones de bodegas, Granada.' },
-    { img:'assets/portfolio/07-movimiento-tierra-o.jpg', cat:'Obras', title:'Ubicación de ejes en fundaciones', desc:'Ubicación de ejes para colocación de acero en fundaciones, Carretera Norte, Managua.' },
-    { img:'assets/portfolio/10-tuberias-pluviales-chinandega-o.jpg', cat:'Obras', title:'Trazo y corte para tuberías pluviales', desc:'Trazo y corte para excavación y colocación de tuberías de aguas pluviales, Ingenio San Antonio, Chinandega.' },
-    { img:'assets/portfolio/11-obra-01-o.jpg' }, { img:'assets/portfolio/12-obra-02-o.jpg' }, { img:'assets/portfolio/13-obra-03-o.jpg' },
-    { img:'assets/portfolio/14-obra-04-o.jpg', cat:'Estudios de suelo', title:'Estudio de suelo', desc:'Estudio de suelo realizado en Cosmapa, Chinandega.' }, { img:'assets/portfolio/15-obra-05-o.jpg' }, { img:'assets/portfolio/16-obra-06-o.jpg' },
-    { img:'assets/portfolio/17-obra-07-o.jpg' }, { img:'assets/portfolio/18-obra-08-o.jpg', cat:'Supervisión de obra', title:'Supervisión y administración de obra', desc:'Supervisión y administración de obra en Ciudad de Guatemala, Guatemala.' }, { img:'assets/portfolio/19-obra-09-o.jpg', cat:'Supervisión de obra', title:'Supervisión de obra — AIFA', desc:'Supervisión de obra en el Aeropuerto Internacional Felipe Ángeles (AIFA), Ciudad de México, México.' },
-    { img:'assets/portfolio/20-obra-10-o.jpg' }, { img:'assets/portfolio/21-obra-11-o.jpg' }, { img:'assets/portfolio/22-obra-12-o.jpg' },
-    { img:'assets/portfolio/23-obra-13-o.jpg' }, { img:'assets/portfolio/24-obra-14-o.jpg' }, { img:'assets/portfolio/25-obra-15-o.jpg' },
-    { img:'assets/portfolio/26-obra-16-o.jpg' }, { img:'assets/portfolio/27-obra-17-o.jpg' },
-    { img:'assets/portfolio/35-uam-levantamiento-01.png', cat:'Topografía', title:'Levantamiento topográfico UAM', desc:'Levantamiento topográfico de la Universidad Americana (UAM).' },
-    { img:'assets/portfolio/36-uam-levantamiento-02.png', cat:'Topografía', title:'Levantamiento topográfico UAM', desc:'Levantamiento topográfico de la Universidad Americana (UAM).' },
-    { img:'assets/portfolio/37-uam-levantamiento-03.png', cat:'Topografía', title:'Levantamiento topográfico UAM', desc:'Levantamiento topográfico de la Universidad Americana (UAM).' },
-    { img:'assets/portfolio/38-puente-rio-01.jpeg', cat:'Topografía', title:'Levantamiento topográfico de puente', desc:'Levantamiento topográfico con estación total en puente sobre río, control de accesos y estructura.' },
-    { img:'assets/portfolio/39-camino-rural.jpeg', cat:'Topografía', title:'Levantamiento de camino rural', desc:'Levantamiento topográfico de camino de acceso en zona rural con estación total.' },
-    { img:'assets/portfolio/40-puente-rio-02.jpeg', cat:'Topografía', title:'Levantamiento topográfico de puente', desc:'Levantamiento topográfico con estación total en puente sobre río, control de accesos y estructura.' },
-    { img:'assets/portfolio/41-carretera-curva.jpeg', cat:'Topografía', title:'Levantamiento de carretera', desc:'Levantamiento topográfico en tramo de carretera con estación total.' },
-    { img:'assets/portfolio/42-levantamiento-urbano-01.jpeg', cat:'Topografía', title:'Levantamiento urbano', desc:'Levantamiento topográfico en área urbana, Nicaragua.' },
-    { img:'assets/portfolio/43-levantamiento-urbano-02.jpeg', cat:'Topografía', title:'Levantamiento urbano', desc:'Levantamiento topográfico en área urbana, Nicaragua.' },
-    { img:'assets/portfolio/44-azotea-tanque-01.jpeg', cat:'Topografía', title:'Levantamiento de azotea', desc:'Levantamiento topográfico en azotea para instalación de tanque de agua.' },
-    { img:'assets/portfolio/45-azotea-tanque-02.jpeg', cat:'Topografía', title:'Levantamiento de azotea', desc:'Levantamiento topográfico en azotea para instalación de tanque de agua.' },
-    { img:'assets/portfolio/46-replanteo-estructura-01.jpeg', cat:'Obras', title:'Replanteo de estructura metálica', desc:'Replanteo topográfico para montaje de estructura metálica en obra.' },
-    { img:'assets/portfolio/47-replanteo-estructura-02.png', cat:'Obras', title:'Replanteo de estructura metálica', desc:'Replanteo topográfico para montaje de estructura metálica en obra.' },
-    { img:'assets/portfolio/48-uam-parqueo.jpeg', cat:'Topografía', title:'Levantamiento topográfico UAM', desc:'Levantamiento topográfico de la Universidad Americana (UAM).' },
-    { img:'assets/portfolio/49-uam-cancha.jpeg', cat:'Topografía', title:'Levantamiento topográfico UAM', desc:'Levantamiento topográfico de instalaciones deportivas, Universidad Americana (UAM).' },
-    { img:'assets/portfolio/50-uam-estadio-01.jpeg', cat:'Topografía', title:'Levantamiento topográfico UAM', desc:'Levantamiento topográfico del estadio de béisbol, Universidad Americana (UAM).' },
-    { img:'assets/portfolio/51-uam-estadio-02.jpeg', cat:'Topografía', title:'Levantamiento topográfico UAM', desc:'Levantamiento topográfico del estadio de béisbol, Universidad Americana (UAM).' }
+    { img:'assets/portfolio/28-cubierta-acero.webp', cat:'Topografía', title:'Control topográfico de cubierta metálica', desc:'Replanteo, alineación y control de verticalidad para el montaje de la estructura de una cubierta metálica con estación total.' },
+    { img:'assets/portfolio/29-corte-estructura.webp', cat:'Estructuras metálicas', title:'Fabricación de estructuras de acero', desc:'Corte, armado y soldadura de vigas de acero para estructura metálica en obra.' },
+    { img:'assets/portfolio/30-nave-arco.webp', cat:'Estructuras metálicas', title:'Montaje de nave de acero', desc:'Montaje de estructura metálica de gran claro para nave industrial, zona norte de Nicaragua.' },
+    { img:'assets/portfolio/31-mojon-geodesico-chinandega.webp', cat:'Geodesia', title:'Instalación de mojón geodésico', desc:'Instalación y georreferenciación de mojón geodésico con receptor GNSS, Chinandega.' },
+    { img:'assets/portfolio/32-mojon-geodesico-el-rama-base.webp', cat:'Geodesia', title:'Estación base GNSS', desc:'Montaje de estación base GNSS para levantamiento y red de mojones geodésicos, El Rama.' },
+    { img:'assets/portfolio/33-mojon-geodesico-el-rama.webp', cat:'Geodesia', title:'Punto de control geodésico', desc:'Ocupación de punto de control con base GNSS para densificación de la red geodésica, El Rama.' },
+    { img:'assets/portfolio/34-mojon-geodesico-palma.webp', cat:'Geodesia', title:'Mojón geodésico en campo', desc:'Instalación de mojón geodésico con GNSS en plantación de palma, zona rural.' },
+    { img:'assets/portfolio/01-levantamiento-cerro-o.webp', cat:'Topografía', title:'Control de verticalidad de torre', desc:'Control de verticalidad para torres de telecomunicaciones, El Naranjal, Matagalpa.' },
+    { img:'assets/portfolio/02-torre-camino-o.webp', cat:'Topografía', title:'Control de verticalidad de torre', desc:'Control de verticalidad para torres de telecomunicaciones, San Marcos, Matiguás.' },
+    { img:'assets/portfolio/03-estacion-total-leica.webp', cat:'Topografía', title:'Levantamiento de poligonal', desc:'Levantamiento de poligonal, Rotonda El Periodista, Managua.' },
+    { img:'assets/portfolio/05-nave-industrial-o.webp', cat:'Obras', title:'Control de niveles para losas', desc:'Control de niveles terminados para llena de losas en naves industriales, Ciudad Jardín, Managua.' },
+    { img:'assets/portfolio/06-replanteo-fundaciones-o.webp', cat:'Obras', title:'Replanteo de zapatas y ejes', desc:'Replanteo de zapatas y ejes para colocación de acero y formaletas en fundaciones de bodegas, Granada.' },
+    { img:'assets/portfolio/07-movimiento-tierra-o.webp', cat:'Obras', title:'Ubicación de ejes en fundaciones', desc:'Ubicación de ejes para colocación de acero en fundaciones, Carretera Norte, Managua.' },
+    { img:'assets/portfolio/10-tuberias-pluviales-chinandega-o.webp', cat:'Obras', title:'Trazo y corte para tuberías pluviales', desc:'Trazo y corte para excavación y colocación de tuberías de aguas pluviales, Ingenio San Antonio, Chinandega.' },
+    { img:'assets/portfolio/11-obra-01-o.webp' }, { img:'assets/portfolio/12-obra-02-o.webp' }, { img:'assets/portfolio/13-obra-03-o.webp' },
+    { img:'assets/portfolio/14-obra-04-o.webp', cat:'Estudios de suelo', title:'Estudio de suelo', desc:'Estudio de suelo realizado en Cosmapa, Chinandega.' }, { img:'assets/portfolio/15-obra-05-o.webp' }, { img:'assets/portfolio/16-obra-06-o.webp' },
+    { img:'assets/portfolio/17-obra-07-o.webp' }, { img:'assets/portfolio/18-obra-08-o.webp', cat:'Supervisión de obra', title:'Supervisión y administración de obra', desc:'Supervisión y administración de obra en Ciudad de Guatemala, Guatemala.' }, { img:'assets/portfolio/19-obra-09-o.webp', cat:'Supervisión de obra', title:'Supervisión de obra — AIFA', desc:'Supervisión de obra en el Aeropuerto Internacional Felipe Ángeles (AIFA), Ciudad de México, México.' },
+    { img:'assets/portfolio/20-obra-10-o.webp' }, { img:'assets/portfolio/21-obra-11-o.webp' }, { img:'assets/portfolio/22-obra-12-o.webp' },
+    { img:'assets/portfolio/23-obra-13-o.webp' }, { img:'assets/portfolio/24-obra-14-o.webp' }, { img:'assets/portfolio/25-obra-15-o.webp' },
+    { img:'assets/portfolio/26-obra-16-o.webp' }, { img:'assets/portfolio/27-obra-17-o.webp' },
+    { img:'assets/portfolio/35-uam-levantamiento-01.webp', cat:'Topografía', title:'Levantamiento topográfico UAM', desc:'Levantamiento topográfico de la Universidad Americana (UAM).' },
+    { img:'assets/portfolio/36-uam-levantamiento-02.webp', cat:'Topografía', title:'Levantamiento topográfico UAM', desc:'Levantamiento topográfico de la Universidad Americana (UAM).' },
+    { img:'assets/portfolio/37-uam-levantamiento-03.webp', cat:'Topografía', title:'Levantamiento topográfico UAM', desc:'Levantamiento topográfico de la Universidad Americana (UAM).' },
+    { img:'assets/portfolio/38-puente-rio-01.webp', cat:'Topografía', title:'Levantamiento topográfico de puente', desc:'Levantamiento topográfico con estación total en puente sobre río, control de accesos y estructura.' },
+    { img:'assets/portfolio/39-camino-rural.webp', cat:'Topografía', title:'Levantamiento de camino rural', desc:'Levantamiento topográfico de camino de acceso en zona rural con estación total.' },
+    { img:'assets/portfolio/40-puente-rio-02.webp', cat:'Topografía', title:'Levantamiento topográfico de puente', desc:'Levantamiento topográfico con estación total en puente sobre río, control de accesos y estructura.' },
+    { img:'assets/portfolio/41-carretera-curva.webp', cat:'Topografía', title:'Levantamiento de carretera', desc:'Levantamiento topográfico en tramo de carretera con estación total.' },
+    { img:'assets/portfolio/42-levantamiento-urbano-01.webp', cat:'Topografía', title:'Levantamiento urbano', desc:'Levantamiento topográfico en área urbana, Nicaragua.' },
+    { img:'assets/portfolio/43-levantamiento-urbano-02.webp', cat:'Topografía', title:'Levantamiento urbano', desc:'Levantamiento topográfico en área urbana, Nicaragua.' },
+    { img:'assets/portfolio/44-azotea-tanque-01.webp', cat:'Topografía', title:'Levantamiento de azotea', desc:'Levantamiento topográfico en azotea para instalación de tanque de agua.' },
+    { img:'assets/portfolio/45-azotea-tanque-02.webp', cat:'Topografía', title:'Levantamiento de azotea', desc:'Levantamiento topográfico en azotea para instalación de tanque de agua.' },
+    { img:'assets/portfolio/46-replanteo-estructura-01.webp', cat:'Obras', title:'Replanteo de estructura metálica', desc:'Replanteo topográfico para montaje de estructura metálica en obra.' },
+    { img:'assets/portfolio/47-replanteo-estructura-02.webp', cat:'Obras', title:'Replanteo de estructura metálica', desc:'Replanteo topográfico para montaje de estructura metálica en obra.' },
+    { img:'assets/portfolio/48-uam-parqueo.webp', cat:'Topografía', title:'Levantamiento topográfico UAM', desc:'Levantamiento topográfico de la Universidad Americana (UAM).' },
+    { img:'assets/portfolio/49-uam-cancha.webp', cat:'Topografía', title:'Levantamiento topográfico UAM', desc:'Levantamiento topográfico de instalaciones deportivas, Universidad Americana (UAM).' },
+    { img:'assets/portfolio/50-uam-estadio-01.webp', cat:'Topografía', title:'Levantamiento topográfico UAM', desc:'Levantamiento topográfico del estadio de béisbol, Universidad Americana (UAM).' },
+    { img:'assets/portfolio/51-uam-estadio-02.webp', cat:'Topografía', title:'Levantamiento topográfico UAM', desc:'Levantamiento topográfico del estadio de béisbol, Universidad Americana (UAM).' }
   ];
   renderVals(){
     const L = Component.ITEMS, n = L.length;
