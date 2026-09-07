@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /deploy-facturacion/
 
 Sitemap: https://martinezseguramultiserviciosni.com/sitemap.xml
