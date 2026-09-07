@@ -10,31 +10,36 @@
  *
  * Bump CACHE_VERSION on every deploy so old bundles are evicted.
  */
-const CACHE_VERSION = 'ms-facturacion-v12.2';
+const CACHE_VERSION = 'ms-facturacion-v12.3';
 /* Written by the app on every run so this worker can raise a follow-up
    notification without the app being open. Never evicted with the page cache. */
 const NOTIFY_CACHE = 'ms-facturacion-notify';
 const CACHE = CACHE_VERSION;
 
+/* The directory this worker was served from — '/' at the site root,
+   '/deploy-facturacion/' when the folder is uploaded as a subdirectory.
+   Every path below is built from it, so the same file works either way. */
+const BASE = self.location.pathname.replace(/[^/]*$/, '');
+const at = (f) => BASE + f;
+
 /* Fetched during install so the app opens offline on first launch. */
 const PRECACHE = [
-  '/facturacion-app',
-  '/manifest-facturacion.webmanifest',
-  '/icon-192.png',
-  '/icon-512.png',
-  '/icon-maskable-192.png',
-  '/icon-maskable-512.png',
-  '/apple-touch-icon.png',
+  at('facturacion-app'),
+  at('manifest-facturacion.webmanifest'),
+  at('icon-192.png'),
+  at('icon-512.png'),
+  at('icon-maskable-192.png'),
+  at('apple-touch-icon.png'),
 ];
 
 /* Also cached, but only once actually visited — no point paying for the
    desktop bundle and the calculator on a phone's first install. */
 const RUNTIME = [
-  '/facturacion-web',
-  '/facturacion-calculadora',
-  '/facturacion-app.html',
-  '/facturacion-web.html',
-  '/facturacion-calculadora.html',
+  at('facturacion-web'),
+  at('facturacion-calculadora'),
+  at('facturacion-app.html'),
+  at('facturacion-web.html'),
+  at('facturacion-calculadora.html'),
 ];
 
 const OWNED = new Set(PRECACHE.concat(RUNTIME));
@@ -79,11 +84,11 @@ self.addEventListener('fetch', (event) => {
 
   // The manifest's shortcuts add a query string; the document is the same one.
   const isAppNav = req.mode === 'navigate' && url.origin === self.location.origin &&
-                   (url.pathname === '/facturacion-app' || url.pathname === '/facturacion-app.html');
+                   (url.pathname === at('facturacion-app') || url.pathname === at('facturacion-app.html'));
 
   if (!isAppNav && !isOurs(url)) return;  // hands off the rest of the site
 
-  const key = isAppNav ? '/facturacion-app' : url.pathname;
+  const key = isAppNav ? at('facturacion-app') : url.pathname;
 
   event.respondWith((async () => {
     const cache = await caches.open(CACHE);
@@ -102,7 +107,7 @@ self.addEventListener('fetch', (event) => {
     if (fresh) return fresh;
 
     if (isAppNav) {
-      const shell = await cache.match('/facturacion-app');
+      const shell = await cache.match(at('facturacion-app'));
       if (shell) return shell;
     }
     return new Response(
@@ -174,10 +179,10 @@ async function notifyFollowup() {
       body: parts.join(' · ')
         + (first ? '\n' + first.client + ' · ' + first.number : '')
         + (oldest ? ' · ' + oldest + ' días' : ''),
-      icon: '/icon-192.png',
-      badge: '/icon-192.png',
+      icon: at('icon-192.png'),
+      badge: at('icon-192.png'),
       tag: 'ms-followup',
-      data: { url: '/facturacion-app?accion=seguimiento' },
+      data: { url: at('facturacion-app?accion=seguimiento') },
     });
     await cache.put('/__notified', new Response(stamp));
   } catch (e) {
@@ -197,11 +202,11 @@ self.addEventListener('message', (event) => {
 
 self.addEventListener('notificationclick', (event) => {
   event.notification.close();
-  const url = (event.notification.data && event.notification.data.url) || '/facturacion-app';
+  const url = (event.notification.data && event.notification.data.url) || at('facturacion-app');
   event.waitUntil((async () => {
     const all = await self.clients.matchAll({ type: 'window', includeUncontrolled: true });
     for (const c of all) {
-      if (c.url.includes('/facturacion-app')) {
+      if (c.url.includes(at('facturacion-app'))) {
         await c.focus();
         if ('navigate' in c) { try { await c.navigate(url); } catch (e) {} }
         return;
