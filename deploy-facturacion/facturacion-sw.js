@@ -10,7 +10,7 @@
  *
  * Bump CACHE_VERSION on every deploy so old bundles are evicted.
  */
-const CACHE_VERSION = 'ms-facturacion-v12.3';
+const CACHE_VERSION = 'ms-facturacion-v12.4';
 /* Written by the app on every run so this worker can raise a follow-up
    notification without the app being open. Never evicted with the page cache. */
 const NOTIFY_CACHE = 'ms-facturacion-notify';
@@ -90,6 +90,9 @@ self.addEventListener('fetch', (event) => {
 
   const key = isAppNav ? at('facturacion-app') : url.pathname;
 
+  // A page is HTML if it is a navigation or has no file extension (clean URLs).
+  const isDoc = req.mode === 'navigate' || !/\.[a-z0-9]+$/i.test(url.pathname);
+
   event.respondWith((async () => {
     const cache = await caches.open(CACHE);
     const cached = await cache.match(key);
@@ -99,9 +102,19 @@ self.addEventListener('fetch', (event) => {
       return res;
     }).catch(() => null);
 
-    // Serve what we have and refresh behind it; fall back to the network on a
-    // cold cache, and to whatever we have when the network is gone.
-    if (cached) { event.waitUntil(network); return cached; }
+    // Pages go network-first: serving them stale meant a deploy only appeared
+    // on the load AFTER the one that fetched it, which looks exactly like the
+    // upload never happened. The cache stays as the offline fallback.
+    if (isDoc) {
+      const fresh = await network;
+      if (fresh) return fresh;
+      if (cached) return cached;
+    } else if (cached) {
+      // Icons and the manifest are versioned by the cache name, so serving
+      // them from cache and refreshing behind is still right.
+      event.waitUntil(network);
+      return cached;
+    }
 
     const fresh = await network;
     if (fresh) return fresh;
