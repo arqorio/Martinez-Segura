@@ -1,0 +1,42 @@
+{
+  "id": "/facturacion-app",
+  "name": "Martínez-Segura Facturación",
+  "short_name": "M·S Facturación",
+  "description": "Cotizaciones, facturas, proyectos y cobros de Martínez-Segura Multiservicios.",
+  "lang": "es-NI",
+  "dir": "ltr",
+  "start_url": "/facturacion-app",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "orientation": "portrait",
+  "background_color": "#17333D",
+  "theme_color": "#17333D",
+  "categories": ["business", "productivity", "finance"],
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icon-maskable-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    {
+      "name": "Nueva cotización",
+      "short_name": "Cotizar",
+      "url": "/facturacion-app?accion=cotizacion",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" }]
+    },
+    {
+      "name": "Seguimiento de cotizaciones",
+      "short_name": "Seguimiento",
+      "url": "/facturacion-app?accion=seguimiento",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" }]
+    },
+    {
+      "name": "Por cobrar",
+      "short_name": "Cobros",
+      "url": "/facturacion-app?accion=cobros",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" }]
+    }
+  ]
+}
