@@ -3,15 +3,29 @@
   "trailingSlash": false,
   "headers": [
     {
-      "source": "/deploy-facturacion/facturacion-sw.js",
+      "source": "/deploy-facturacion/facturacion-app",
       "headers": [
         {
           "key": "Cache-Control",
-          "value": "no-cache"
-        },
+          "value": "no-cache, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/deploy-facturacion/facturacion-web",
+      "headers": [
         {
-          "key": "Service-Worker-Allowed",
-          "value": "/deploy-facturacion/"
+          "key": "Cache-Control",
+          "value": "no-cache, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/deploy-facturacion/facturacion-calculadora",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-cache, must-revalidate"
         }
       ]
     },
@@ -20,7 +34,29 @@
       "headers": [
         {
           "key": "Cache-Control",
-          "value": "no-cache"
+          "value": "no-cache, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/deploy-facturacion/facturacion-sw.js",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-cache, must-revalidate"
+        },
+        {
+          "key": "Service-Worker-Allowed",
+          "value": "/deploy-facturacion/"
+        }
+      ]
+    },
+    {
+      "source": "/deploy-facturacion/(.*).png",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800"
         }
       ]
     },
