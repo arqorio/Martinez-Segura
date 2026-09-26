@@ -52,6 +52,15 @@
       ]
     },
     {
+      "source": "/facturacion-sw.js",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-cache, must-revalidate"
+        }
+      ]
+    },
+    {
       "source": "/deploy-facturacion/(.*).png",
       "headers": [
         {
