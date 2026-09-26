@@ -22,7 +22,7 @@
 </helmet>
 <header style="position:sticky;top:0;z-index:50;background:rgba(16,33,41,0.97);backdrop-filter:blur(10px);border-bottom:1px solid rgba(244,234,210,0.14);">
   <div style="max-width:1180px;margin:0 auto;padding:13px clamp(16px,5vw,32px);display:flex;align-items:center;justify-content:space-between;gap:16px;">
-    <a href="/en/" aria-label="Martínez-Segura Surveying — Home" style="display:flex;align-items:center;gap:11px;text-decoration:none;flex:none;">
+    <a href="/en" aria-label="Martínez-Segura Surveying — Home" style="display:flex;align-items:center;gap:11px;text-decoration:none;flex:none;">
       <svg width="34" height="30" viewBox="0 0 38 34" fill="none" aria-hidden="true" style="flex:none;"><path d="M19 3 L34 28 C35 30 34 31 32 31 L6 31 C4 31 3 30 4 28 Z" stroke="#E0703F" stroke-width="2.4" stroke-linejoin="round"></path><circle cx="19" cy="22" r="2.4" fill="#E0703F"></circle></svg>
       <span style="text-align:left;line-height:1;display:block;">
         <span style="display:block;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:clamp(14px,4.2vw,19px);letter-spacing:0.01em;color:#F7EFDC;white-space:nowrap;">MARTÍNEZ-SEGURA</span>
@@ -31,7 +31,7 @@
     </a>
 
     <nav aria-label="Primary" style="display:{{ navDisplay }};align-items:center;gap:clamp(12px,1.7vw,22px);">
-      <a href="/en/" style="position:relative;text-decoration:none;font-family:'Hanken Grotesk',sans-serif;font-weight:600;font-size:15px;color:{{ cHome }};padding:4px 0;">Home<span style="position:absolute;left:0;right:0;bottom:-5px;height:2px;border-radius:2px;background:{{ uHome }};"></span></a>
+      <a href="/en" style="position:relative;text-decoration:none;font-family:'Hanken Grotesk',sans-serif;font-weight:600;font-size:15px;color:{{ cHome }};padding:4px 0;">Home<span style="position:absolute;left:0;right:0;bottom:-5px;height:2px;border-radius:2px;background:{{ uHome }};"></span></a>
       <a href="/en/services" style="position:relative;text-decoration:none;font-family:'Hanken Grotesk',sans-serif;font-weight:600;font-size:15px;color:{{ cServ }};padding:4px 0;">Services<span style="position:absolute;left:0;right:0;bottom:-5px;height:2px;border-radius:2px;background:{{ uServ }};"></span></a>
       <a href="/en/contact" style="position:relative;text-decoration:none;font-family:'Hanken Grotesk',sans-serif;font-weight:600;font-size:15px;color:{{ cContact }};padding:4px 0;">Contact<span style="position:absolute;left:0;right:0;bottom:-5px;height:2px;border-radius:2px;background:{{ uContact }};"></span></a>
       <a href="/" hreflang="es" style="display:inline-flex;align-items:center;gap:6px;text-decoration:none;font-family:'Hanken Grotesk',sans-serif;font-weight:700;font-size:13px;color:#C9D6DA;border:1px solid rgba(244,234,210,0.28);border-radius:999px;padding:6px 12px;" style-hover="color:#F2A81E;border-color:#F2A81E;">ES</a>
@@ -47,7 +47,7 @@
 
   <sc-if value="{{ showMobileMenu }}" hint-placeholder-val="{{ false }}">
   <nav aria-label="Mobile" style="border-top:1px solid rgba(244,234,210,0.14);padding:6px clamp(16px,5vw,32px) 14px;display:flex;flex-direction:column;">
-    <a href="/en/" style="text-decoration:none;border-bottom:1px solid rgba(244,234,210,0.1);font-family:'Hanken Grotesk',sans-serif;font-weight:600;font-size:18px;color:{{ cHome }};padding:16px 2px;">Home</a>
+    <a href="/en" style="text-decoration:none;border-bottom:1px solid rgba(244,234,210,0.1);font-family:'Hanken Grotesk',sans-serif;font-weight:600;font-size:18px;color:{{ cHome }};padding:16px 2px;">Home</a>
     <a href="/en/services" style="text-decoration:none;border-bottom:1px solid rgba(244,234,210,0.1);font-family:'Hanken Grotesk',sans-serif;font-weight:600;font-size:18px;color:{{ cServ }};padding:16px 2px;">Services</a>
     <a href="/en/contact" style="text-decoration:none;border-bottom:1px solid rgba(244,234,210,0.1);font-family:'Hanken Grotesk',sans-serif;font-weight:600;font-size:18px;color:{{ cContact }};padding:16px 2px;">Contact</a>
     <a href="/" hreflang="es" style="text-decoration:none;border-bottom:1px solid rgba(244,234,210,0.1);font-family:'Hanken Grotesk',sans-serif;font-weight:600;font-size:18px;color:#C9D6DA;padding:16px 2px;">Español</a>

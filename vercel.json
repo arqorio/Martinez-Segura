@@ -106,6 +106,15 @@
       ]
     },
     {
+      "source": "/(.*)\\.dc(\\.html)?",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex"
+        }
+      ]
+    },
+    {
       "source": "/(.*)",
       "headers": [
         {
