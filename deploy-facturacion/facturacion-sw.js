@@ -10,7 +10,7 @@
  *
  * Bump CACHE_VERSION on every deploy so old bundles are evicted.
  */
-const CACHE_VERSION = 'ms-facturacion-v12.5';
+const CACHE_VERSION = 'ms-facturacion-v12.6';
 /* Written by the app on every run so this worker can raise a follow-up
    notification without the app being open. Never evicted with the page cache. */
 const NOTIFY_CACHE = 'ms-facturacion-notify';
