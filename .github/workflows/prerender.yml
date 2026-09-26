@@ -1,0 +1,46 @@
+# Regenerates the pre-rendered HTML every time something lands on main,
+# so pages uploaded through the GitHub web UI get their snapshot without
+# anyone running the tool by hand. See herramientas/prerender.py.
+#
+# Pushes made with GITHUB_TOKEN do not trigger workflows, so the commit
+# this job makes cannot start another run.
+name: Pre-render
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: prerender
+  cancel-in-progress: true      # a newer upload supersedes an older run
+
+jobs:
+  prerender:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generar HTML pre-renderizado
+        env:
+          MS_BROWSER: google-chrome
+        run: python3 herramientas/prerender.py --hilos 4
+
+      - name: Guardar cambios
+        run: |
+          if git diff --quiet; then
+            echo "Nada que actualizar."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -am "Pre-render automático"
+          if ! git push; then
+            # Someone uploaded again while we worked: the run for that upload
+            # will regenerate everything, so there is nothing to force here.
+            echo "::warning::main avanzó durante el pre-render; lo hará la siguiente ejecución."
+          fi
