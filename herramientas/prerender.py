@@ -51,7 +51,7 @@ BASE_CSS = ('x-dc{display:none!important}'
 
 SWAP_JS = r'''<script>(function(){
 var de=document.documentElement;de.classList.add('ms-pre-on');
-function ready(){var r=document.getElementById('dc-root');return r&&r.querySelector('header')&&r.querySelector('footer');}
+function ready(){var r=document.getElementById('dc-root');return r&&r.firstElementChild&&!r.querySelector('.sc-placeholder');}
 function norm(el){var c=el.cloneNode(true);for(var i=c.attributes.length-1;i>=0;i--){if(/^data-/.test(c.attributes[i].name))c.removeAttribute(c.attributes[i].name);}return c.outerHTML;}
 function swap(){if(done)return;done=true;if(mo)mo.disconnect();
 var p=document.getElementById('ms-pre');if(p)p.parentNode.removeChild(p);de.classList.remove('ms-pre-on');
@@ -89,8 +89,7 @@ def xdc_block(src):
 def eligible(rel, src):
     if EXCLUDE.search(rel):
         return False
-    return ('support.js' in src and '<x-dc' in src
-            and 'dc-import name="Header"' in src and 'dc-import name="Footer"' in src)
+    return 'support.js' in src and '<x-dc' in src
 
 
 # ------------------------------------------------------------------ local server
@@ -231,16 +230,26 @@ def tag_header(header_html, cls):
     return '<header' + attrs + '>' + header_html[m.end():]
 
 
-def build_snapshot(desk_dom, mob_dom):
+def build_snapshot(desk_dom, mob_dom, shared_header):
     body = inner_of(desk_dom, 'dc-root')
-    mob = inner_of(mob_dom, 'dc-root')
-    if not body or not mob:
+    if not body or not body.strip():
         return None, 'el runtime no renderizó #dc-root'
-    body, mob = clean_snapshot(body), clean_snapshot(mob)
+    if 'sc-placeholder' in body:
+        return None, 'quedaron componentes sin cargar (sc-placeholder)'
+    body = clean_snapshot(body)
+    if not shared_header:
+        # an inline header is laid out with CSS, so one capture fits every width
+        return body, None
+    # The shared Header component picks menu vs. burger in JS (innerWidth < 1010),
+    # so capture it at both widths and let a media query choose.
+    mob = inner_of(mob_dom or '', 'dc-root')
+    if not mob or 'sc-placeholder' in mob:
+        return None, 'la captura móvil no terminó'
+    mob = clean_snapshot(mob)
     hd = re.search(r'<header\b.*?</header>', body, re.S)
     hm = re.search(r'<header\b.*?</header>', mob, re.S)
-    if not hd or not hm or '<footer' not in body:
-        return None, 'faltan el header o el footer (¿no cargaron los componentes?)'
+    if not hd or not hm:
+        return None, 'falta el header compartido'
     both = tag_header(hd.group(0), 'ms-hd-d') + tag_header(hm.group(0), 'ms-hd-m')
     body = body[:hd.start()] + both + body[hd.end():]
     return body, None
@@ -293,9 +302,11 @@ def process(rel, browser, port, profile_root, write):
     snap, err = None, None
     # Under load a headless render can come back empty or before the Header and
     # Footer components arrive; retry with more time before giving up.
+    shared_header = 'dc-import name="Header"' in src
     for budget in (12000, 20000, 30000):
         snap, err = build_snapshot(dump(browser, url, DESKTOP, profile, budget),
-                                   dump(browser, url, MOBILE, profile, budget))
+                                   dump(browser, url, MOBILE, profile, budget) if shared_header else None,
+                                   shared_header)
         if snap:
             break
     if not snap:
@@ -307,7 +318,12 @@ def process(rel, browser, port, profile_root, write):
     # safety checks: the runtime template must be untouched, and the result must be sane
     if xdc_block(out) != xdc_block(src):
         return rel, 'ERROR', 'la plantilla <x-dc> cambió', False
-    for need in ('<title', 'rel="canonical"', '<header class="ms-hd-d', '<footer'):
+    needs = ['<title', 'rel="canonical"']
+    if shared_header:
+        needs.append('<header class="ms-hd-d')
+    if 'dc-import name="Footer"' in src:
+        needs.append('<footer')
+    for need in needs:
         if need not in out:
             return rel, 'ERROR', 'falta %s' % need, False
     if '{{' in snap:

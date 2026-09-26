@@ -40,7 +40,12 @@ Solo usa la biblioteca estándar de Python.
 
 ### Qué páginas procesa
 
-Las que usan `support.js` con los componentes `Header` y `Footer`. Por ahora quedan
-fuera `arquitectura.html`, `arquitectura-fotos.html`, las páginas de PARCON
-(`construccion-*`, `parajon-construcciones`), `tarjeta.html` y la facturación:
-tienen encabezado propio o animaciones que conviene revisar aparte.
+Todas las que usan `support.js` (114). Quedan fuera `tarjeta.html` y la carpeta
+`deploy-facturacion/`: son paquetes con su propio runtime, y la facturación es una
+herramienta interna marcada `noindex`.
+
+La copia se retira cuando el runtime ya dibujó la página y no queda ningún componente
+pendiente (`.sc-placeholder`). En las páginas con el `Header` compartido se captura
+el encabezado a 1280 y a 390 px, porque ese componente elige entre menú y hamburguesa
+con JavaScript; las páginas con encabezado propio (arquitectura, PARCON) lo resuelven
+con CSS y basta una captura.
