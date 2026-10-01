@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 420" width="820" height="420" role="img" aria-labelledby="t d" font-family="system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif">
+<title id="t">Diseño arquitectónico: planta con cotas y áreas</title>
+<desc id="d">Planta de una vivienda de 12 por 8 metros a ejes con sala-comedor-cocina y dos dormitorios, puertas, ventanas, cotas y el área libre de cada espacio.</desc>
+<rect width="820" height="420" fill="#FFFDF6"/>
+<rect x="170.0" y="72.0" width="432.0" height="288.0" fill="#F4EAD2" stroke="#2B1F15" stroke-width="5.3999999999999995"/>
+<line x1="350.0" y1="360.0" x2="350.0" y2="72.0" stroke="#2B1F15" stroke-width="4.319999999999999"/>
+<line x1="350.0" y1="198.0" x2="602.0" y2="198.0" stroke="#2B1F15" stroke-width="4.319999999999999"/>
+<line x1="242.0" y1="360.0" x2="274.4" y2="360.0" stroke="#F4EAD2" stroke-width="7.3999999999999995"/>
+<path d="M242.0 360.0 L242.0 327.6 A32.4 32.4 0 0 1 274.4 360.0" fill="none" stroke="#5C4A36" stroke-width="0.9"/>
+<line x1="350.0" y1="280.8" x2="350.0" y2="248.39999999999998" stroke="#F4EAD2" stroke-width="7.3999999999999995"/>
+<path d="M350.0 280.8 L382.4 280.8 A32.4 32.4 0 0 0 350.0 248.39999999999998" fill="none" stroke="#5C4A36" stroke-width="0.9"/>
+<line x1="350.0" y1="144.0" x2="350.0" y2="111.6" stroke="#F4EAD2" stroke-width="7.3999999999999995"/>
+<path d="M350.0 144.0 L382.4 144.0 A32.4 32.4 0 0 0 350.0 111.6" fill="none" stroke="#5C4A36" stroke-width="0.9"/>
+<line x1="422.0" y1="72.0" x2="512.0" y2="72.0" stroke="#FFFDF6" stroke-width="4.3999999999999995"/>
+<line x1="422.0" y1="72.0" x2="512.0" y2="72.0" stroke="#2F5D68" stroke-width="0.9"/>
+<line x1="602.0" y1="306.0" x2="602.0" y2="244.8" stroke="#FFFDF6" stroke-width="4.3999999999999995"/>
+<line x1="602.0" y1="306.0" x2="602.0" y2="244.8" stroke="#2F5D68" stroke-width="0.9"/>
+<line x1="170.0" y1="252.0" x2="170.0" y2="162.0" stroke="#FFFDF6" stroke-width="4.3999999999999995"/>
+<line x1="170.0" y1="252.0" x2="170.0" y2="162.0" stroke="#2F5D68" stroke-width="0.9"/>
+<text x="260.0" y="214.0" font-size="11.5" fill="#2B1F15" text-anchor="middle" font-weight="700">Sala-comedor-cocina</text>
+<text x="260.0" y="231.0" font-size="11" fill="#5C4A36" text-anchor="middle" font-weight="400" font-family="ui-monospace,'SFMono-Regular',Consolas,'Liberation Mono',monospace">38.07 m²</text>
+<text x="476.0" y="277.0" font-size="11.5" fill="#2B1F15" text-anchor="middle" font-weight="700">Dormitorio 2</text>
+<text x="476.0" y="294.0" font-size="11" fill="#5C4A36" text-anchor="middle" font-weight="400" font-family="ui-monospace,'SFMono-Regular',Consolas,'Liberation Mono',monospace">29.80 m²</text>
+<text x="476.0" y="133.0" font-size="11.5" fill="#2B1F15" text-anchor="middle" font-weight="700">Dormitorio 1</text>
+<text x="476.0" y="150.0" font-size="11" fill="#5C4A36" text-anchor="middle" font-weight="400" font-family="ui-monospace,'SFMono-Regular',Consolas,'Liberation Mono',monospace">22.95 m²</text>
+<line x1="170.0" y1="54.0" x2="350.0" y2="54.0" stroke="#5C4A36" stroke-width="0.8"/>
+<line x1="166.0" y1="58.0" x2="174.0" y2="50.0" stroke="#5C4A36" stroke-width="0.8"/>
+<line x1="346.0" y1="58.0" x2="354.0" y2="50.0" stroke="#5C4A36" stroke-width="0.8"/>
+<text x="260.0" y="49.0" font-size="10.5" fill="#5C4A36" text-anchor="middle" font-weight="400" font-family="ui-monospace,'SFMono-Regular',Consolas,'Liberation Mono',monospace">5.00</text>
+<line x1="350.0" y1="54.0" x2="602.0" y2="54.0" stroke="#5C4A36" stroke-width="0.8"/>
+<line x1="346.0" y1="58.0" x2="354.0" y2="50.0" stroke="#5C4A36" stroke-width="0.8"/>
+<line x1="598.0" y1="58.0" x2="606.0" y2="50.0" stroke="#5C4A36" stroke-width="0.8"/>
+<text x="476.0" y="49.0" font-size="10.5" fill="#5C4A36" text-anchor="middle" font-weight="400" font-family="ui-monospace,'SFMono-Regular',Consolas,'Liberation Mono',monospace">7.00</text>
+<line x1="170.0" y1="34.0" x2="602.0" y2="34.0" stroke="#5C4A36" stroke-width="0.8"/>
+<line x1="166.0" y1="38.0" x2="174.0" y2="30.0" stroke="#5C4A36" stroke-width="0.8"/>
+<line x1="598.0" y1="38.0" x2="606.0" y2="30.0" stroke="#5C4A36" stroke-width="0.8"/>
+<text x="386.0" y="29.0" font-size="10.5" fill="#5C4A36" text-anchor="middle" font-weight="400" font-family="ui-monospace,'SFMono-Regular',Consolas,'Liberation Mono',monospace">12.00</text>
+<line x1="622.0" y1="360.0" x2="622.0" y2="198.0" stroke="#5C4A36" stroke-width="0.8"/>
+<line x1="618.0" y1="364.0" x2="626.0" y2="356.0" stroke="#5C4A36" stroke-width="0.8"/>
+<line x1="618.0" y1="202.0" x2="626.0" y2="194.0" stroke="#5C4A36" stroke-width="0.8"/>
+<text x="630.0" y="283.0" font-size="10.5" fill="#5C4A36" text-anchor="start" font-weight="400" font-family="ui-monospace,'SFMono-Regular',Consolas,'Liberation Mono',monospace">4.50</text>
+<line x1="622.0" y1="198.0" x2="622.0" y2="72.0" stroke="#5C4A36" stroke-width="0.8"/>
+<line x1="618.0" y1="202.0" x2="626.0" y2="194.0" stroke="#5C4A36" stroke-width="0.8"/>
+<line x1="618.0" y1="76.0" x2="626.0" y2="68.0" stroke="#5C4A36" stroke-width="0.8"/>
+<text x="630.0" y="139.0" font-size="10.5" fill="#5C4A36" text-anchor="start" font-weight="400" font-family="ui-monospace,'SFMono-Regular',Consolas,'Liberation Mono',monospace">3.50</text>
+<text x="30.0" y="30.0" font-size="13" fill="#2B1F15" text-anchor="start" font-weight="700">Planta arquitectónica</text>
+<text x="30.0" y="50.0" font-size="11" fill="#8A7A62" text-anchor="start" font-weight="400">Cotas a ejes en metros</text>
+<text x="30.0" y="68.0" font-size="11" fill="#8A7A62" text-anchor="start" font-weight="400">Áreas libres descontando</text>
+<text x="30.0" y="84.0" font-size="11" fill="#8A7A62" text-anchor="start" font-weight="400">muros de 0.15 m</text>
+<text x="30.0" y="116.0" font-size="11" fill="#5C4A36" text-anchor="start" font-weight="400" font-family="ui-monospace,'SFMono-Regular',Consolas,'Liberation Mono',monospace">Construida  99.02 m²</text>
+</svg>
