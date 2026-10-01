@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 400" width="820" height="400" role="img" aria-labelledby="t d" font-family="system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif">
+<title id="t">Mojones geodésicos: posicionamiento GNSS con base y receptor</title>
+<desc id="d">Una estación base GNSS y un receptor sobre un mojón de concreto observan los mismos satélites; la línea base entre ambos da la posición del mojón. Corte del mojón con su placa.</desc>
+<rect width="820" height="400" fill="#FFFDF6"/>
+<g transform="translate(360 58)"><rect x="-7" y="-5" width="14" height="10" fill="#5C4A36"/><rect x="-24" y="-3" width="14" height="6" fill="#2F5D68"/><rect x="10" y="-3" width="14" height="6" fill="#2F5D68"/></g>
+<line x1="360" y1="64" x2="230" y2="240" stroke="#B9C9CC" stroke-width="0.7" stroke-dasharray="2 4"/>
+<line x1="360" y1="64" x2="600" y2="240" stroke="#B9C9CC" stroke-width="0.7" stroke-dasharray="2 4"/>
+<g transform="translate(480 40)"><rect x="-7" y="-5" width="14" height="10" fill="#5C4A36"/><rect x="-24" y="-3" width="14" height="6" fill="#2F5D68"/><rect x="10" y="-3" width="14" height="6" fill="#2F5D68"/></g>
+<line x1="480" y1="46" x2="230" y2="240" stroke="#B9C9CC" stroke-width="0.7" stroke-dasharray="2 4"/>
+<line x1="480" y1="46" x2="600" y2="240" stroke="#B9C9CC" stroke-width="0.7" stroke-dasharray="2 4"/>
+<g transform="translate(610 52)"><rect x="-7" y="-5" width="14" height="10" fill="#5C4A36"/><rect x="-24" y="-3" width="14" height="6" fill="#2F5D68"/><rect x="10" y="-3" width="14" height="6" fill="#2F5D68"/></g>
+<line x1="610" y1="58" x2="230" y2="240" stroke="#B9C9CC" stroke-width="0.7" stroke-dasharray="2 4"/>
+<line x1="610" y1="58" x2="600" y2="240" stroke="#B9C9CC" stroke-width="0.7" stroke-dasharray="2 4"/>
+<g transform="translate(740 80)"><rect x="-7" y="-5" width="14" height="10" fill="#5C4A36"/><rect x="-24" y="-3" width="14" height="6" fill="#2F5D68"/><rect x="10" y="-3" width="14" height="6" fill="#2F5D68"/></g>
+<line x1="740" y1="86" x2="230" y2="240" stroke="#B9C9CC" stroke-width="0.7" stroke-dasharray="2 4"/>
+<line x1="740" y1="86" x2="600" y2="240" stroke="#B9C9CC" stroke-width="0.7" stroke-dasharray="2 4"/>
+<line x1="230" y1="242" x2="208" y2="300" stroke="#2B1F15" stroke-width="1.4"/>
+<line x1="230" y1="242" x2="252" y2="300" stroke="#2B1F15" stroke-width="1.4"/>
+<line x1="230" y1="242" x2="230" y2="300" stroke="#2B1F15" stroke-width="1.4"/>
+<ellipse cx="230" cy="236" rx="14" ry="6" fill="#2B1F15"/>
+<text x="230.0" y="322.0" font-size="11.5" fill="#2B1F15" text-anchor="middle" font-weight="700">Base GNSS</text>
+<line x1="600" y1="242" x2="578" y2="300" stroke="#2B1F15" stroke-width="1.4"/>
+<line x1="600" y1="242" x2="622" y2="300" stroke="#2B1F15" stroke-width="1.4"/>
+<line x1="600" y1="242" x2="600" y2="300" stroke="#2B1F15" stroke-width="1.4"/>
+<ellipse cx="600" cy="236" rx="14" ry="6" fill="#2B1F15"/>
+<text x="600.0" y="322.0" font-size="11.5" fill="#2B1F15" text-anchor="middle" font-weight="700">Receptor sobre el mojón</text>
+<line x1="230" y1="270" x2="600" y2="270" stroke="#B0512B" stroke-width="1.6"/>
+<text x="415.0" y="262.0" font-size="11" fill="#B0512B" text-anchor="middle" font-weight="700">Línea base: el vector entre las dos antenas</text>
+<rect x="480" y="300" width="240" height="70" fill="#EFE3C7"/>
+<line x1="480" y1="300" x2="720" y2="300" stroke="#8B6B4E" stroke-width="1"/>
+<polygon points="586,292 614,292 620,360 580,360" fill="#D9CDB4" stroke="#5C4A36" stroke-width="1"/>
+<rect x="592" y="288" width="16" height="4" fill="#D9982A"/>
+<text x="632.0" y="318.0" font-size="10.5" fill="#5C4A36" text-anchor="start" font-weight="400">Mojón de concreto</text>
+<text x="632.0" y="334.0" font-size="10.5" fill="#5C4A36" text-anchor="start" font-weight="400">placa con el punto marcado</text>
+<text x="632.0" y="350.0" font-size="10.5" fill="#5C4A36" text-anchor="start" font-weight="400">en la cara superior</text>
+<text x="30.0" y="30.0" font-size="13" fill="#2B1F15" text-anchor="start" font-weight="700">Mojones geodésicos con GNSS</text>
+<text x="30.0" y="50.0" font-size="11" fill="#8A7A62" text-anchor="start" font-weight="400">Los dos receptores observan los mismos satélites</text>
+<text x="30.0" y="68.0" font-size="11" fill="#8A7A62" text-anchor="start" font-weight="400">al mismo tiempo; se calcula la posición del mojón</text>
+<text x="30.0" y="86.0" font-size="11" fill="#8A7A62" text-anchor="start" font-weight="400">respecto de la base</text>
+</svg>
