@@ -383,6 +383,8 @@ def info(slug):
 
 
 def guia(t, g):
+    # The template's "Compartir" row points at the template guide; enlazar.py adds the right one.
+    t = re.sub(r'  <div data-compartir.*?</div>\n', '', t, count=1, flags=re.S)
     slug, url = g['slug'], SITE + '/' + g['slug']
     crumbs = [('Inicio', SITE + '/'), ('Guías', SITE + '/guias'), (g['titulo'], url)]
     org = {'@type': 'Organization', 'name': 'Martínez-Segura Multiservicios', 'url': SITE + '/'}
@@ -423,7 +425,7 @@ def no_minimal(t):
     title = 'No Minimal | Ensayos de Arquitectura Latinoamericana'
     desc = 'No Minimal: seis ensayos y tesis del Arq. Orelio Martínez sobre arquitectura latinoamericana: ladrillo, luz, color, patio y cómo construir bien.'
     crumbs = [('Inicio', SITE + '/'), ('Arquitectura', SITE + '/arquitectura'), ('No Minimal', url)]
-    orelio = {'@type': 'Person', '@id': SITE + '/#orelio', 'name': 'Orelio Martínez', 'jobTitle': 'Arquitecto e ingeniero',
+    orelio = {'@type': 'Person', '@id': SITE + '/#orelio', 'name': 'Orelio Martínez', 'honorificPrefix': 'Arq.', 'jobTitle': 'Arquitecto e ingeniero',
               'url': SITE + '/arquitectura', 'sameAs': [NM]}
     schemas = [
         {'@context': 'https://schema.org', '@type': 'CollectionPage', 'name': 'No Minimal', 'description': desc, 'url': url, 'inLanguage': 'es',

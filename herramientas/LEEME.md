@@ -49,3 +49,25 @@ pendiente (`.sc-placeholder`). En las páginas con el `Header` compartido se cap
 el encabezado a 1280 y a 390 px, porque ese componente elige entre menú y hamburguesa
 con JavaScript; las páginas con encabezado propio (arquitectura, PARCON) lo resuelven
 con CSS y basta una captura.
+
+## Las demás herramientas
+
+Todas trabajan sobre las fuentes (sin los bloques de pre-render) y se pueden correr
+varias veces sin duplicar nada. El orden es:
+
+| Paso | Herramienta | Qué hace |
+|---|---|---|
+| 1 | `graficos.py` + `insertar_graficos.py` | Dibuja los diagramas de `assets/graficos/` y los coloca en las páginas de servicio. |
+| 1 | `guias.py` | Crea guías nuevas y la página `/no-minimal`; las añade al hub, al sitemap y al mapa del sitio. |
+| 1 | `paginas.py` | Crea páginas de servicio (deslinde, desmembración), el convertidor de medidas y `404.html`. |
+| 2 | `enlazar.py` | Enlaza las páginas nuevas, pone "Compartir" en las guías y sube el `?v=` de `contacto.js`. |
+| 3 | `prerender.py` | Regenera los snapshots (arriba). |
+| 4 | `auditar_seo.py` | Revisa títulos, descripciones, schema, sitemap y enlaces. Solo lee. |
+| — | `tarjetas_sociales.py` | Genera las tarjetas 1200×630 de `assets/social/` para Facebook y WhatsApp. |
+
+Reglas que conviene no romper:
+
+- Títulos de 60 caracteres o menos y descripciones de 160 o menos.
+- Siempre "Ing. Steven Segura" y "Arq. Orelio Martínez" en el texto visible.
+- `mapa-del-sitio.html` no es pública: va con `noindex`, fuera del sitemap y sin enlace en el pie.
+- `/assets/` se sirve con caché de un año: al cambiar un archivo ya publicado, cámbiale el nombre o el `?v=`.

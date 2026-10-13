@@ -1,6 +1,6 @@
 /* Martínez-Segura — el cliente elige con quién hablar.
  *
- * El Ing. Steven Segura y Orelio Martínez atienden por WhatsApp. Los botones
+ * El Ing. Steven Segura y el Arq. Orelio Martínez atienden por WhatsApp. Los botones
  * genéricos ("Cotizar", "Escríbenos") ya no abren un número fijo: muestran un
  * selector con los dos, lo que atiende cada uno y, cuando la página o el
  * formulario dejan claro el servicio, cuál es el sugerido. Se conserva el
@@ -23,7 +23,7 @@
                     : 'Topografía, catastro, control de obra y mojones'
     },
     orelio: {
-      nombre: 'Orelio Martínez', iniciales: 'OM', numero: '17608830683', tel: '+1 760 883 0683',
+      nombre: 'Arq. Orelio Martínez', iniciales: 'OM', numero: '17608830683', tel: '+1 760 883 0683',
       servicios: EN ? 'Architecture, structural design, BIM and cost estimates'
                     : 'Arquitectura, diseño estructural, BIM y presupuestos'
     }
@@ -133,6 +133,11 @@
 
   document.addEventListener('click', function (ev) {
     if (ev.defaultPrevented || ev.button || ev.metaKey || ev.ctrlKey || ev.shiftKey) return;
+    var t = ev.target && ev.target.closest ? ev.target.closest('a[href^="tel:"], a[href^="mailto:"]') : null;
+    if (t && typeof window.gtag === 'function') {
+      // Llamadas y correos también son contactos: se miden igual que WhatsApp.
+      try { window.gtag('event', t.getAttribute('href').indexOf('tel:') === 0 ? 'llamada_click' : 'correo_click', { page_path: location.pathname }); } catch (e) {}
+    }
     var a = ev.target && ev.target.closest ? ev.target.closest('a[href*="wa.me/"]') : null;
     if (!a) return;
     var href = a.getAttribute('href') || '', m = href.match(NUMS);
